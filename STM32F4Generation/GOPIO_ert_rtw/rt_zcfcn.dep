@@ -1,0 +1,11 @@
+rt_zcfcn.o: D:/Work/Matlab/STM32F4Generation/GOPIO_ert_rtw/rt_zcfcn.c \
+ D:/Work/Matlab/STM32F4Generation/GOPIO_ert_rtw/zero_crossing_types.h \
+ D:/Work/Matlab/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h \
+ D:/Work/Matlab/STM32F4Generation/GOPIO_ert_rtw/rt_zcfcn.h \
+ D:/software/MATLAB2024a/simulink/include/solver_zc.h \
+ D:/Work/Matlab/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h
+D:/Work/Matlab/STM32F4Generation/GOPIO_ert_rtw/zero_crossing_types.h:
+D:/Work/Matlab/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h:
+D:/Work/Matlab/STM32F4Generation/GOPIO_ert_rtw/rt_zcfcn.h:
+D:/software/MATLAB2024a/simulink/include/solver_zc.h:
+D:/Work/Matlab/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h:

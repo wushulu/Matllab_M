@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "add_private.h": "c",
+        "add.h": "c",
+        "rtwtypes.h": "c",
+        "add_types.h": "c"
+    }
+}
