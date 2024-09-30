@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'GOPIO'.
  *
- * Model version                  : 1.17
+ * Model version                  : 1.19
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Fri Sep 13 10:10:45 2024
+ * C/C++ source code generated on : Fri Sep 27 23:32:46 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -59,7 +59,7 @@ typedef struct tag_S5MMpcz8vT0FlmhmEl4q5C stm32cube_blocks_DigitalPortW_T;
 
 #endif                             /* typedef_stm32cube_blocks_DigitalPortW_T */
 
-/* Custom Type definition for MATLABSystem: '<S85>/PWM Output' */
+/* Custom Type definition for MATLABSystem: '<Root>/Timer' */
 #include "stm_timer_ll.h"
 #include "stm_timer_ll.h"
 #ifndef struct_tag_C3ug75osl8w3UN1OXa3ipB
@@ -81,6 +81,26 @@ struct tag_C3ug75osl8w3UN1OXa3ipB
 typedef struct tag_C3ug75osl8w3UN1OXa3ipB stm32cube_blocks_PWMOutput_GO_T;
 
 #endif                             /* typedef_stm32cube_blocks_PWMOutput_GO_T */
+
+#ifndef struct_tag_lVYsrGoTQYYB21wZ5vAzOC
+#define struct_tag_lVYsrGoTQYYB21wZ5vAzOC
+
+struct tag_lVYsrGoTQYYB21wZ5vAzOC
+{
+  boolean_T matlabCodegenIsDeleted;
+  int32_T isInitialized;
+  boolean_T isSetupComplete;
+  TIM_Type_T* TimerHandle;
+};
+
+#endif                                 /* struct_tag_lVYsrGoTQYYB21wZ5vAzOC */
+
+#ifndef typedef_stm32cube_blocks_TimerBlock_G_T
+#define typedef_stm32cube_blocks_TimerBlock_G_T
+
+typedef struct tag_lVYsrGoTQYYB21wZ5vAzOC stm32cube_blocks_TimerBlock_G_T;
+
+#endif                             /* typedef_stm32cube_blocks_TimerBlock_G_T */
 
 /* Parameters (default storage) */
 typedef struct P_GOPIO_T_ P_GOPIO_T;

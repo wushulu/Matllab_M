@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'GOPIO'.
  *
- * Model version                  : 1.10
+ * Model version                  : 1.12
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Wed Sep  4 21:01:52 2024
+ * C/C++ source code generated on : Fri Sep 27 23:20:48 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -16,14 +16,7 @@
 #ifndef GOPIO_private_h_
 #define GOPIO_private_h_
 #include "rtwtypes.h"
-#include "multiword_types.h"
 #include "GOPIO_types.h"
-
-/* Private macros used by the generated code to access rtModel */
-#ifndef rtmSetTFinal
-#define rtmSetTFinal(rtm, val)         ((rtm)->Timing.tFinal = (val))
-#endif
-
 #ifndef UCHAR_MAX
 #include <limits.h>
 #endif

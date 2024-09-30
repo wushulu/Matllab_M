@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'GOPIO'.
  *
- * Model version                  : 1.17
+ * Model version                  : 1.19
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Fri Sep 13 10:10:45 2024
+ * C/C++ source code generated on : Fri Sep 27 23:32:46 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -42,6 +42,7 @@ static void GOPIO_SystemCore_setup(stm32cube_blocks_AnalogInput__T *obj);
 
 /* Forward declaration for local functions */
 static void GOPIO_PWMOutput_setupImpl(stm32cube_blocks_PWMOutput_GO_T *obj);
+static void GOPIO_SystemCore_setup_b(stm32cube_blocks_TimerBlock_G_T *obj);
 static void GOPIO_SystemCore_setup(stm32cube_blocks_AnalogInput__T *obj)
 {
   ADC_Type_T adcStructLoc;
@@ -156,6 +157,29 @@ static void GOPIO_PWMOutput_setupImpl(stm32cube_blocks_PWMOutput_GO_T *obj)
     /* Start for MATLABSystem: '<S85>/PWM Output' */
     enableCounter(obj->TimerHandle, true);
   }
+}
+
+static void GOPIO_SystemCore_setup_b(stm32cube_blocks_TimerBlock_G_T *obj)
+{
+  TIM_Type_T b;
+  boolean_T isSlaveModeTriggerEnabled;
+
+  /* Start for MATLABSystem: '<Root>/Timer' */
+  obj->isInitialized = 1;
+  b.PeripheralPtr = TIM3;
+  b.isCenterAlignedMode = false;
+
+  /* Start for MATLABSystem: '<Root>/Timer' */
+  b.repetitionCounter = 0U;
+  obj->TimerHandle = Timer_Handle_Init(&b);
+  enableTimerInterrupts(obj->TimerHandle, 0);
+  isSlaveModeTriggerEnabled = isSlaveTriggerModeEnabled(obj->TimerHandle);
+  if (!isSlaveModeTriggerEnabled) {
+    /* Start for MATLABSystem: '<Root>/Timer' */
+    enableCounter(obj->TimerHandle, false);
+  }
+
+  obj->isSetupComplete = true;
 }
 
 /* Model step function */
@@ -604,6 +628,9 @@ void GOPIO_step(void)
 
   /* End of MATLABSystem: '<S14>/Digital Port Write' */
 
+  /* MATLABSystem: '<Root>/Timer' */
+  GOPIO_B.timer3cn = getTimerCounterValue(GOPIO_DW.obj_j.TimerHandle);
+
   /* Update absolute time for base rate */
   /* The "clockTick0" counts the number of times the code of this task has
    * been executed. The absolute time is the multiplication of "clockTick0"
@@ -622,15 +649,15 @@ void GOPIO_initialize(void)
   GOPIO_M->Timing.stepSize0 = 0.1;
 
   /* External mode info */
-  GOPIO_M->Sizes.checksums[0] = (1614025423U);
-  GOPIO_M->Sizes.checksums[1] = (887938870U);
-  GOPIO_M->Sizes.checksums[2] = (3382036707U);
-  GOPIO_M->Sizes.checksums[3] = (1270855670U);
+  GOPIO_M->Sizes.checksums[0] = (1598026308U);
+  GOPIO_M->Sizes.checksums[1] = (377478778U);
+  GOPIO_M->Sizes.checksums[2] = (1700691969U);
+  GOPIO_M->Sizes.checksums[3] = (1308357475U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;
     static RTWExtModeInfo rt_ExtModeInfo;
-    static const sysRanDType *systemRan[14];
+    static const sysRanDType *systemRan[15];
     GOPIO_M->extModeInfo = (&rt_ExtModeInfo);
     rteiSetSubSystemActiveVectorAddresses(&rt_ExtModeInfo, systemRan);
     systemRan[0] = &rtAlwaysEnabled;
@@ -651,6 +678,7 @@ void GOPIO_initialize(void)
       &GOPIO_DW.IfActionSubsystem1_f.IfActionSubsystem1_SubsysRanBC;
     systemRan[12] = &rtAlwaysEnabled;
     systemRan[13] = &rtAlwaysEnabled;
+    systemRan[14] = &rtAlwaysEnabled;
     rteiSetModelMappingInfoPtr(GOPIO_M->extModeInfo,
       &GOPIO_M->SpecialInfo.mappingInfo);
     rteiSetChecksumsPtr(GOPIO_M->extModeInfo, GOPIO_M->Sizes.checksums);
@@ -687,6 +715,11 @@ void GOPIO_initialize(void)
   GOPIO_DW.obj_e.isInitialized = 1;
   GOPIO_PWMOutput_setupImpl(&GOPIO_DW.obj_e);
   GOPIO_DW.obj_e.isSetupComplete = true;
+
+  /* Start for MATLABSystem: '<Root>/Timer' */
+  GOPIO_DW.obj_j.isInitialized = 0;
+  GOPIO_DW.obj_j.matlabCodegenIsDeleted = false;
+  GOPIO_SystemCore_setup_b(&GOPIO_DW.obj_j);
 }
 
 /* Model terminate function */
@@ -724,6 +757,16 @@ void GOPIO_terminate(void)
   }
 
   /* End of Terminate for MATLABSystem: '<S85>/PWM Output' */
+  /* Terminate for MATLABSystem: '<Root>/Timer' */
+  if (!GOPIO_DW.obj_j.matlabCodegenIsDeleted) {
+    GOPIO_DW.obj_j.matlabCodegenIsDeleted = true;
+    if ((GOPIO_DW.obj_j.isInitialized == 1) && GOPIO_DW.obj_j.isSetupComplete) {
+      disableCounter(GOPIO_DW.obj_j.TimerHandle);
+      disableTimerInterrupts(GOPIO_DW.obj_j.TimerHandle, 0);
+    }
+  }
+
+  /* End of Terminate for MATLABSystem: '<Root>/Timer' */
 }
 
 void GOPIO_configure_interrupts(void)

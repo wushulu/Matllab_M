@@ -2,7 +2,7 @@ stm_timer_ll.o: \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/stm_timer_ll.c \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_timer_ll.h \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_types.h \
- D:/Work/Matlab/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h \
+ D:/Work/Matlab/PMSM/02Clarke\ Park/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h \
  D:/Work/Matlab/STM32F4Generation/GPIO/Core/Inc/main.h \
  D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  D:/Work/Matlab/STM32F4Generation/GPIO/Core/Inc/stm32f4xx_hal_conf.h \
@@ -45,7 +45,7 @@ stm_timer_ll.o: \
  D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_timer_ll.h:
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_types.h:
-D:/Work/Matlab/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h:
+D:/Work/Matlab/PMSM/02Clarke\ Park/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h:
 D:/Work/Matlab/STM32F4Generation/GPIO/Core/Inc/main.h:
 D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 D:/Work/Matlab/STM32F4Generation/GPIO/Core/Inc/stm32f4xx_hal_conf.h:

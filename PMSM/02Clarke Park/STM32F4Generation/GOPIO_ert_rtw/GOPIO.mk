@@ -2,7 +2,7 @@
 ## Makefile generated for component 'GOPIO'. 
 ## 
 ## Makefile     : GOPIO.mk
-## Generated on : Wed Sep 04 21:02:03 2024
+## Generated on : Fri Sep 27 23:20:51 2024
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/GOPIO.elf
 ## Product type : executable
 ## 
@@ -23,7 +23,7 @@ MAKEFILE                  = GOPIO.mk
 MATLAB_ROOT               = D:/software/MATLAB2024a
 MATLAB_BIN                = D:/software/MATLAB2024a/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = D:/Work/Matlab/STM32F4Generation
+START_DIR                 = D:/Work/Matlab/PMSM/02Clarke Park/STM32F4Generation
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -151,44 +151,45 @@ RUN                 =
 # "Faster Builds" Build Configuration
 #----------------------------------------
 
+ARFLAGS              = ruvs
+ASFLAGS              = -MMD -MP -MF"$(@:%.o=%.dep)" -MT"$@"  \
+                       -Wall \
+                       -x assembler-with-cpp \
+                       $(ASFLAGS_ADDITIONAL) \
+                       $(DEFINES) \
+                       $(INCLUDES) \
+                       -c
+OBJCOPYFLAGS_BIN     = -O binary $(PRODUCT) $(PRODUCT_BIN)
+CFLAGS               = $(FDATASECTIONS_FLG) \
+                       -Wall \
+                       -MMD -MP -MF"$(@:%.o=%.dep)" -MT"$@"  \
+                       -c \
+                       -O0
+CPPFLAGS             = -std=gnu++14 \
+                       -fno-rtti \
+                       -fno-exceptions \
+                       $(FDATASECTIONS_FLG) \
+                       -Wall \
+                       -MMD -MP -MF"$(@:%.o=%.dep)" -MT"$@"  \
+                       -c \
+                       -O0
+CPP_LDFLAGS          = -Wl,--gc-sections \
+                       -Wl,-Map="$(PRODUCT_NAME).map"
+CPP_SHAREDLIB_LDFLAGS  =
+DOWNLOAD_FLAGS       =
+EXESIZE_FLAGS        = $(PRODUCT)
+EXECUTE_FLAGS        =
+OBJCOPYFLAGS_HEX     = -O ihex $(PRODUCT) $(PRODUCT_HEX)
+LDFLAGS              = -Wl,--gc-sections \
+                       -Wl,-Map="$(PRODUCT_NAME).map"
 MEX_CPPFLAGS         =
 MEX_CPPLDFLAGS       =
 MEX_CFLAGS           =
 MEX_LDFLAGS          =
+MAKE_FLAGS           = -f $(MAKEFILE)
+SHAREDLIB_LDFLAGS    =
 
 
-
-#---------------------------
-# Model-Specific Options
-#---------------------------
-
-ASFLAGS = -MMD -MP -MF"$(@:%.o=%.dep)" -MT"$@"  -Wall -x assembler-with-cpp $(ASFLAGS_ADDITIONAL) $(DEFINES) $(INCLUDES) -c
-
-CFLAGS = $(FDATASECTIONS_FLG) -Wall -MMD -MP -MF"$(@:%.o=%.dep)" -MT"$@"  -c -O0 -g
-
-LDFLAGS = -Wl,--gc-sections -Wl,-Map="$(PRODUCT_NAME).map" -g
-
-SHAREDLIB_LDFLAGS = -g
-
-CPPFLAGS = -std=gnu++14 -fno-rtti -fno-exceptions $(FDATASECTIONS_FLG) -Wall -MMD -MP -MF"$(@:%.o=%.dep)" -MT"$@"  -c -O0 -g
-
-CPP_LDFLAGS = -Wl,--gc-sections -Wl,-Map="$(PRODUCT_NAME).map" -g
-
-CPP_SHAREDLIB_LDFLAGS = -g
-
-ARFLAGS = ruvs
-
-OBJCOPYFLAGS_BIN = -O binary $(PRODUCT) $(PRODUCT_BIN)
-
-OBJCOPYFLAGS_HEX = -O ihex $(PRODUCT) $(PRODUCT_HEX)
-
-EXESIZE_FLAGS = $(PRODUCT)
-
-DOWNLOAD_FLAGS = 
-
-EXECUTE_FLAGS = 
-
-MAKE_FLAGS = -f $(MAKEFILE)
 
 ###########################################################################
 ## OUTPUT INFO
@@ -210,11 +211,11 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
-DEFINES_ = -DMW_ADC1_ENABLED=1 -DMW_ADC1_VAR=mw_adc1 -DMW_ADC1_INJ_IRQ_ENABLED=1 -DMW_TIM1_ENABLED=1 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DUSE_FULL_LL_DRIVER -DSTM32F401xE -DUSE_HAL_DRIVER -DMW_TIMEBASESOURCE=TIM5 -DMW_CONNECTIVITY_UART=USART2_BASE -DMW_CONNECTIVITY_RX_DMA=DMA1 -DMW_USART2_RX_DMA_STREAM=5 -DMW_USART2_RX_DMA_ENABLED=DMA1_Stream5_IRQHandler -DMW_CONNECTIVITY_RX_DMAStream=LL_DMA_STREAM_5 -DMW_CONNECTIVITY_RX_BUFFER()=GET_USART2_RECEIVE_BUFFER() -DMW_USART2_RECEIVE_BUFFER_SIZE=1024 -DMW_USART2_ENABLED=1
-DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DEXT_MODE=1 -DINTEGER_CODE=0 -DMT=0
+DEFINES_ = -DMW_ADC1_ENABLED=1 -DMW_ADC1_VAR=mw_adc1 -DMW_ADC1_INJ_IRQ_ENABLED=1 -DMW_TIM1_ENABLED=1 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DUSE_FULL_LL_DRIVER -DSTM32F401xE -DUSE_HAL_DRIVER -DMW_TIMEBASESOURCE=TIM5
+DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0
 DEFINES_CUSTOM = 
-DEFINES_OPTS = -DXCP_DAQ_SUPPORT -DXCP_CALIBRATION_SUPPORT -DXCP_TIMESTAMP_SUPPORT -DXCP_SET_MTA_SUPPORT -DEXTMODE_XCP_TRIGGER_SUPPORT -DINTERNAL_XCP_MEM_BLOCK_1_SIZE=160 -DINTERNAL_XCP_MEM_BLOCK_1_NUMBER=1 -DINTERNAL_XCP_MEM_BLOCK_2_SIZE=168 -DINTERNAL_XCP_MEM_BLOCK_2_NUMBER=5 -DINTERNAL_XCP_MEM_BLOCK_3_SIZE=64 -DINTERNAL_XCP_MEM_BLOCK_3_NUMBER=5 -DINTERNAL_XCP_MEM_RESERVED_POOLS_TOTAL_SIZE=3802 -DINTERNAL_XCP_MEM_RESERVED_POOLS_NUMBER=6 -DXCP_MEM_DAQ_RESERVED_POOL_BLOCKS_NUMBER=3 -DXCP_MEM_DAQ_RESERVED_POOLS_NUMBER=2 -DXCP_MIN_EVENT_NO_RESERVED_POOL=2 -DXCP_MAX_CTO_SIZE=255 -DXCP_MAX_DTO_SIZE=65532 -DXCP_MAX_ODT_ENTRY_SIZE=255 -DEXTMODE_STATIC -DEXTMODE_STATIC_SIZE=2048 -DON_TARGET_WAIT_FOR_START=1 -DTID01EQ=0
-DEFINES_SKIPFORSIL = -DHWI_ADC_IRQ -DMW_SCHEDULER_PRIORITY=3 -DXCP_CUSTOM_PLATFORM -D__FPU_PRESENT=1U -D__FPU_USED=1U -DEXTMODE_DISABLE_ARGS_PROCESSING -DSTACK_SIZE=64 -DRT -DHWI_ADC_IRQHandler
+DEFINES_OPTS = -DTID01EQ=0
+DEFINES_SKIPFORSIL = -DHWI_ADC_IRQ -DMW_SCHEDULER_PRIORITY=3 -DXCP_CUSTOM_PLATFORM -DXCP_MEM_DAQ_RESERVED_POOL_BLOCKS_NUMBER=10 -D__FPU_PRESENT=1U -D__FPU_USED=1U -DSTACK_SIZE=64 -DRT -DHWI_ADC_IRQHandler
 DEFINES_STANDARD = -DMODEL=GOPIO -DNUMST=1 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
 
 DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(DEFINES_SKIPFORSIL) $(DEFINES_STANDARD)
@@ -223,7 +224,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/stm_adc_ll.c C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/stm_timer_ll.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_mode.c C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/mw_stm32_nvic.c $(START_DIR)/GOPIO_ert_rtw/GOPIO.c $(START_DIR)/GOPIO_ert_rtw/GOPIO_data.c $(START_DIR)/GOPIO_ert_rtw/rt_nonfinite.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_common.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_classic_trigger.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_standard.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_daq.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_calibration.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_fifo.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_transport.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/xcp_mem_default.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/xcp_drv_rtiostream.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/xcp_utils.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_frame_serial.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_param_default_serial.c C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/platform_timer.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/SysTickScheduler.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/rtiostream_serial.c C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/stm_usart.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/xcp/src/sys_arch.c $(START_DIR)/GPIO/Core/Src/main.c $(START_DIR)/GPIO/Core/Src/stm32f4xx_it.c $(START_DIR)/GPIO/Core/Src/stm32f4xx_hal_msp.c $(START_DIR)/GPIO/Core/Src/stm32f4xx_hal_timebase_tim.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c $(START_DIR)/GPIO/Core/Src/system_stm32f4xx.c $(START_DIR)/GPIO/STM32CubeIDE/Application/User/Core/syscalls.c $(START_DIR)/GPIO/STM32CubeIDE/Application/User/Core/sysmem.c $(START_DIR)/GPIO/STM32CubeIDE/Application/User/Startup/startup_stm32f401retx.s
+SRCS = C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/stm_adc_ll.c C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/stm_timer_ll.c C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/mw_stm32_nvic.c $(START_DIR)/GOPIO_ert_rtw/GOPIO.c $(START_DIR)/GOPIO_ert_rtw/GOPIO_data.c C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/platform_timer.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/SysTickScheduler.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c D:/Work/Matlab/STM32F4Generation/GPIO/Core/Src/main.c D:/Work/Matlab/STM32F4Generation/GPIO/Core/Src/stm32f4xx_it.c D:/Work/Matlab/STM32F4Generation/GPIO/Core/Src/stm32f4xx_hal_msp.c D:/Work/Matlab/STM32F4Generation/GPIO/Core/Src/stm32f4xx_hal_timebase_tim.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c D:/Work/Matlab/STM32F4Generation/GPIO/Core/Src/system_stm32f4xx.c D:/Work/Matlab/STM32F4Generation/GPIO/STM32CubeIDE/Application/User/Core/syscalls.c D:/Work/Matlab/STM32F4Generation/GPIO/STM32CubeIDE/Application/User/Core/sysmem.c D:/Work/Matlab/STM32F4Generation/GPIO/STM32CubeIDE/Application/User/Startup/startup_stm32f401retx.s
 
 MAIN_SRC = $(START_DIR)/GOPIO_ert_rtw/ert_main.c
 
@@ -233,7 +234,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = stm_adc_ll.o stm_timer_ll.o xcp_ext_mode.o mw_stm32_nvic.o GOPIO.o GOPIO_data.o rt_nonfinite.o xcp_ext_common.o xcp_ext_classic_trigger.o xcp.o xcp_standard.o xcp_daq.o xcp_calibration.o xcp_fifo.o xcp_transport.o xcp_mem_default.o xcp_drv_rtiostream.o xcp_utils.o xcp_frame_serial.o xcp_ext_param_default_serial.o overrideHALDelay.o platform_timer.o SysTickScheduler.o m3m4m4f_multitasking.o rtiostream_serial.o stm_usart.o sys_arch.o main.o stm32f4xx_it.o stm32f4xx_hal_msp.o stm32f4xx_hal_timebase_tim.o stm32f4xx_ll_gpio.o stm32f4xx_ll_adc.o stm32f4xx_ll_dma.o stm32f4xx_ll_rcc.o stm32f4xx_ll_utils.o stm32f4xx_ll_exti.o stm32f4xx_hal_rcc.o stm32f4xx_hal_rcc_ex.o stm32f4xx_hal_flash.o stm32f4xx_hal_flash_ex.o stm32f4xx_hal_flash_ramfunc.o stm32f4xx_hal_gpio.o stm32f4xx_hal_dma_ex.o stm32f4xx_hal_dma.o stm32f4xx_hal_pwr.o stm32f4xx_hal_pwr_ex.o stm32f4xx_hal_cortex.o stm32f4xx_hal.o stm32f4xx_hal_exti.o stm32f4xx_hal_tim.o stm32f4xx_hal_tim_ex.o stm32f4xx_ll_tim.o stm32f4xx_ll_usart.o system_stm32f4xx.o syscalls.o sysmem.o startup_stm32f401retx.o
+OBJS = stm_adc_ll.o stm_timer_ll.o mw_stm32_nvic.o GOPIO.o GOPIO_data.o overrideHALDelay.o platform_timer.o SysTickScheduler.o m3m4m4f_multitasking.o main.o stm32f4xx_it.o stm32f4xx_hal_msp.o stm32f4xx_hal_timebase_tim.o stm32f4xx_ll_gpio.o stm32f4xx_ll_adc.o stm32f4xx_ll_dma.o stm32f4xx_ll_rcc.o stm32f4xx_ll_utils.o stm32f4xx_ll_exti.o stm32f4xx_hal_rcc.o stm32f4xx_hal_rcc_ex.o stm32f4xx_hal_flash.o stm32f4xx_hal_flash_ex.o stm32f4xx_hal_flash_ramfunc.o stm32f4xx_hal_gpio.o stm32f4xx_hal_dma_ex.o stm32f4xx_hal_dma.o stm32f4xx_hal_pwr.o stm32f4xx_hal_pwr_ex.o stm32f4xx_hal_cortex.o stm32f4xx_hal.o stm32f4xx_hal_exti.o stm32f4xx_hal_tim.o stm32f4xx_hal_tim_ex.o stm32f4xx_ll_tim.o stm32f4xx_ll_usart.o system_stm32f4xx.o syscalls.o sysmem.o startup_stm32f401retx.o
 
 MAIN_OBJ = ert_main.o
 
@@ -270,24 +271,6 @@ CFLAGS_BASIC = $(DEFINES) $(INCLUDES) @$(COMPILER_COMMAND_FILE)
 
 CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
 
-#-----------
-# Linker
-#-----------
-
-LDFLAGS_ = --specs=nano.specs
-LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\STM32F4Generation\GPIO\STM32CubeIDE\STM32F401RETX_FLASH.ld"
-
-LDFLAGS += $(LDFLAGS_) $(LDFLAGS_SKIPFORSIL)
-
-#--------------------------
-# Shared Library Linker
-#--------------------------
-
-SHAREDLIB_LDFLAGS_ = --specs=nano.specs
-SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\STM32F4Generation\GPIO\STM32CubeIDE\STM32F401RETX_FLASH.ld"
-
-SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_) $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
-
 #-----------------
 # C++ Compiler
 #-----------------
@@ -314,6 +297,40 @@ CPP_SHAREDLIB_LDFLAGS_ = --specs=nano.specs
 CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\STM32F4Generation\GPIO\STM32CubeIDE\STM32F401RETX_FLASH.ld"
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_) $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
+
+#-----------
+# Linker
+#-----------
+
+LDFLAGS_ = --specs=nano.specs
+LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\STM32F4Generation\GPIO\STM32CubeIDE\STM32F401RETX_FLASH.ld"
+
+LDFLAGS += $(LDFLAGS_) $(LDFLAGS_SKIPFORSIL)
+
+#---------------------
+# MEX C++ Compiler
+#---------------------
+
+MEX_CPP_Compiler_BASIC =  @$(COMPILER_COMMAND_FILE)
+
+MEX_CPPFLAGS += $(MEX_CPP_Compiler_BASIC)
+
+#-----------------
+# MEX Compiler
+#-----------------
+
+MEX_Compiler_BASIC =  @$(COMPILER_COMMAND_FILE)
+
+MEX_CFLAGS += $(MEX_Compiler_BASIC)
+
+#--------------------------
+# Shared Library Linker
+#--------------------------
+
+SHAREDLIB_LDFLAGS_ = --specs=nano.specs
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\STM32F4Generation\GPIO\STM32CubeIDE\STM32F401RETX_FLASH.ld"
+
+SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_) $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
 ###########################################################################
 ## INLINED COMMANDS
@@ -598,155 +615,11 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
 stm_adc_ll.o : C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/stm_adc_ll.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
 stm_timer_ll.o : C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/stm_timer_ll.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_ext_mode.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_mode.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
@@ -766,62 +639,6 @@ ert_main.o : $(START_DIR)/GOPIO_ert_rtw/ert_main.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-rt_nonfinite.o : $(START_DIR)/GOPIO_ert_rtw/rt_nonfinite.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_ext_common.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_common.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_ext_classic_trigger.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_classic_trigger.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_standard.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_standard.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_daq.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_daq.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_calibration.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_calibration.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_fifo.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_fifo.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_transport.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_transport.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_mem_default.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/xcp_mem_default.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_drv_rtiostream.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/xcp_drv_rtiostream.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_utils.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/xcp_utils.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_frame_serial.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_frame_serial.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_ext_param_default_serial.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_param_default_serial.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
 overrideHALDelay.o : C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
@@ -838,139 +655,127 @@ m3m4m4f_multitasking.o : $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/sch
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-rtiostream_serial.o : C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/rtiostream_serial.c
+main.o : D:/Work/Matlab/STM32F4Generation/GPIO/Core/Src/main.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm_usart.o : C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/src/stm_usart.c
+stm32f4xx_it.o : D:/Work/Matlab/STM32F4Generation/GPIO/Core/Src/stm32f4xx_it.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-sys_arch.o : $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/xcp/src/sys_arch.c
+stm32f4xx_hal_msp.o : D:/Work/Matlab/STM32F4Generation/GPIO/Core/Src/stm32f4xx_hal_msp.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-main.o : $(START_DIR)/GPIO/Core/Src/main.c
+stm32f4xx_hal_timebase_tim.o : D:/Work/Matlab/STM32F4Generation/GPIO/Core/Src/stm32f4xx_hal_timebase_tim.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_it.o : $(START_DIR)/GPIO/Core/Src/stm32f4xx_it.c
+stm32f4xx_ll_gpio.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_msp.o : $(START_DIR)/GPIO/Core/Src/stm32f4xx_hal_msp.c
+stm32f4xx_ll_adc.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_timebase_tim.o : $(START_DIR)/GPIO/Core/Src/stm32f4xx_hal_timebase_tim.c
+stm32f4xx_ll_dma.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_gpio.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c
+stm32f4xx_ll_rcc.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_adc.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c
+stm32f4xx_ll_utils.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_dma.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c
+stm32f4xx_ll_exti.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_rcc.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c
+stm32f4xx_hal_rcc.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_utils.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c
+stm32f4xx_hal_rcc_ex.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_exti.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c
+stm32f4xx_hal_flash.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_rcc.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+stm32f4xx_hal_flash_ex.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_rcc_ex.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+stm32f4xx_hal_flash_ramfunc.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_flash.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
+stm32f4xx_hal_gpio.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_flash_ex.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
+stm32f4xx_hal_dma_ex.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_flash_ramfunc.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
+stm32f4xx_hal_dma.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_gpio.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+stm32f4xx_hal_pwr.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_dma_ex.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+stm32f4xx_hal_pwr_ex.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_dma.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+stm32f4xx_hal_cortex.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_pwr.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+stm32f4xx_hal.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_pwr_ex.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+stm32f4xx_hal_exti.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_cortex.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+stm32f4xx_hal_tim.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+stm32f4xx_hal_tim_ex.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_exti.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+stm32f4xx_ll_tim.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_tim.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+stm32f4xx_ll_usart.o : D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_tim_ex.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+system_stm32f4xx.o : D:/Work/Matlab/STM32F4Generation/GPIO/Core/Src/system_stm32f4xx.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_tim.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c
+syscalls.o : D:/Work/Matlab/STM32F4Generation/GPIO/STM32CubeIDE/Application/User/Core/syscalls.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_usart.o : $(START_DIR)/GPIO/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c
+sysmem.o : D:/Work/Matlab/STM32F4Generation/GPIO/STM32CubeIDE/Application/User/Core/sysmem.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-system_stm32f4xx.o : $(START_DIR)/GPIO/Core/Src/system_stm32f4xx.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-syscalls.o : $(START_DIR)/GPIO/STM32CubeIDE/Application/User/Core/syscalls.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-sysmem.o : $(START_DIR)/GPIO/STM32CubeIDE/Application/User/Core/sysmem.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-startup_stm32f401retx.o : $(START_DIR)/GPIO/STM32CubeIDE/Application/User/Startup/startup_stm32f401retx.s
+startup_stm32f401retx.o : D:/Work/Matlab/STM32F4Generation/GPIO/STM32CubeIDE/Application/User/Startup/startup_stm32f401retx.s
 	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 

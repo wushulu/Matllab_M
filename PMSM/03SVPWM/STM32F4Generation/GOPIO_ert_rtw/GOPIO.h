@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'GOPIO'.
  *
- * Model version                  : 1.17
+ * Model version                  : 1.19
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Fri Sep 13 10:10:45 2024
+ * C/C++ source code generated on : Fri Sep 27 23:32:46 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -82,22 +82,23 @@ typedef struct {
 
 /* Block signals (default storage) */
 typedef struct {
-  real_T TmpSignalConversionAtTAQSigLo_g[3];
-  /* '<Root>/TmpSignal ConversionAtTAQSigLogging_InsertedFor_Inverse Park Transform_at_outport_0Inport1' */
+  real_T Gain1[3];                     /* '<S10>/Gain1' */
   real_T Gain4[3];                     /* '<Root>/Gain4' */
   GPIO_TypeDef * portNameLoc;
   real_T Ia;                           /* '<Root>/Sine Wave' */
   real_T Ib;                           /* '<Root>/Sine Wave1' */
   real_T Ic;                           /* '<Root>/Sine Wave2' */
-  real_T Gain1[3];                     /* '<S10>/Gain1' */
   real_T Constant4;                    /* '<Root>/Constant4' */
   real_T TmpSignalConversionAtTAQSigLogg[3];
   /* '<Root>/TmpSignal ConversionAtTAQSigLogging_InsertedFor_Mux_at_outport_0Inport1' */
+  real_T TmpSignalConversionAtTAQSigLo_g[3];
+  /* '<Root>/TmpSignal ConversionAtTAQSigLogging_InsertedFor_Inverse Park Transform_at_outport_0Inport1' */
   real_T algDD_o1;                     /* '<S94>/algDD' */
   real_T algDD_o2;                     /* '<S94>/algDD' */
   real_T algDD_o1_p;
   real_T algDD_o2_f;
   real_T Gain1_m;                      /* '<Root>/Gain1' */
+  uint32_T timer3cn;                   /* '<Root>/Timer' */
   uint32_T Output;                     /* '<S16>/Output' */
 } B_GOPIO_T;
 
@@ -105,6 +106,7 @@ typedef struct {
 typedef struct {
   stm32cube_blocks_AnalogInput__T obj; /* '<S18>/Analog to Digital Converter' */
   stm32cube_blocks_PWMOutput_GO_T obj_e;/* '<S85>/PWM Output' */
+  stm32cube_blocks_TimerBlock_G_T obj_j;/* '<Root>/Timer' */
   struct {
     void *LoggedData;
   } Scope2_PWORK;                      /* '<Root>/Scope2' */
