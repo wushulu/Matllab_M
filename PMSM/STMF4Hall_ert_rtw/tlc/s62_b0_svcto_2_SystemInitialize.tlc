@@ -1,0 +1,46 @@
+%implements s62_b0_svcto_2_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* SystemInitialize for Merge: '<S67>/Merge' */
+/*@>496b79*/localB->/*@>497155*/Merge/*@>49150e*/ = /*@>496c38*/localP->/*@>497161*/Merge_InitialOutput;
+/* SystemInitialize for Merge: '<S67>/Merge1' */
+/*@>496b80*/localB->/*@>497158*/Merge1/*@>491510*/ = /*@>496c3f*/localP->/*@>497164*/Merge1_InitialOutput;
+/* SystemInitialize for Merge: '<S67>/Merge2' */
+/*@>496b87*/localB->/*@>49715b*/Merge2/*@>491512*/ = /*@>496c46*/localP->/*@>497167*/Merge2_InitialOutput;
+/* SystemInitialize for Merge: '<S67>/Merge3' */
+/*@>496b8e*/localB->/*@>49715e*/Merge3/*@>491514*/ = /*@>496c4d*/localP->/*@>49716a*/Merge3_InitialOutput;
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[2].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("SystemInitialize", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))
+%<SLibCG_AccessArg(2, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(2, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "SystemInitialize", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(2, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void STMF4Hall_ValidHalls_Init(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(2, 0, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("STMF4Hall_ValidHalls_Init", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>B_ValidHalls_STMF4Hall_T *localB\
+%assign comma = ", "
+%<comma>P_ValidHalls_STMF4Hall_T *localP\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 0, fcnProtoType)>
+%endfunction

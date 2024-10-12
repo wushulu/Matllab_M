@@ -5,7 +5,7 @@
  *
  * Model version                  : 1.19
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Fri Sep 27 23:32:46 2024
+ * C/C++ source code generated on : Wed Oct  9 11:43:38 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -22,10 +22,6 @@
 #include "stm_adc_ll.h"
 #include <stddef.h>
 #include "stm_timer_ll.h"
-#include "xcp.h"
-#include "ext_mode.h"
-
-extmodeSimulationTime_T currentTime = (extmodeSimulationTime_T) 0;
 
 /* Block signals (default storage) */
 B_GOPIO_T GOPIO_B;
@@ -186,40 +182,32 @@ static void GOPIO_SystemCore_setup_b(stm32cube_blocks_TimerBlock_G_T *obj)
 void GOPIO_step(void)
 {
   real_T rtb_Add1;
+  real_T rtb_Add2;
+  real_T rtb_Kc;
   real_T rtb_Min;
-  real_T rtb_Sum4;
-  real_T rtb_Sum6_tmp;
   real_T rtb_convert_pu;
   int32_T c;
-  uint32_T rtb_TmpRTBAtGainInport1;
+  uint32_T rtb_TmpRTBAtFunctionCallSubsyst;
   uint16_T rtb_Get_Integer;
   uint16_T rtb_Get_Integer_n;
 
-  /* Reset subsysRan breadcrumbs */
-  srClearBC(GOPIO_DW.IfActionSubsystem.IfActionSubsystem_SubsysRanBC);
-
-  /* Reset subsysRan breadcrumbs */
-  srClearBC(GOPIO_DW.IfActionSubsystem1.IfActionSubsystem1_SubsysRanBC);
-
-  /* RateTransition generated from: '<Root>/Gain' */
-  rtb_TmpRTBAtGainInport1 = GOPIO_B.Output;
+  /* RateTransition generated from: '<Root>/Function-Call Subsystem' */
+  rtb_TmpRTBAtFunctionCallSubsyst = GOPIO_B.Output;
 
   /* DataTypeConversion: '<Root>/Data Type Conversion' incorporates:
    *  Gain: '<Root>/Gain'
    */
-  rtb_Sum4 = (real_T)((uint64_T)GOPIO_P.Gain_Gain_o * rtb_TmpRTBAtGainInport1) *
-    1.4210854715202004E-14;
+  rtb_Kc = (real_T)((uint64_T)GOPIO_P.Gain_Gain_o *
+                    rtb_TmpRTBAtFunctionCallSubsyst) * 1.4210854715202004E-14;
 
-  /* Gain: '<Root>/Gain1' incorporates:
+  /* Gain: '<S11>/Gain' incorporates:
    *  DataTypeConversion: '<Root>/Data Type Conversion'
+   *  Gain: '<Root>/Gain1'
    */
-  GOPIO_B.Gain1_m = rtb_Sum4 * GOPIO_P.Gain1_Gain;
-
-  /* Gain: '<S11>/Gain' */
-  rtb_Min = GOPIO_P.Gain_Gain * GOPIO_B.Gain1_m;
+  GOPIO_B.indexing = rtb_Kc * GOPIO_P.Gain1_Gain * GOPIO_P.Gain_Gain;
 
   /* Gain: '<S26>/convert_pu' */
-  rtb_convert_pu = GOPIO_P.convert_pu_Gain * rtb_Min;
+  rtb_convert_pu = GOPIO_P.convert_pu_Gain * GOPIO_B.indexing;
 
   /* If: '<S26>/If' incorporates:
    *  Constant: '<S27>/Constant'
@@ -229,14 +217,14 @@ void GOPIO_step(void)
     /* Outputs for IfAction SubSystem: '<S26>/If Action Subsystem' incorporates:
      *  ActionPort: '<S28>/Action Port'
      */
-    GOPIO_IfActionSubsystem(rtb_convert_pu, &rtb_Add1);
+    GOPIO_IfActionSubsystem(rtb_convert_pu, &rtb_Min);
 
     /* End of Outputs for SubSystem: '<S26>/If Action Subsystem' */
   } else {
     /* Outputs for IfAction SubSystem: '<S26>/If Action Subsystem1' incorporates:
      *  ActionPort: '<S29>/Action Port'
      */
-    GOPIO_IfActionSubsystem1(rtb_convert_pu, &rtb_Add1);
+    GOPIO_IfActionSubsystem1(rtb_convert_pu, &rtb_Min);
 
     /* End of Outputs for SubSystem: '<S26>/If Action Subsystem1' */
   }
@@ -244,10 +232,10 @@ void GOPIO_step(void)
   /* End of If: '<S26>/If' */
 
   /* Gain: '<S23>/indexing' */
-  rtb_Add1 *= GOPIO_P.indexing_Gain;
+  rtb_Min *= GOPIO_P.indexing_Gain;
 
   /* DataTypeConversion: '<S23>/Get_Integer' */
-  rtb_convert_pu = trunc(rtb_Add1);
+  rtb_convert_pu = trunc(rtb_Min);
   if (rtIsNaN(rtb_convert_pu) || rtIsInf(rtb_convert_pu)) {
     rtb_convert_pu = 0.0;
   } else {
@@ -260,7 +248,7 @@ void GOPIO_step(void)
   /* End of DataTypeConversion: '<S23>/Get_Integer' */
 
   /* Gain: '<S97>/convert_pu' */
-  rtb_convert_pu = GOPIO_P.convert_pu_Gain_n * rtb_Min;
+  rtb_convert_pu = GOPIO_P.convert_pu_Gain_n * GOPIO_B.indexing;
 
   /* If: '<S97>/If' incorporates:
    *  Constant: '<S98>/Constant'
@@ -270,14 +258,14 @@ void GOPIO_step(void)
     /* Outputs for IfAction SubSystem: '<S97>/If Action Subsystem' incorporates:
      *  ActionPort: '<S99>/Action Port'
      */
-    GOPIO_IfActionSubsystem(rtb_convert_pu, &rtb_Min);
+    GOPIO_IfActionSubsystem(rtb_convert_pu, &GOPIO_B.indexing);
 
     /* End of Outputs for SubSystem: '<S97>/If Action Subsystem' */
   } else {
     /* Outputs for IfAction SubSystem: '<S97>/If Action Subsystem1' incorporates:
      *  ActionPort: '<S100>/Action Port'
      */
-    GOPIO_IfActionSubsystem1(rtb_convert_pu, &rtb_Min);
+    GOPIO_IfActionSubsystem1(rtb_convert_pu, &GOPIO_B.indexing);
 
     /* End of Outputs for SubSystem: '<S97>/If Action Subsystem1' */
   }
@@ -285,10 +273,10 @@ void GOPIO_step(void)
   /* End of If: '<S97>/If' */
 
   /* Gain: '<S95>/indexing' */
-  rtb_Min *= GOPIO_P.indexing_Gain_c;
+  GOPIO_B.indexing *= GOPIO_P.indexing_Gain_c;
 
   /* DataTypeConversion: '<S95>/Get_Integer' */
-  rtb_convert_pu = trunc(rtb_Min);
+  rtb_convert_pu = trunc(GOPIO_B.indexing);
   if (rtIsNaN(rtb_convert_pu) || rtIsInf(rtb_convert_pu)) {
     rtb_convert_pu = 0.0;
   } else {
@@ -301,53 +289,33 @@ void GOPIO_step(void)
   /* End of DataTypeConversion: '<S95>/Get_Integer' */
 
   /* Sin: '<Root>/Sine Wave' */
-  GOPIO_B.Ia = sin(rtb_Sum4 * GOPIO_P.SineWave_Freq + GOPIO_P.SineWave_Phase) *
+  rtb_Add1 = sin(rtb_Kc * GOPIO_P.SineWave_Freq + GOPIO_P.SineWave_Phase) *
     GOPIO_P.SineWave_Amp + GOPIO_P.SineWave_Bias;
 
   /* Sin: '<Root>/Sine Wave1' */
-  GOPIO_B.Ib = sin(rtb_Sum4 * GOPIO_P.SineWave1_Freq + GOPIO_P.SineWave1_Phase) *
+  rtb_Add2 = sin(rtb_Kc * GOPIO_P.SineWave1_Freq + GOPIO_P.SineWave1_Phase) *
     GOPIO_P.SineWave1_Amp + GOPIO_P.SineWave1_Bias;
 
   /* Sin: '<Root>/Sine Wave2' */
-  GOPIO_B.Ic = sin(rtb_Sum4 * GOPIO_P.SineWave2_Freq + GOPIO_P.SineWave2_Phase) *
+  rtb_Kc = sin(rtb_Kc * GOPIO_P.SineWave2_Freq + GOPIO_P.SineWave2_Phase) *
     GOPIO_P.SineWave2_Amp + GOPIO_P.SineWave2_Bias;
-
-  /* Gain: '<S10>/Gain1' incorporates:
-   *  Fcn: '<S10>/d'
-   *  Fcn: '<S10>/q'
-   */
-  GOPIO_B.Gain1[0] = ((sin(GOPIO_B.Gain1_m - 2.0943951023931953) * GOPIO_B.Ib +
-                       sin(GOPIO_B.Gain1_m) * GOPIO_B.Ia) + sin(GOPIO_B.Gain1_m
-    + 2.0943951023931953) * GOPIO_B.Ic) * GOPIO_P.Gain1_Gain_o;
-  GOPIO_B.Gain1[1] = ((cos(GOPIO_B.Gain1_m - 2.0943951023931953) * GOPIO_B.Ib +
-                       cos(GOPIO_B.Gain1_m) * GOPIO_B.Ia) + cos(GOPIO_B.Gain1_m
-    + 2.0943951023931953) * GOPIO_B.Ic) * GOPIO_P.Gain1_Gain_o;
-
-  /* Fcn: '<S10>/0' incorporates:
-   *  Sum: '<S12>/Sum'
-   */
-  rtb_convert_pu = (GOPIO_B.Ia + GOPIO_B.Ib) + GOPIO_B.Ic;
-
-  /* Gain: '<S10>/Gain1' incorporates:
-   *  Fcn: '<S10>/0'
-   */
-  GOPIO_B.Gain1[2] = rtb_convert_pu * 0.5 * GOPIO_P.Gain1_Gain_o;
 
   /* Gain: '<S12>/Kalphabeta0' incorporates:
    *  Gain: '<S12>/one_by_3'
    *  Gain: '<S12>/one_by_sqrt3_'
+   *  Sum: '<S12>/Sum'
    *  Sum: '<S12>/Sum1'
    *  Sum: '<S12>/Sum2'
    */
-  rtb_convert_pu = (GOPIO_B.Ia - rtb_convert_pu * GOPIO_P.one_by_3_Gain) *
-    GOPIO_P.Kalphabeta0_Gain[0];
-  GOPIO_B.Gain1_m = (GOPIO_B.Ib - GOPIO_B.Ic) * GOPIO_P.one_by_sqrt3_Gain *
+  rtb_convert_pu = (rtb_Add1 - ((rtb_Add1 + rtb_Add2) + rtb_Kc) *
+                    GOPIO_P.one_by_3_Gain) * GOPIO_P.Kalphabeta0_Gain[0];
+  rtb_Add2 = (rtb_Add2 - rtb_Kc) * GOPIO_P.one_by_sqrt3_Gain *
     GOPIO_P.Kalphabeta0_Gain[1];
 
   /* Sum: '<S95>/Sum2' incorporates:
    *  DataTypeConversion: '<S95>/Data Type Conversion1'
    */
-  rtb_Min -= (real_T)rtb_Get_Integer_n;
+  rtb_Kc = GOPIO_B.indexing - (real_T)rtb_Get_Integer_n;
 
   /* Selector: '<S95>/Lookup' incorporates:
    *  Constant: '<S95>/offset'
@@ -355,7 +323,7 @@ void GOPIO_step(void)
    *  Sum: '<S95>/Sum'
    *  Sum: '<S96>/Sum3'
    */
-  rtb_Sum4 = GOPIO_P.sine_table_values_Value[(int32_T)((uint32_T)
+  GOPIO_B.indexing = GOPIO_P.sine_table_values_Value[(int32_T)((uint32_T)
     GOPIO_P.offset_Value_h[1] + rtb_Get_Integer_n)];
 
   /* Sum: '<S96>/Sum4' incorporates:
@@ -366,8 +334,9 @@ void GOPIO_step(void)
    *  Sum: '<S95>/Sum'
    *  Sum: '<S96>/Sum3'
    */
-  rtb_Sum4 += (GOPIO_P.sine_table_values_Value[(int32_T)((uint32_T)
-    GOPIO_P.offset_Value_h[0] + rtb_Get_Integer_n)] - rtb_Sum4) * rtb_Min;
+  rtb_Add1 = (GOPIO_P.sine_table_values_Value[(int32_T)((uint32_T)
+    GOPIO_P.offset_Value_h[0] + rtb_Get_Integer_n)] - GOPIO_B.indexing) * rtb_Kc
+    + GOPIO_B.indexing;
 
   /* Selector: '<S95>/Lookup' incorporates:
    *  Constant: '<S95>/offset'
@@ -375,7 +344,7 @@ void GOPIO_step(void)
    *  Sum: '<S95>/Sum'
    *  Sum: '<S96>/Sum5'
    */
-  rtb_Sum6_tmp = GOPIO_P.sine_table_values_Value[(int32_T)((uint32_T)
+  GOPIO_B.indexing = GOPIO_P.sine_table_values_Value[(int32_T)((uint32_T)
     GOPIO_P.offset_Value_h[3] + rtb_Get_Integer_n)];
 
   /* Sum: '<S96>/Sum6' incorporates:
@@ -386,60 +355,36 @@ void GOPIO_step(void)
    *  Sum: '<S95>/Sum'
    *  Sum: '<S96>/Sum5'
    */
-  rtb_Min = (GOPIO_P.sine_table_values_Value[(int32_T)((uint32_T)
-              GOPIO_P.offset_Value_h[2] + rtb_Get_Integer_n)] - rtb_Sum6_tmp) *
-    rtb_Min + rtb_Sum6_tmp;
+  rtb_Kc = (GOPIO_P.sine_table_values_Value[(int32_T)((uint32_T)
+             GOPIO_P.offset_Value_h[2] + rtb_Get_Integer_n)] - GOPIO_B.indexing)
+    * rtb_Kc + GOPIO_B.indexing;
 
   /* Outputs for Atomic SubSystem: '<S9>/Two inputs CRL' */
   /* Switch: '<S101>/Switch' incorporates:
    *  Constant: '<S101>/Offset'
+   *  Product: '<S94>/acos'
+   *  Product: '<S94>/asin'
+   *  Product: '<S94>/bcos'
+   *  Product: '<S94>/bsin'
+   *  Sum: '<S94>/sum_Ds'
+   *  Sum: '<S94>/sum_Qs'
+   *  UnaryMinus: '<S101>/Unary_Minus'
    */
   if (GOPIO_P.Offset_Value_i > GOPIO_P.Switch_Threshold_i) {
-    /* AlgorithmDescriptorDelegate generated from: '<S94>/a16' incorporates:
-     *  Product: '<S94>/asin'
-     *  Product: '<S94>/bcos'
-     *  Sum: '<S94>/sum_Qs'
-     *  UnaryMinus: '<S101>/Unary_Minus'
-     */
-    GOPIO_B.algDD_o1 = -(GOPIO_B.Gain1_m * rtb_Min - rtb_convert_pu * rtb_Sum4);
-
-    /* AlgorithmDescriptorDelegate generated from: '<S94>/a16' incorporates:
-     *  Product: '<S94>/acos'
-     *  Product: '<S94>/bsin'
-     *  Sum: '<S94>/sum_Ds'
-     */
-    GOPIO_B.algDD_o2 = rtb_convert_pu * rtb_Min + GOPIO_B.Gain1_m * rtb_Sum4;
+    GOPIO_B.indexing = -(rtb_Add2 * rtb_Kc - rtb_convert_pu * rtb_Add1);
+    rtb_Add2 = rtb_convert_pu * rtb_Kc + rtb_Add2 * rtb_Add1;
   } else {
-    /* AlgorithmDescriptorDelegate generated from: '<S94>/a16' incorporates:
-     *  Product: '<S94>/acos'
-     *  Product: '<S94>/bsin'
-     *  Sum: '<S94>/sum_Ds'
-     */
-    GOPIO_B.algDD_o1 = rtb_convert_pu * rtb_Min + GOPIO_B.Gain1_m * rtb_Sum4;
-
-    /* AlgorithmDescriptorDelegate generated from: '<S94>/a16' incorporates:
-     *  Product: '<S94>/asin'
-     *  Product: '<S94>/bcos'
-     *  Sum: '<S94>/sum_Qs'
-     */
-    GOPIO_B.algDD_o2 = GOPIO_B.Gain1_m * rtb_Min - rtb_convert_pu * rtb_Sum4;
+    GOPIO_B.indexing = rtb_convert_pu * rtb_Kc + rtb_Add2 * rtb_Add1;
+    rtb_Add2 = rtb_Add2 * rtb_Kc - rtb_convert_pu * rtb_Add1;
   }
 
   /* End of Switch: '<S101>/Switch' */
   /* End of Outputs for SubSystem: '<S9>/Two inputs CRL' */
 
-  /* Constant: '<Root>/Constant4' */
-  GOPIO_B.Constant4 = GOPIO_P.Constant4_Value;
-
-  /* SignalConversion generated from: '<Root>/Mux' */
-  GOPIO_B.TmpSignalConversionAtTAQSigLogg[0] = GOPIO_B.algDD_o1;
-  GOPIO_B.TmpSignalConversionAtTAQSigLogg[1] = GOPIO_B.algDD_o2;
-  GOPIO_B.TmpSignalConversionAtTAQSigLogg[2] = GOPIO_B.Constant4;
-
   /* Sum: '<S23>/Sum2' incorporates:
    *  DataTypeConversion: '<S23>/Data Type Conversion1'
    */
-  rtb_Min = rtb_Add1 - (real_T)rtb_Get_Integer;
+  rtb_Kc = rtb_Min - (real_T)rtb_Get_Integer;
 
   /* Selector: '<S23>/Lookup' incorporates:
    *  Constant: '<S23>/offset'
@@ -447,7 +392,7 @@ void GOPIO_step(void)
    *  Sum: '<S23>/Sum'
    *  Sum: '<S25>/Sum3'
    */
-  rtb_Add1 = GOPIO_P.sine_table_values_Value_b[(int32_T)((uint32_T)
+  rtb_Min = GOPIO_P.sine_table_values_Value_b[(int32_T)((uint32_T)
     GOPIO_P.offset_Value[1] + rtb_Get_Integer)];
 
   /* Sum: '<S25>/Sum4' incorporates:
@@ -458,8 +403,8 @@ void GOPIO_step(void)
    *  Sum: '<S23>/Sum'
    *  Sum: '<S25>/Sum3'
    */
-  rtb_Add1 += (GOPIO_P.sine_table_values_Value_b[(int32_T)((uint32_T)
-    GOPIO_P.offset_Value[0] + rtb_Get_Integer)] - rtb_Add1) * rtb_Min;
+  rtb_Min += (GOPIO_P.sine_table_values_Value_b[(int32_T)((uint32_T)
+    GOPIO_P.offset_Value[0] + rtb_Get_Integer)] - rtb_Min) * rtb_Kc;
 
   /* Selector: '<S23>/Lookup' incorporates:
    *  Constant: '<S23>/offset'
@@ -478,134 +423,122 @@ void GOPIO_step(void)
    *  Sum: '<S23>/Sum'
    *  Sum: '<S25>/Sum5'
    */
-  rtb_Min = (GOPIO_P.sine_table_values_Value_b[(int32_T)((uint32_T)
-              GOPIO_P.offset_Value[2] + rtb_Get_Integer)] - rtb_convert_pu) *
-    rtb_Min + rtb_convert_pu;
+  rtb_Kc = (GOPIO_P.sine_table_values_Value_b[(int32_T)((uint32_T)
+             GOPIO_P.offset_Value[2] + rtb_Get_Integer)] - rtb_convert_pu) *
+    rtb_Kc + rtb_convert_pu;
 
   /* Outputs for Atomic SubSystem: '<S24>/Two inputs CRL' */
   /* Switch: '<S31>/Switch' incorporates:
+   *  AlgorithmDescriptorDelegate generated from: '<S94>/a16'
    *  Constant: '<S31>/Offset'
+   *  Product: '<S30>/dcos'
+   *  Product: '<S30>/dsin'
+   *  Product: '<S30>/qcos'
+   *  Product: '<S30>/qsin'
+   *  Sum: '<S30>/sum_alpha'
+   *  Sum: '<S30>/sum_beta'
+   *  UnaryMinus: '<S31>/Unary_Minus'
    */
   if (GOPIO_P.Offset_Value > GOPIO_P.Switch_Threshold) {
-    /* AlgorithmDescriptorDelegate generated from: '<S30>/a16' incorporates:
-     *  Product: '<S30>/dsin'
-     *  Product: '<S30>/qcos'
-     *  Sum: '<S30>/sum_beta'
-     */
-    GOPIO_B.algDD_o1_p = GOPIO_B.algDD_o2 * rtb_Min + GOPIO_B.algDD_o1 *
-      rtb_Add1;
+    /* Outputs for Atomic SubSystem: '<S9>/Two inputs CRL' */
+    /* AlgorithmDescriptorDelegate generated from: '<S94>/a16' */
+    rtb_convert_pu = GOPIO_B.indexing;
+    GOPIO_B.indexing = rtb_Add2 * rtb_Kc + GOPIO_B.indexing * rtb_Min;
+    rtb_Add2 = -(rtb_convert_pu * rtb_Kc - rtb_Add2 * rtb_Min);
 
-    /* AlgorithmDescriptorDelegate generated from: '<S30>/a16' incorporates:
-     *  Product: '<S30>/dcos'
-     *  Product: '<S30>/qsin'
-     *  Sum: '<S30>/sum_alpha'
-     *  UnaryMinus: '<S31>/Unary_Minus'
-     */
-    GOPIO_B.algDD_o2_f = -(GOPIO_B.algDD_o1 * rtb_Min - GOPIO_B.algDD_o2 *
-      rtb_Add1);
+    /* End of Outputs for SubSystem: '<S9>/Two inputs CRL' */
   } else {
-    /* AlgorithmDescriptorDelegate generated from: '<S30>/a16' incorporates:
-     *  Product: '<S30>/dcos'
-     *  Product: '<S30>/qsin'
-     *  Sum: '<S30>/sum_alpha'
-     */
-    GOPIO_B.algDD_o1_p = GOPIO_B.algDD_o1 * rtb_Min - GOPIO_B.algDD_o2 *
-      rtb_Add1;
+    /* Outputs for Atomic SubSystem: '<S9>/Two inputs CRL' */
+    /* AlgorithmDescriptorDelegate generated from: '<S94>/a16' */
+    rtb_convert_pu = GOPIO_B.indexing;
+    GOPIO_B.indexing = GOPIO_B.indexing * rtb_Kc - rtb_Add2 * rtb_Min;
+    rtb_Add2 = rtb_Add2 * rtb_Kc + rtb_convert_pu * rtb_Min;
 
-    /* AlgorithmDescriptorDelegate generated from: '<S30>/a16' incorporates:
-     *  Product: '<S30>/dsin'
-     *  Product: '<S30>/qcos'
-     *  Sum: '<S30>/sum_beta'
-     */
-    GOPIO_B.algDD_o2_f = GOPIO_B.algDD_o2 * rtb_Min + GOPIO_B.algDD_o1 *
-      rtb_Add1;
+    /* End of Outputs for SubSystem: '<S9>/Two inputs CRL' */
   }
 
   /* End of Switch: '<S31>/Switch' */
+
+  /* Gain: '<Root>/Gain2' incorporates:
+   *  AlgorithmDescriptorDelegate generated from: '<S30>/a16'
+   */
+  rtb_convert_pu = GOPIO_P.Gain2_Gain * GOPIO_B.indexing;
+
   /* End of Outputs for SubSystem: '<S24>/Two inputs CRL' */
 
-  /* SignalConversion generated from: '<Root>/Inverse Park Transform' */
-  GOPIO_B.TmpSignalConversionAtTAQSigLo_g[0] = GOPIO_B.algDD_o1_p;
-  GOPIO_B.TmpSignalConversionAtTAQSigLo_g[1] = GOPIO_B.algDD_o2_f;
-  GOPIO_B.TmpSignalConversionAtTAQSigLo_g[2] = GOPIO_B.Constant4;
-
-  /* Gain: '<Root>/Gain2' */
-  rtb_convert_pu = GOPIO_P.Gain2_Gain * GOPIO_B.TmpSignalConversionAtTAQSigLo_g
-    [0];
-
   /* Gain: '<S92>/Ka' */
-  GOPIO_B.Gain1_m = GOPIO_P.Ka_Gain * rtb_convert_pu;
+  rtb_Min = GOPIO_P.Ka_Gain * rtb_convert_pu;
 
   /* Gain: '<S92>/one_by_two' */
-  rtb_Min = GOPIO_P.one_by_two_Gain * rtb_convert_pu;
+  rtb_Kc = GOPIO_P.one_by_two_Gain * rtb_convert_pu;
 
+  /* Outputs for Atomic SubSystem: '<S24>/Two inputs CRL' */
   /* Gain: '<S92>/sqrt3_by_two' incorporates:
+   *  AlgorithmDescriptorDelegate generated from: '<S30>/a16'
    *  Gain: '<Root>/Gain2'
    */
-  rtb_convert_pu = GOPIO_P.Gain2_Gain * GOPIO_B.TmpSignalConversionAtTAQSigLo_g
-    [1] * GOPIO_P.sqrt3_by_two_Gain;
+  rtb_Add2 = GOPIO_P.Gain2_Gain * rtb_Add2 * GOPIO_P.sqrt3_by_two_Gain;
+
+  /* End of Outputs for SubSystem: '<S24>/Two inputs CRL' */
 
   /* Gain: '<S92>/Kb' incorporates:
    *  Sum: '<S92>/add_b'
    */
-  rtb_Add1 = (rtb_convert_pu - rtb_Min) * GOPIO_P.Kb_Gain;
+  rtb_Add1 = (rtb_Add2 - rtb_Kc) * GOPIO_P.Kb_Gain;
 
   /* Gain: '<S92>/Kc' incorporates:
    *  Sum: '<S92>/add_c'
    */
-  rtb_Min = ((0.0 - rtb_Min) - rtb_convert_pu) * GOPIO_P.Kc_Gain;
+  rtb_Kc = ((0.0 - rtb_Kc) - rtb_Add2) * GOPIO_P.Kc_Gain;
 
   /* Gain: '<S89>/one_by_two' incorporates:
    *  MinMax: '<S89>/Max'
    *  MinMax: '<S89>/Min'
    *  Sum: '<S89>/Add'
    */
-  rtb_convert_pu = (fmax(fmax(GOPIO_B.Gain1_m, rtb_Add1), rtb_Min) + fmin(fmin
-    (GOPIO_B.Gain1_m, rtb_Add1), rtb_Min)) * GOPIO_P.one_by_two_Gain_d;
+  rtb_Add2 = (fmax(fmax(rtb_Min, rtb_Add1), rtb_Kc) + fmin(fmin(rtb_Min,
+    rtb_Add1), rtb_Kc)) * GOPIO_P.one_by_two_Gain_d;
 
-  /* Gain: '<Root>/Gain4' incorporates:
+  /* MATLABSystem: '<S85>/PWM Output' incorporates:
    *  Constant: '<Root>/Constant'
+   *  Constant: '<Root>/Constant3'
    *  Gain: '<Root>/Gain3'
+   *  Gain: '<Root>/Gain4'
    *  Gain: '<S88>/Gain'
    *  Sum: '<Root>/Add'
    *  Sum: '<S88>/Add1'
    *  Sum: '<S88>/Add2'
    *  Sum: '<S88>/Add3'
    */
-  GOPIO_B.Gain4[0] = ((GOPIO_B.Gain1_m + rtb_convert_pu) * GOPIO_P.Gain_Gain_m *
-                      GOPIO_P.Gain3_Gain + GOPIO_P.Constant_Value_p) *
-    GOPIO_P.Gain4_Gain;
-  GOPIO_B.Gain4[1] = ((rtb_Add1 + rtb_convert_pu) * GOPIO_P.Gain_Gain_m *
-                      GOPIO_P.Gain3_Gain + GOPIO_P.Constant_Value_p) *
-    GOPIO_P.Gain4_Gain;
-  GOPIO_B.Gain4[2] = ((rtb_convert_pu + rtb_Min) * GOPIO_P.Gain_Gain_m *
-                      GOPIO_P.Gain3_Gain + GOPIO_P.Constant_Value_p) *
-    GOPIO_P.Gain4_Gain;
-
-  /* MATLABSystem: '<S85>/PWM Output' incorporates:
-   *  Constant: '<Root>/Constant3'
-   */
   rtb_convert_pu = rt_roundd_snf(GOPIO_P.Constant3_Value);
   if (rtb_convert_pu < 4.294967296E+9) {
     if (rtb_convert_pu >= 0.0) {
-      rtb_TmpRTBAtGainInport1 = (uint32_T)rtb_convert_pu;
+      rtb_TmpRTBAtFunctionCallSubsyst = (uint32_T)rtb_convert_pu;
     } else {
-      rtb_TmpRTBAtGainInport1 = 0U;
+      rtb_TmpRTBAtFunctionCallSubsyst = 0U;
     }
   } else {
-    rtb_TmpRTBAtGainInport1 = MAX_uint32_T;
+    rtb_TmpRTBAtFunctionCallSubsyst = MAX_uint32_T;
   }
 
-  rtb_TmpRTBAtGainInport1 = checkFrequencyAndDutyCycleLimits
-    (GOPIO_DW.obj_e.TimerHandle, rtb_TmpRTBAtGainInport1);
-  setFrequencyAccToInput(GOPIO_DW.obj_e.TimerHandle, rtb_TmpRTBAtGainInport1);
-  setDutyCycleInPercentageChannel1(GOPIO_DW.obj_e.TimerHandle, GOPIO_B.Gain4[0]);
-  setDutyCycleInPercentageChannel2(GOPIO_DW.obj_e.TimerHandle, GOPIO_B.Gain4[1]);
-  setDutyCycleInPercentageChannel3(GOPIO_DW.obj_e.TimerHandle, GOPIO_B.Gain4[2]);
+  rtb_TmpRTBAtFunctionCallSubsyst = checkFrequencyAndDutyCycleLimits
+    (GOPIO_DW.obj_e.TimerHandle, rtb_TmpRTBAtFunctionCallSubsyst);
+  setFrequencyAccToInput(GOPIO_DW.obj_e.TimerHandle,
+    rtb_TmpRTBAtFunctionCallSubsyst);
+  setDutyCycleInPercentageChannel1(GOPIO_DW.obj_e.TimerHandle,
+    GOPIO_P.Gain4_Gain * (GOPIO_P.Gain3_Gain * (GOPIO_P.Gain_Gain_m * (rtb_Min +
+    rtb_Add2)) + GOPIO_P.Constant_Value_p));
+  setDutyCycleInPercentageChannel2(GOPIO_DW.obj_e.TimerHandle,
+    GOPIO_P.Gain4_Gain * (GOPIO_P.Gain3_Gain * (GOPIO_P.Gain_Gain_m * (rtb_Add1
+    + rtb_Add2)) + GOPIO_P.Constant_Value_p));
+  setDutyCycleInPercentageChannel3(GOPIO_DW.obj_e.TimerHandle,
+    GOPIO_P.Gain4_Gain * (GOPIO_P.Gain3_Gain * (GOPIO_P.Gain_Gain_m * (rtb_Add2
+    + rtb_Kc)) + GOPIO_P.Constant_Value_p));
 
   /* End of MATLABSystem: '<S85>/PWM Output' */
+
   /* DiscretePulseGenerator: '<Root>/Pulse Generator' */
-  rtb_Add1 = (GOPIO_DW.clockTickCounter < GOPIO_P.PulseGenerator_Duty) &&
+  rtb_Min = (GOPIO_DW.clockTickCounter < GOPIO_P.PulseGenerator_Duty) &&
     (GOPIO_DW.clockTickCounter >= 0) ? GOPIO_P.PulseGenerator_Amp : 0.0;
   if (GOPIO_DW.clockTickCounter >= GOPIO_P.PulseGenerator_Period - 1.0) {
     GOPIO_DW.clockTickCounter = 0;
@@ -617,7 +550,7 @@ void GOPIO_step(void)
 
   /* MATLABSystem: '<S14>/Digital Port Write' */
   GOPIO_B.portNameLoc = GPIOA;
-  if (rtb_Add1 != 0.0) {
+  if (rtb_Min != 0.0) {
     c = 32;
   } else {
     c = 0;
@@ -629,68 +562,17 @@ void GOPIO_step(void)
   /* End of MATLABSystem: '<S14>/Digital Port Write' */
 
   /* MATLABSystem: '<Root>/Timer' */
-  GOPIO_B.timer3cn = getTimerCounterValue(GOPIO_DW.obj_j.TimerHandle);
-
-  /* Update absolute time for base rate */
-  /* The "clockTick0" counts the number of times the code of this task has
-   * been executed. The absolute time is the multiplication of "clockTick0"
-   * and "Timing.stepSize0". Size of "clockTick0" ensures timer will not
-   * overflow during the application lifespan selected.
-   */
-  GOPIO_M->Timing.taskTime0 =
-    ((time_T)(++GOPIO_M->Timing.clockTick0)) * GOPIO_M->Timing.stepSize0;
+  getTimerCounterValue(GOPIO_DW.obj_j.TimerHandle);
 }
 
 /* Model initialize function */
 void GOPIO_initialize(void)
 {
-  /* Registration code */
-  rtmSetTFinal(GOPIO_M, -1);
-  GOPIO_M->Timing.stepSize0 = 0.1;
-
-  /* External mode info */
-  GOPIO_M->Sizes.checksums[0] = (1598026308U);
-  GOPIO_M->Sizes.checksums[1] = (377478778U);
-  GOPIO_M->Sizes.checksums[2] = (1700691969U);
-  GOPIO_M->Sizes.checksums[3] = (1308357475U);
-
-  {
-    static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;
-    static RTWExtModeInfo rt_ExtModeInfo;
-    static const sysRanDType *systemRan[15];
-    GOPIO_M->extModeInfo = (&rt_ExtModeInfo);
-    rteiSetSubSystemActiveVectorAddresses(&rt_ExtModeInfo, systemRan);
-    systemRan[0] = &rtAlwaysEnabled;
-    systemRan[1] = &rtAlwaysEnabled;
-    systemRan[2] = (sysRanDType *)&GOPIO_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[3] = (sysRanDType *)&GOPIO_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[4] = (sysRanDType *)&GOPIO_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[5] = (sysRanDType *)
-      &GOPIO_DW.IfActionSubsystem.IfActionSubsystem_SubsysRanBC;
-    systemRan[6] = (sysRanDType *)
-      &GOPIO_DW.IfActionSubsystem1.IfActionSubsystem1_SubsysRanBC;
-    systemRan[7] = &rtAlwaysEnabled;
-    systemRan[8] = &rtAlwaysEnabled;
-    systemRan[9] = &rtAlwaysEnabled;
-    systemRan[10] = (sysRanDType *)
-      &GOPIO_DW.IfActionSubsystem_g.IfActionSubsystem_SubsysRanBC;
-    systemRan[11] = (sysRanDType *)
-      &GOPIO_DW.IfActionSubsystem1_f.IfActionSubsystem1_SubsysRanBC;
-    systemRan[12] = &rtAlwaysEnabled;
-    systemRan[13] = &rtAlwaysEnabled;
-    systemRan[14] = &rtAlwaysEnabled;
-    rteiSetModelMappingInfoPtr(GOPIO_M->extModeInfo,
-      &GOPIO_M->SpecialInfo.mappingInfo);
-    rteiSetChecksumsPtr(GOPIO_M->extModeInfo, GOPIO_M->Sizes.checksums);
-    rteiSetTPtr(GOPIO_M->extModeInfo, rtmGetTPtr(GOPIO_M));
-  }
-
   /* SystemInitialize for S-Function (HardwareInterrupt_sfun): '<S22>/Hardware Interrupt' incorporates:
    *  SubSystem: '<Root>/Function-Call Subsystem'
    */
 
   /* System initialize for function-call system: '<Root>/Function-Call Subsystem' */
-  GOPIO_M->Timing.clockTick1 = GOPIO_M->Timing.clockTick0;
 
   /* InitializeConditions for Sum: '<S19>/FixPt Sum1' incorporates:
    *  UnitDelay: '<S16>/Output'
@@ -757,6 +639,7 @@ void GOPIO_terminate(void)
   }
 
   /* End of Terminate for MATLABSystem: '<S85>/PWM Output' */
+
   /* Terminate for MATLABSystem: '<Root>/Timer' */
   if (!GOPIO_DW.obj_j.matlabCodegenIsDeleted) {
     GOPIO_DW.obj_j.matlabCodegenIsDeleted = true;
@@ -794,15 +677,11 @@ void ADC_IRQHandler(void)
     LL_ADC_ClearFlag_JEOS(ADC1);
     if (1 == runModel) {
       {
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(GOPIO_DW.FunctionCallSubsystem_SubsysRan);
-
         /* S-Function (HardwareInterrupt_sfun): '<S22>/Hardware Interrupt' */
 
         /* Output and update for function-call system: '<Root>/Function-Call Subsystem' */
         {
           uint16_T tmp[2];
-          GOPIO_M->Timing.clockTick1 = GOPIO_M->Timing.clockTick0;
 
           /* MATLABSystem: '<S18>/Analog to Digital Converter' */
           injectedReadADCIntr(GOPIO_DW.obj.ADCHandle, ADC_READ, &tmp[0]);
@@ -825,15 +704,10 @@ void ADC_IRQHandler(void)
           }
 
           /* End of Switch: '<S20>/FixPt Switch' */
-          GOPIO_DW.FunctionCallSubsystem_SubsysRan = 4;
         }
 
         /* End of Outputs for S-Function (HardwareInterrupt_sfun): '<S22>/Hardware Interrupt' */
       }
-
-      currentTime = (extmodeSimulationTime_T) ((GOPIO_M->Timing.clockTick1) *
-        0.1);
-      extmodeEvent(1,currentTime);
     }
   }
 

@@ -1,0 +1,61 @@
+%implements s62_b0_svcto_4_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%assign   SystemInitialize_open_ValidHalls_11_13 = ""
+%openfile SystemInitialize_open_ValidHalls_11_13
+
+/* SystemInitialize for IfAction SubSystem: '<S65>/Valid Halls' */
+%closefile SystemInitialize_open_ValidHalls_11_13
+
+%assign    SystemInitialize_body_ValidHalls_11_13 = ""
+%openfile  SystemInitialize_body_ValidHalls_11_13
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[6], "SystemInitialize",2)
+%if SLibCG_SystemFcnArgAccessed("STMF4Hall_ValidHalls_Init",6,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[49a7df*/",SLibCGIRGenReusableSysCall("STMF4Hall_ValidHalls_Init", ["%<_modelSS>", "&/*@>49a93a*/STMF4Hall_B./*@>49a939*/ValidHalls", "&/*@>49a94b*/STMF4Hall_P./*@>49a94a*/ValidHalls"], 6, 0, 4, 2, 4, 28),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[6]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+%endif
+%closefile SystemInitialize_body_ValidHalls_11_13
+
+%assign    SystemInitialize_close_ValidHalls_11_13 = ""
+%openfile  SystemInitialize_close_ValidHalls_11_13
+
+/* End of SystemInitialize for SubSystem: '<S65>/Valid Halls' */
+%closefile SystemInitialize_close_ValidHalls_11_13
+%<SLibCG_DumpSSCode(SystemInitialize_open_ValidHalls_11_13, SystemInitialize_body_ValidHalls_11_13, SystemInitialize_close_ValidHalls_11_13)>
+
+
+/* SystemInitialize for SignalConversion generated from: '<S4>/Out2' incorporates:
+ *  Constant: '<S4>/Constant'
+ */
+/*@>49a47f*/STMF4Hall_B./*@>49a8e6*/OutportBufferForOut2_e2/*@>4918b1*/ = /*@>49a4fa*/STMF4Hall_P./*@>49a8ef*/Constant_Value;
+/* SystemInitialize for Sum: '<S4>/Sum' incorporates:
+ *  Outport: '<S4>/Out1'
+ */
+/*@>49a485*/STMF4Hall_B./*@>49a8e9*/Sum_i/*@>4918ad*/ = /*@>49a500*/STMF4Hall_P./*@>49a8f2*/Out1_Y0;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 0, fcnProtoType)>
+%endfunction

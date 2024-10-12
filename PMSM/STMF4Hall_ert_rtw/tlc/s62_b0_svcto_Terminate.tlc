@@ -1,0 +1,91 @@
+%implements s62_b0_svcto_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcTerminateFcnOfS28B1 = OpaqueTLCBlockFcn("Terminate", 28, 1, 8, 8, 0)
+%assign tlcTerminateFcnOfS28B2 = OpaqueTLCBlockFcn("Terminate", 28, 2, 8, 8, 1)
+%assign tlcTerminateFcnOfS28B3 = OpaqueTLCBlockFcn("Terminate", 28, 3, 8, 8, 2)
+%assign tlcTerminateFcnOfS28B4 = OpaqueTLCBlockFcn("Terminate", 28, 4, 8, 8, 3)
+%assign tlcTerminateFcnOfS28B5 = OpaqueTLCBlockFcn("Terminate", 28, 5, 8, 8, 4)
+%assign tlcTerminateFcnOfS28B6 = OpaqueTLCBlockFcn("Terminate", 28, 6, 8, 8, 5)
+%assign tlcTerminateFcnOfS28B8 = OpaqueTLCBlockFcn("Terminate", 28, 8, 8, 8, 6)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B2 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 2, 8, 8, 7)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B3 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 3, 8, 8, 8)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B5 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 5, 8, 8, 9)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B6 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 6, 8, 8, 10)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B8 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 8, 8, 8, 11)
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B1)
+/* {S!d5159}Terminate for S-Function (HardwareInterrupt_sfun): '<S88>/Hardware Interrupt' */
+%<SLibCG_DumpSSCode("/*@[4ab6f5*/",tlcTerminateFcnOfS28B1,"/*@]*/")>\
+/* {E!d5159}End of Terminate for S-Function (HardwareInterrupt_sfun): '<S88>/Hardware Interrupt' */
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B2)
+
+/* {S!d5164}Terminate for ToAsyncQueueBlock generated from: '<Root>/Hall state' */
+%<SLibCG_DumpSSCode("/*@[4ab6f7*/",tlcTerminateFcnOfS28B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B3)
+/* {S!d5166}Terminate for ToAsyncQueueBlock generated from: '<Root>/Hall angle' */
+%<SLibCG_DumpSSCode("/*@[4ab6f9*/",tlcTerminateFcnOfS28B3,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B4)
+/* {S!d5161}Terminate for S-Function (HardwareInterrupt_sfun): '<S90>/Hardware Interrupt' */
+%<SLibCG_DumpSSCode("/*@[4ab6fb*/",tlcTerminateFcnOfS28B4,"/*@]*/")>\
+/* {E!d5161}End of Terminate for S-Function (HardwareInterrupt_sfun): '<S90>/Hardware Interrupt' */
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B5)
+
+/* {S!d5168}Terminate for ToAsyncQueueBlock generated from: '<Root>/RT6' */
+%<SLibCG_DumpSSCode("/*@[4ab6fd*/",tlcTerminateFcnOfS28B5,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B6)
+/* {S!d5170}Terminate for ToAsyncQueueBlock generated from: '<Root>/Multiport Switch' */
+%<SLibCG_DumpSSCode("/*@[4ab6ff*/",tlcTerminateFcnOfS28B6,"/*@]*/")>\
+%endif
+/* {S!d5172}Terminate for MATLABSystem: '<Root>/Timer1' */
+/*@>491f58*/if (!/*@<491f56*//*@>4aac01*/STMF4Hall_DW./*@>4acb70*/obj.matlabCodegenIsDeleted) {
+    /*@>4aac07*/STMF4Hall_DW./*@>4acb73*/obj./*@>4acb6d*/matlabCodegenIsDeleted/*@>491f55*/ = /*@>4a67cd*/true;
+    /*@>491f5e*/if ((/*@>4aac0d*/STMF4Hall_DW./*@>4acb76*/obj.isInitialized/*@>491f5d*/ == /*@>4a67e1*/1)/*@>491f77*/ && /*@>4aac13*/STMF4Hall_DW./*@>4acb79*/obj.isSetupComplete) {
+        /*@>4a9d14*/disableCounter(/*@>4aac19*/STMF4Hall_DW./*@>4acb7c*/obj.TimerHandle);
+        /*@>4a9d16*/disableTimerInterrupts(/*@>4aac1f*/STMF4Hall_DW./*@>4acb7f*/obj.TimerHandle, /*@>4a7d4f*/0);
+    }
+}
+/* {E!d5172}End of Terminate for MATLABSystem: '<Root>/Timer1' */
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B8)
+
+/* {S!d5174}Terminate for ToAsyncQueueBlock generated from: '<Root>/Timer1' */
+%<SLibCG_DumpSSCode("/*@[4ab701*/",tlcTerminateFcnOfS28B8,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B2)
+/* {S!d5176}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Hall state' */
+%<SLibCG_DumpSSCode("/*@[4ab703*/",tlcCleanupRuntimeResourcesFcnOfS28B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B3)
+/* {S!d5178}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Hall angle' */
+%<SLibCG_DumpSSCode("/*@[4ab705*/",tlcCleanupRuntimeResourcesFcnOfS28B3,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B5)
+/* {S!d5180}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/RT6' */
+%<SLibCG_DumpSSCode("/*@[4ab707*/",tlcCleanupRuntimeResourcesFcnOfS28B5,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B6)
+/* {S!d5182}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Multiport Switch' */
+%<SLibCG_DumpSSCode("/*@[4ab709*/",tlcCleanupRuntimeResourcesFcnOfS28B6,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B8)
+/* {S!d5184}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Timer1' */
+%<SLibCG_DumpSSCode("/*@[4ab70b*/",tlcCleanupRuntimeResourcesFcnOfS28B8,"/*@]*/")>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function TerminateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Terminate(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(8, 8, fcnProtoType)>
+%endfunction

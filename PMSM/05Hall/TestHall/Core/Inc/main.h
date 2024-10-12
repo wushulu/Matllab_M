@@ -86,9 +86,9 @@ void Error_Handler(void);
 void   MX_GPIO_Init(void);
 void   MX_DMA_Init(void);
 void   MX_USART2_UART_Init(void);
-void   MX_TIM3_Init(void);
 void   MX_ADC1_Init(void);
 void   MX_TIM1_Init(void);
+void   MX_TIM2_Init(void);
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

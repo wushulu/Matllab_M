@@ -5,7 +5,7 @@
  *
  * Model version                  : 1.19
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Fri Sep 27 23:32:46 2024
+ * C/C++ source code generated on : Wed Oct  9 11:43:38 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -793,11 +793,6 @@ P_GOPIO_T GOPIO_P = {
    * Referenced by: '<Root>/Sine Wave2'
    */
   3.6651914291880918,
-
-  /* Expression: K2
-   * Referenced by: '<S10>/Gain1'
-   */
-  0.66666666666666663,
 
   /* Expression: 1/3
    * Referenced by: '<S12>/one_by_3'

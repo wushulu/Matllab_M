@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'STMF4Hall'.
  *
- * Model version                  : 1.22
+ * Model version                  : 1.37
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Tue Oct  8 09:01:53 2024
+ * C/C++ source code generated on : Thu Oct 10 21:19:28 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -74,8 +74,6 @@ preprocessor word size checks.
 #endif
 
 /* Skipping ulong_long/long_long check: insufficient preprocessor integer range. */
-extern void STMF4Hall_HallValueof1(real32_T *rty_position,
-  P_HallValueof1_STMF4Hall_T *localP);
 extern void STMF4Hal_IfActionSubsystem6(int16_T *rty_direction, uint16_T
   *rty_sequence_check, P_IfActionSubsystem6_STMF4Hal_T *localP);
 extern void STMF4Hall_IfActionSubsystem(uint16_T *rty_Out1, uint16_T *rty_Out2,
@@ -90,6 +88,8 @@ extern void STMF4Hall_ValidHalls(uint16_T rtu_hallReading, uint16_T
 extern void Badhallglitchorwrongconnect(int16_T rtu_previous_direction, uint16_T
   *rty_inValidHall, int16_T *rty_direction, boolean_T
   *rty_directional_speed_valid_fla, P_Badhallglitchorwrongconnect_T *localP);
+extern void STMF4Hall_HallValueof1(real32_T *rty_position,
+  P_HallValueof1_STMF4Hall_T *localP);
 
 #endif                                 /* STMF4Hall_private_h_ */
 

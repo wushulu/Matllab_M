@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'STMF4Hall'.
  *
- * Model version                  : 1.22
+ * Model version                  : 1.37
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Tue Oct  8 09:01:53 2024
+ * C/C++ source code generated on : Thu Oct 10 21:19:28 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -121,10 +121,9 @@ int main(int argc, char **argv)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_USART2_UART_Init();
-  MX_TIM2_Init();
-  MX_TIM3_Init();
   MX_ADC1_Init();
   MX_TIM1_Init();
+  MX_TIM2_Init();
   rtmSetErrorStatus(STMF4Hall_M, 0);
 
   /* Parse External Mode command line arguments */

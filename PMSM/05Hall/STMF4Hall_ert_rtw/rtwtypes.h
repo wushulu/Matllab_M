@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'STMF4Hall'.
  *
- * Model version                  : 1.22
+ * Model version                  : 1.37
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Tue Oct  8 09:01:53 2024
+ * C/C++ source code generated on : Thu Oct 10 21:19:28 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M

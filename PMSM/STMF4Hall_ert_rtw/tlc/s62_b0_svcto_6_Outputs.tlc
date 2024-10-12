@@ -1,0 +1,135 @@
+%implements s62_b0_svcto_6_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+uint32_T pinReadLoc;
+uint32_T pinReadLoc_e;
+uint32_T pinReadLoc_p;
+uint16_T rtb_Merge;
+boolean_T rtb_Merge3;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+%<SLibGenerateExtModeOutput(system)>
+/* {S!d5060}MATLABSystem: '<S32>/Digital Port Read' */
+/*@>49f282*/pinReadLoc/*@>491dc8*/ = /*@>4a018c*/LL_GPIO_ReadInputPort(/*@>49f280*/GPIOC);
+/* {S!d5062}MATLABSystem: '<S34>/Digital Port Read' */
+/*@>49f286*/pinReadLoc_p/*@>491de2*/ = /*@>4a018e*/LL_GPIO_ReadInputPort(/*@>49f284*/GPIOC);
+/* {S!d5064}MATLABSystem: '<S36>/Digital Port Read' */
+/*@>49f28a*/pinReadLoc_e/*@>491dfc*/ = /*@>4a0190*/LL_GPIO_ReadInputPort(/*@>49f288*/GPIOC);
+/* {S!d5066}Sum: '<S13>/Sum' incorporates:
+ *  DataStoreWrite: '<S2>/Data Store Write'
+ *  Gain: '<S13>/Gain'
+ *  Gain: '<S13>/Gain1'
+ *  Gain: '<S13>/Gain2'
+ *  MATLABSystem: '<S32>/Digital Port Read'
+ *  MATLABSystem: '<S34>/Digital Port Read'
+ *  MATLABSystem: '<S36>/Digital Port Read'
+ * */
+/*@>4a0523*/STMF4Hall_DW./*@>4a0a02*/GlobalHallState/*@>49286e*/ = /*@>49facc*/(uint8_T)((/*@>49fac3*/(uint32_T)((/*@>49f2b7*/pinReadLoc/*@>49f36e*/ & /*@>49f2b9*/1024U)/*@>49e364*/ != /*@>49f2ba*/0U/*@>49e364*/ ? /*@>4a04c4*/STMF4Hall_P./*@>4a09ed*/Gain_Gain_a/*@>49f7c9*/ >> /*@>49f372*/5 : /*@>49f36b*/0)/*@>49f35d*/ + /*@>49fac7*/(uint32_T)((/*@>49f2bb*/pinReadLoc_p/*@>49f383*/ & /*@>49f2bd*/2048U)/*@>49e36a*/ != /*@>49f2be*/0U/*@>49e36a*/ ? /*@>4a04ca*/STMF4Hall_P./*@>4a09f0*/Gain1_Gain_i/*@>49f7ca*/ >> /*@>49f387*/6 : /*@>49f380*/0))/*@>49f350*/ + /*@>49facb*/(uint32_T)((/*@>49f2bf*/pinReadLoc_e/*@>49f398*/ & /*@>49f2c1*/4096U)/*@>49e370*/ != /*@>49f2c2*/0U/*@>49e370*/ ? /*@>4a04d0*/STMF4Hall_P./*@>4a09f3*/Gain2_Gain_f/*@>49f7cb*/ >> /*@>49f39c*/7 : /*@>49f395*/0));
+/* {S!d5072}SwitchCase: '<S12>/Detects if the halls reading is valid' incorporates:
+ *  DataStoreWrite: '<S2>/Data Store Write'
+ *  DataTypeConversion: '<S12>/Data Type Conversion1'
+ */
+switch (/*@>4a0529*/STMF4Hall_DW./*@>4a0a05*/GlobalHallState) {
+  case 5:
+  case 4:
+  case 6:
+  case 2:
+  case 3:
+  case 1:
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[6], "Output",4)
+    /* {S!d5057}Outputs for IfAction SubSystem: '<S15>/Valid Halls' incorporates:
+ *  ActionPort: '<S17>/Action Port'
+ */
+    /* {S!d5070}DataStoreWrite: '<S2>/Data Store Write1' incorporates:
+ *  DataStoreRead: '<S2>/Data Store Read'
+ *  DataStoreRead: '<S2>/Data Store Read2'
+ *  DataTypeConversion: '<S12>/Data Type Conversion2'
+ */
+%if SLibCG_SystemFcnArgAccessed("STMF4Hall_ValidHalls",6,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[4a0807*/",SLibCGIRGenReusableSysCall("STMF4Hall_ValidHalls", ["%<_modelSS>", "/*@>4a0a9f*/(uint16_T)/*@>4a0aa1*/STMF4Hall_DW./*@>4a0aa0*/GlobalHallState", "/*@>4a0ab0*/(uint16_T)/*@>4a0ab2*/STMF4Hall_DW./*@>4a0ab1*/GlobalHallState", "/*@>4a0ac2*/STMF4Hall_DW./*@>4a0ac1*/GlobalDirection", "&/*@>4a0ad2*/rtb_Merge3", "&/*@>4a0ae2*/STMF4Hall_DW./*@>4a0ae1*/GlobalDirection", "&/*@>4a0af2*/rtb_Merge", "&/*@>4a0b02*/STMF4Hall_B./*@>4a0b01*/ValidHalls_d", "&/*@>4a0b13*/STMF4Hall_DW./*@>4a0b12*/ValidHalls_d", "&/*@>4a0b24*/STMF4Hall_P./*@>4a0b23*/ValidHalls_d"], 6, 2, 6, 4, 6, 28),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[6]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+    /* {E!d5057}End of Outputs for SubSystem: '<S15>/Valid Halls' */
+%endif
+    break;
+  default:
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[7], "Output",4)
+    /* {S!d5055}Outputs for IfAction SubSystem: '<S15>/Bad hall (glitch or wrong connection)' incorporates:
+ *  ActionPort: '<S16>/Action Port'
+ */
+    /* {S!d5068}DataStoreWrite: '<S2>/Data Store Write1' incorporates:
+ *  DataStoreRead: '<S2>/Data Store Read2'
+ */
+%if SLibCG_SystemFcnArgAccessed("Badhallglitchorwrongconnect",7,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[4a0806*/",SLibCGIRGenReusableSysCall("Badhallglitchorwrongconnect", ["%<_modelSS>", "/*@>4a0b70*/STMF4Hall_DW./*@>4a0b6f*/GlobalDirection", "&/*@>4a0b80*/rtb_Merge", "&/*@>4a0b90*/STMF4Hall_DW./*@>4a0b8f*/GlobalDirection", "&/*@>4a0ba0*/rtb_Merge3", "&/*@>4a0bb0*/STMF4Hall_P./*@>4a0baf*/Badhallglitchorwrongconnectio_a"], 7, 2, 6, 4, 6, 28),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[7]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+    /* {E!d5055}End of Outputs for SubSystem: '<S15>/Bad hall (glitch or wrong connection)' */
+%endif
+    break;
+}
+/* {E!d5072}End of SwitchCase: '<S12>/Detects if the halls reading is valid' */
+
+/* {S!d5074}Sum: '<S2>/Sum' incorporates:
+ *  DataStoreRead: '<S2>/Data Store Read1'
+ *  DataTypeConversion: '<S2>/Data Type Conversion'
+ *  DataTypeConversion: '<S2>/Data Type Conversion1'
+ */
+/*@>4a044f*/STMF4Hall_B./*@>4a09d8*/Sum/*@>492873*/ = /*@>49f30a*/(int16_T)(/*@>49f31e*/(int16_T)/*@>4a0455*/STMF4Hall_B./*@>4a09db*/time3_gw/*@>49f2fe*/ - /*@>49f322*/(int16_T)/*@>4a0559*/STMF4Hall_DW./*@>4a0a1d*/Timercntprev);
+/* {S!d5076}DataTypeConversion: '<S12>/counterSize' incorporates:
+ *  DataStoreWrite: '<S2>/Data Store Write2'
+ */
+/*@>4a055f*/STMF4Hall_DW./*@>4a0a20*/GlobalSpeedCount/*@>491ced*/ = /*@>49f2f7*/(uint16_T)/*@>4a045b*/STMF4Hall_B./*@>4a09de*/Sum;
+/* {S!d5078}DataTypeConversion: '<S15>/Data Type Conversion' incorporates:
+ *  DataStoreWrite: '<S2>/Data Store Write3'
+ */
+/*@>4a0565*/STMF4Hall_DW./*@>4a0a23*/GlobalSpeedValidity/*@>491cf2*/ = /*@>49f262*/rtb_Merge3;
+/* {S!d5080}DataStoreWrite: '<S2>/Data Store Write4' incorporates:
+ *  Constant: '<S12>/Constant'
+ */
+/*@>4a056b*/STMF4Hall_DW./*@>4a0a26*/HallStateChangeFlag/*@>491cf6*/ = /*@>4a04e4*/STMF4Hall_P./*@>4a09fc*/Constant_Value_b;
+/* {S!d5082}DataStoreWrite: '<S2>/Data Store Write5' */
+/*@>4a0571*/STMF4Hall_DW./*@>4a0a29*/HallAcapture/*@>491cf8*/ = /*@>4a0461*/STMF4Hall_B./*@>4a09e1*/Sum;
+/* {S!d5084}DataStoreWrite: '<S14>/Data Store Write2' */
+/*@>4a0577*/STMF4Hall_DW./*@>4a0a2c*/Timehall/*@>491cfa*/ = /*@>4a0467*/STMF4Hall_B./*@>4a09e4*/Sum;
+/* {S!d5086}DataStoreWrite: '<S14>/Data Store Write1' */
+/*@>4a057d*/STMF4Hall_DW./*@>4a0a2f*/Timercntprev/*@>491cfc*/ = /*@>4a046d*/STMF4Hall_B./*@>4a09e7*/time3_gw;
+/* {S!d5088}SignalConversion generated from: '<S2>/Out2' incorporates:
+ *  Constant: '<S2>/Constant'
+ */
+/*@>4a0473*/STMF4Hall_B./*@>4a09ea*/OutportBufferForOut2/*@>491d01*/ = /*@>4a04ea*/STMF4Hall_P./*@>4a09ff*/Constant_Value_f;
+STMF4Hall_DW.HallsensorA_SubsysRanBC = 4;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput4LocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 1, fcnProtoType)>
+%endfunction

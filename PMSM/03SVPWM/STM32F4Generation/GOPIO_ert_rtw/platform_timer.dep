@@ -44,8 +44,6 @@ platform_timer.o: \
  D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h \
  D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO.h \
  D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h \
- D:/software/MATLAB2024a/simulink/include/rtw_extmode.h \
- D:/software/MATLAB2024a/simulink/include/sysran_types.h \
  D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rt_nonfinite.h \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_nvic.h \
  D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO_types.h \
@@ -100,8 +98,6 @@ D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx
 D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h:
 D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO.h:
 D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h:
-D:/software/MATLAB2024a/simulink/include/rtw_extmode.h:
-D:/software/MATLAB2024a/simulink/include/sysran_types.h:
 D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rt_nonfinite.h:
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_nvic.h:
 D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO_types.h:

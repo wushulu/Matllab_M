@@ -1,0 +1,35 @@
+%implements s62_b0_svcto_7_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibGenerateExtModeOutput(system)>
+/* {S!d5096}UnitDelay: '<S9>/Output' */
+/*@>4a1aa5*/STMF4Hall_B./*@>4a1d33*/Output/*@>491e33*/ = /*@>4a1b74*/STMF4Hall_DW./*@>4a1d42*/Output_DSTATE;
+/* {S!d5098}Sum: '<S10>/FixPt Sum1' incorporates:
+ *  Constant: '<S10>/FixPt Constant'
+ */
+/*@>4a1b7a*/STMF4Hall_DW./*@>4a1d45*/Output_DSTATE/*@>492a09*/ = /*@>4a118c*/(uint16_T)(/*@>4a14b6*/(uint32_T)/*@>4a1aab*/STMF4Hall_B./*@>4a1d36*/Output/*@>4a1188*/ + /*@>4a1b13*/STMF4Hall_P./*@>4a1d39*/FixPtConstant_Value);
+/* {S!d5102}Switch: '<S11>/FixPt Switch' */
+/*@>4a1382*/if (/*@>4a1b80*/STMF4Hall_DW./*@>4a1d48*/Output_DSTATE/*@>4a0d73*/ > /*@>4a1b19*/STMF4Hall_P./*@>4a1d3c*/WrapToZero_Threshold) {
+    /* {S!d5100}Sum: '<S10>/FixPt Sum1' incorporates:
+ *  Constant: '<S11>/Constant'
+ *  UnitDelay: '<S9>/Output'
+ */
+    /*@>4a1b86*/STMF4Hall_DW./*@>4a1d4b*/Output_DSTATE/*@>4a1385*/ = /*@>4a1b1f*/STMF4Hall_P./*@>4a1d3f*/Constant_Value_o;
+}
+/* {E!d5102}End of Switch: '<S11>/FixPt Switch' */
+STMF4Hall_DW.ADCSIC_SubsysRanBC = 4;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput5LocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(7, 2, fcnProtoType)>
+%endfunction

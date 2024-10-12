@@ -5,6 +5,7 @@ STMF4Hall_data.o: \
  D:/software/MATLAB2024a/simulink/include/rtw_extmode.h \
  D:/Work/Matlab/PMSM/05Hall/STMF4Hall_ert_rtw/rtwtypes.h \
  D:/software/MATLAB2024a/simulink/include/sysran_types.h \
+ D:/Work/Matlab/PMSM/05Hall/STMF4Hall_ert_rtw/rt_nonfinite.h \
  D:/Work/Matlab/PMSM/05Hall/TestHall/Core/Inc/main.h \
  D:/Work/Matlab/PMSM/05Hall/TestHall/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  D:/Work/Matlab/PMSM/05Hall/TestHall/Core/Inc/stm32f4xx_hal_conf.h \
@@ -47,8 +48,9 @@ STMF4Hall_data.o: \
  D:/Work/Matlab/PMSM/05Hall/TestHall/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_nvic.h \
  D:/Work/Matlab/PMSM/05Hall/STMF4Hall_ert_rtw/STMF4Hall_types.h \
- C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_timer_ll.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_adc_ll.h \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_types.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_timer_ll.h \
  D:/Work/Matlab/PMSM/05Hall/STMF4Hall_ert_rtw/MW_target_hardware_resources.h \
  D:/software/MATLAB2024a/toolbox/target/shared/armcortexmbase/scheduler/include/SysTickScheduler.h \
  D:/software/MATLAB2024a/toolbox/target/shared/armcortexmbase/scheduler/include/arm_cortex_m_multitasking.h \
@@ -58,6 +60,7 @@ D:/Work/Matlab/PMSM/05Hall/STMF4Hall_ert_rtw/rtwtypes.h:
 D:/software/MATLAB2024a/simulink/include/rtw_extmode.h:
 D:/Work/Matlab/PMSM/05Hall/STMF4Hall_ert_rtw/rtwtypes.h:
 D:/software/MATLAB2024a/simulink/include/sysran_types.h:
+D:/Work/Matlab/PMSM/05Hall/STMF4Hall_ert_rtw/rt_nonfinite.h:
 D:/Work/Matlab/PMSM/05Hall/TestHall/Core/Inc/main.h:
 D:/Work/Matlab/PMSM/05Hall/TestHall/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 D:/Work/Matlab/PMSM/05Hall/TestHall/Core/Inc/stm32f4xx_hal_conf.h:
@@ -100,8 +103,9 @@ D:/Work/Matlab/PMSM/05Hall/TestHall/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_l
 D:/Work/Matlab/PMSM/05Hall/TestHall/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h:
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_nvic.h:
 D:/Work/Matlab/PMSM/05Hall/STMF4Hall_ert_rtw/STMF4Hall_types.h:
-C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_timer_ll.h:
+C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_adc_ll.h:
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_types.h:
+C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_timer_ll.h:
 D:/Work/Matlab/PMSM/05Hall/STMF4Hall_ert_rtw/MW_target_hardware_resources.h:
 D:/software/MATLAB2024a/toolbox/target/shared/armcortexmbase/scheduler/include/SysTickScheduler.h:
 D:/software/MATLAB2024a/toolbox/target/shared/armcortexmbase/scheduler/include/arm_cortex_m_multitasking.h:

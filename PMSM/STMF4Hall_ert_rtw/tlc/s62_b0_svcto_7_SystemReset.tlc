@@ -1,0 +1,21 @@
+%implements s62_b0_svcto_7_SystemReset "C"
+
+%function SystemReset(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* InitializeConditions for Sum: '<S10>/FixPt Sum1' incorporates:
+ *  UnitDelay: '<S9>/Output'
+ */
+/*@>4a1b6e*/STMF4Hall_DW./*@>4a1cef*/Output_DSTATE/*@>491e6d*/ = /*@>4a1b0d*/STMF4Hall_P./*@>4a1cec*/Output_InitialCondition;
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function SystemResetFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemReset(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(7, 1, fcnProtoType)>
+%endfunction

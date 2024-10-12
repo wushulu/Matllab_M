@@ -1,0 +1,222 @@
+%implements s62_b0_svcto_ModelInitialize "C"
+
+%function ModelInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+uint32_T pinReadLoc;
+uint32_T pinReadLoc_0;
+uint32_T pinReadLoc_1;
+%closefile localVarDecl
+%assign tlcSetupRuntimeResourcesFcnOfS28B2 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 2, 8, 9, 0)
+%assign tlcSetupRuntimeResourcesFcnOfS28B3 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 3, 8, 9, 1)
+%assign tlcSetupRuntimeResourcesFcnOfS28B5 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 5, 8, 9, 2)
+%assign tlcSetupRuntimeResourcesFcnOfS28B6 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 6, 8, 9, 3)
+%assign tlcSetupRuntimeResourcesFcnOfS28B8 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 8, 8, 9, 4)
+%assign tlcStartFcnOfS28B2 = OpaqueTLCBlockFcn("Start", 28, 2, 8, 9, 5)
+%assign tlcStartFcnOfS28B3 = OpaqueTLCBlockFcn("Start", 28, 3, 8, 9, 6)
+%assign tlcStartFcnOfS28B5 = OpaqueTLCBlockFcn("Start", 28, 5, 8, 9, 7)
+%assign tlcStartFcnOfS28B6 = OpaqueTLCBlockFcn("Start", 28, 6, 8, 9, 8)
+%assign tlcStartFcnOfS28B8 = OpaqueTLCBlockFcn("Start", 28, 8, 8, 9, 9)
+%assign tlcStartFcnOfS28B4 = OpaqueTLCBlockFcn("Start", 28, 4, 8, 9, 10)
+%assign tlcSystemInitializeFcnOfS28B4 = OpaqueTLCBlockFcn("SystemInitialize", 28, 4, 8, 9, 11)
+%assign tlcStartFcnOfS28B1 = OpaqueTLCBlockFcn("Start", 28, 1, 8, 9, 12)
+%assign tlcSystemInitializeFcnOfS28B1 = OpaqueTLCBlockFcn("SystemInitialize", 28, 1, 8, 9, 13)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B2)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Hall state' */
+%<SLibCG_DumpSSCode("/*@[4ab7d6*/",tlcSetupRuntimeResourcesFcnOfS28B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B3)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Hall angle' */
+%<SLibCG_DumpSSCode("/*@[4ab7d8*/",tlcSetupRuntimeResourcesFcnOfS28B3,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B5)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/RT6' */
+%<SLibCG_DumpSSCode("/*@[4ab7da*/",tlcSetupRuntimeResourcesFcnOfS28B5,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B6)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Multiport Switch' */
+%<SLibCG_DumpSSCode("/*@[4ab7dc*/",tlcSetupRuntimeResourcesFcnOfS28B6,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B8)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Timer1' */
+%<SLibCG_DumpSSCode("/*@[4ab7de*/",tlcSetupRuntimeResourcesFcnOfS28B8,"/*@]*/")>\
+%endif
+%<SLibCGIRDumpSystemUserCode(28, "Start", "Header")>\
+%<SLibCGIRDumpSystemUserCode(28, "Start", "Body")>\
+%if !WHITE_SPACE(tlcStartFcnOfS28B2)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Hall state' */
+%<SLibCG_DumpSSCode("/*@[4ab7e2*/",tlcStartFcnOfS28B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B3)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Hall angle' */
+%<SLibCG_DumpSSCode("/*@[4ab7e4*/",tlcStartFcnOfS28B3,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B5)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/RT6' */
+%<SLibCG_DumpSSCode("/*@[4ab7e6*/",tlcStartFcnOfS28B5,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B6)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Multiport Switch' */
+%<SLibCG_DumpSSCode("/*@[4ab7e8*/",tlcStartFcnOfS28B6,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B8)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Timer1' */
+%<SLibCG_DumpSSCode("/*@[4ab7ea*/",tlcStartFcnOfS28B8,"/*@]*/")>\
+%endif
+/* Start for DataStoreMemory: '<Root>/Data Store Memory' */
+/*@>4aac25*/STMF4Hall_DW./*@>4ace18*/GlobalHallState/*@>491fe1*/ = /*@>4aaab3*/STMF4Hall_P./*@>4acde8*/DataStoreMemory_InitialValue;
+/* Start for DataStoreMemory: '<Root>/Data Store Memory12' */
+/*@>4aac2b*/STMF4Hall_DW./*@>4ace1b*/HallCcapture/*@>491fd8*/ = /*@>4aaab9*/STMF4Hall_P./*@>4acdeb*/DataStoreMemory12_InitialValue;
+/* Start for DataStoreMemory: '<Root>/Data Store Memory2' */
+/*@>4aac31*/STMF4Hall_DW./*@>4ace1e*/Timehall/*@>491fe4*/ = /*@>4aaabf*/STMF4Hall_P./*@>4acdee*/DataStoreMemory2_InitialValue;
+/* Start for DataStoreMemory: '<Root>/Data Store Memory3' */
+/*@>4aac37*/STMF4Hall_DW./*@>4ace21*/Timercntprev/*@>491fe7*/ = /*@>4aaac5*/STMF4Hall_P./*@>4acdf1*/DataStoreMemory3_InitialValue;
+/* Start for DataStoreMemory: '<Root>/Data Store Memory5' */
+/*@>4aac3d*/STMF4Hall_DW./*@>4ace24*/GlobalDirection/*@>491fea*/ = /*@>4aaacb*/STMF4Hall_P./*@>4acdf4*/DataStoreMemory5_InitialValue;
+/* Start for DataStoreMemory: '<Root>/Data Store Memory6' */
+/*@>4aac43*/STMF4Hall_DW./*@>4ace27*/GlobalSpeedCount/*@>491fed*/ = /*@>4aaad1*/STMF4Hall_P./*@>4acdf7*/DataStoreMemory6_InitialValue;
+/* Start for DataStoreMemory: '<Root>/Data Store Memory7' */
+/*@>4aac49*/STMF4Hall_DW./*@>4ace2a*/GlobalSpeedValidity/*@>491ff0*/ = /*@>4aaad7*/STMF4Hall_P./*@>4acdfa*/DataStoreMemory7_InitialValue;
+/* Start for DataStoreMemory: '<Root>/Data Store Memory8' */
+/*@>4aac4f*/STMF4Hall_DW./*@>4ace2d*/HallStateChangeFlag/*@>491ff3*/ = /*@>4aaadd*/STMF4Hall_P./*@>4acdfd*/DataStoreMemory8_InitialValue;
+/* Start for DataStoreMemory: '<Root>/Data Store Memory11' */
+/*@>4aac55*/STMF4Hall_DW./*@>4ace30*/HallBcapture/*@>491fda*/ = /*@>4aaae3*/STMF4Hall_P./*@>4ace00*/DataStoreMemory11_InitialValue;
+/* Start for DataStoreMemory: '<Root>/Data Store Memory10' */
+/*@>4aac5b*/STMF4Hall_DW./*@>4ace33*/HallAcapture/*@>491fdc*/ = /*@>4aaae9*/STMF4Hall_P./*@>4ace03*/DataStoreMemory10_InitialValue;
+%<SLibCGIRDumpSystemUserCode(28, "Start", "Trailer")>\
+/* InitializeConditions for RateTransition generated from: '<Root>/Hall sensor B' */
+STMF4Hall_DW.TmpRTBAtHallsensorBInport1_Buff/*@>4920d6*/ = /*@>4aaaef*/STMF4Hall_P./*@>4ace06*/TmpRTBAtHallsensorBInport1_Init;
+/* InitializeConditions for RateTransition generated from: '<Root>/Hall sensor C' */
+STMF4Hall_DW.TmpRTBAtHallsensorCInport1_Buff/*@>4920d9*/ = /*@>4aaaf5*/STMF4Hall_P./*@>4ace09*/TmpRTBAtHallsensorCInport1_Init;
+/* InitializeConditions for RateTransition generated from: '<Root>/Hall sensor A' */
+STMF4Hall_DW.time3_Buffer0/*@>4920dc*/ = /*@>4aaafb*/STMF4Hall_P./*@>4ace0c*/time3_InitialCondition;
+%assign   SystemInitialize_open_HardwareInterrupt_k_28_11 = ""
+%openfile SystemInitialize_open_HardwareInterrupt_k_28_11
+
+/* SystemInitialize for S-Function (HardwareInterrupt_sfun): '<S90>/Hardware Interrupt' incorporates:
+ *  SubSystem: '<Root>/ADC SIC'
+ */
+%closefile SystemInitialize_open_HardwareInterrupt_k_28_11
+
+%assign    SystemInitialize_body_HardwareInterrupt_k_28_11 = ""
+%openfile  SystemInitialize_body_HardwareInterrupt_k_28_11
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "SystemInitialize",0)
+%<SLibCG_DumpSSCode("/*@[4ab7f4*/",SLibCGIRGenReusableSysCall("SystemInitialize", [], 21, 0, 4, 0, 19, 28),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[21]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+%<SLibCG_DumpSSCode("/*@[4ab7ed*/",tlcStartFcnOfS28B4,"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[4ab7ef*/",tlcSystemInitializeFcnOfS28B4,"/*@]*/")>\
+%closefile SystemInitialize_body_HardwareInterrupt_k_28_11
+
+%assign    SystemInitialize_close_HardwareInterrupt_k_28_11 = ""
+%openfile  SystemInitialize_close_HardwareInterrupt_k_28_11
+
+/* End of SystemInitialize for S-Function (HardwareInterrupt_sfun): '<S90>/Hardware Interrupt' */
+%closefile SystemInitialize_close_HardwareInterrupt_k_28_11
+%<SLibCG_DumpSSCode(SystemInitialize_open_HardwareInterrupt_k_28_11, SystemInitialize_body_HardwareInterrupt_k_28_11, SystemInitialize_close_HardwareInterrupt_k_28_11)>
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[11], "SystemInitialize",0)
+
+/* SystemInitialize for S-Function (HardwareInterrupt_sfun): '<S88>/Hardware Interrupt' incorporates:
+ *  SubSystem: '<Root>/Hall sensor C'
+ */
+%<SLibCG_DumpSSCode("/*@[4ab7f5*/",SLibCGIRGenReusableSysCall("SystemInitialize", [], 11, 0, 4, 0, 19, 28),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[11]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[15], "SystemInitialize",0)
+
+/* SystemInitialize for S-Function (HardwareInterrupt_sfun): '<S88>/Hardware Interrupt' incorporates:
+ *  SubSystem: '<Root>/Hall sensor B'
+ */
+%<SLibCG_DumpSSCode("/*@[4ab7f6*/",SLibCGIRGenReusableSysCall("SystemInitialize", [], 15, 0, 4, 0, 19, 28),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[15]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+%endif
+%assign   SystemInitialize_open_HardwareInterrupt_28_2 = ""
+%openfile SystemInitialize_open_HardwareInterrupt_28_2
+
+/* SystemInitialize for S-Function (HardwareInterrupt_sfun): '<S88>/Hardware Interrupt' incorporates:
+ *  SubSystem: '<Root>/Hall sensor A'
+ */
+%closefile SystemInitialize_open_HardwareInterrupt_28_2
+
+%assign    SystemInitialize_body_HardwareInterrupt_28_2 = ""
+%openfile  SystemInitialize_body_HardwareInterrupt_28_2
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[19], "SystemInitialize",0)
+%<SLibCG_DumpSSCode("/*@[4ab7f7*/",SLibCGIRGenReusableSysCall("SystemInitialize", [], 19, 0, 4, 0, 19, 28),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[19]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+%<SLibCG_DumpSSCode("/*@[4ab7f1*/",tlcStartFcnOfS28B1,"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[4ab7f3*/",tlcSystemInitializeFcnOfS28B1,"/*@]*/")>\
+%closefile SystemInitialize_body_HardwareInterrupt_28_2
+
+%assign    SystemInitialize_close_HardwareInterrupt_28_2 = ""
+%openfile  SystemInitialize_close_HardwareInterrupt_28_2
+
+/* End of SystemInitialize for S-Function (HardwareInterrupt_sfun): '<S88>/Hardware Interrupt' */
+%closefile SystemInitialize_close_HardwareInterrupt_28_2
+%<SLibCG_DumpSSCode(SystemInitialize_open_HardwareInterrupt_28_2, SystemInitialize_body_HardwareInterrupt_28_2, SystemInitialize_close_HardwareInterrupt_28_2)>
+
+
+/* Start for MATLABSystem: '<Root>/Timer1' */
+/*@>4aac73*/STMF4Hall_DW./*@>4ace3f*/obj./*@>4acde5*/isInitialized/*@>492134*/ = /*@>4acd0c*/0;
+/*@>4aac79*/STMF4Hall_DW./*@>4ace42*/obj./*@>4acde2*/matlabCodegenIsDeleted/*@>492137*/ = /*@>4a6852*/false;
+/*@[4abc9a*/%<(SLibCGCallSubFcn("STMF4Hall_SystemCore_setup", ["&/*@>4ad07c*/STMF4Hall_DW./*@>4ad07b*/obj"], 8, 9, 0))>/*@]*/;
+/* Outputs for Atomic SubSystem: '<Root>/Initialize Function' */
+/* MATLABSystem: '<S98>/Digital Port Read' */
+/*@>4a6849*/pinReadLoc/*@>49219a*/ = /*@>4a9d6a*/LL_GPIO_ReadInputPort(/*@>4a684c*/GPIOC);
+/* MATLABSystem: '<S100>/Digital Port Read' */
+/*@>4a6845*/pinReadLoc_0/*@>4921a9*/ = /*@>4a9d6c*/LL_GPIO_ReadInputPort(/*@>4a6848*/GPIOC);
+/* MATLABSystem: '<S102>/Digital Port Read' */
+/*@>4a6841*/pinReadLoc_1/*@>4921b8*/ = /*@>4a9d6e*/LL_GPIO_ReadInputPort(/*@>4a6844*/GPIOC);
+/* Sum: '<S93>/Sum' incorporates:
+ *  DataStoreWrite: '<S8>/Data Store Write'
+ *  Gain: '<S93>/Gain'
+ *  Gain: '<S93>/Gain1'
+ *  Gain: '<S93>/Gain2'
+ *  MATLABSystem: '<S100>/Digital Port Read'
+ *  MATLABSystem: '<S102>/Digital Port Read'
+ *  MATLABSystem: '<S98>/Digital Port Read'
+ * */
+/*@>4aac85*/STMF4Hall_DW./*@>4ace48*/GlobalHallState/*@>492a6d*/ = /*@>4a7d8a*/(uint8_T)((/*@>4a7d81*/(uint32_T)((/*@>4a6833*/pinReadLoc/*@>4a69ec*/ & /*@>4a6832*/1024U)/*@>4a3132*/ != /*@>4a6831*/0U/*@>4a3132*/ ? /*@>4aab01*/STMF4Hall_P./*@>4ace0f*/Gain_Gain_m/*@>4a7141*/ >> /*@>4a69f0*/5 : /*@>4a69e9*/0)/*@>4a69db*/ + /*@>4a7d85*/(uint32_T)((/*@>4a682f*/pinReadLoc_0/*@>4a6a01*/ & /*@>4a682e*/2048U)/*@>4a3138*/ != /*@>4a682d*/0U/*@>4a3138*/ ? /*@>4aab07*/STMF4Hall_P./*@>4ace12*/Gain1_Gain_p/*@>4a7142*/ >> /*@>4a6a05*/6 : /*@>4a69fe*/0))/*@>4a69ce*/ + /*@>4a7d89*/(uint32_T)((/*@>4a682b*/pinReadLoc_1/*@>4a6a16*/ & /*@>4a682a*/4096U)/*@>4a313e*/ != /*@>4a6829*/0U/*@>4a313e*/ ? /*@>4aab0d*/STMF4Hall_P./*@>4ace15*/Gain2_Gain_n/*@>4a7143*/ >> /*@>4a6a1a*/7 : /*@>4a6a13*/0));
+/* End of Outputs for SubSystem: '<Root>/Initialize Function' */
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedModelInitializeLocalVars", localVarDecl)>
+%endfunction
+%function ModelInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ModelInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(8, 9, fcnProtoType)>
+%endfunction

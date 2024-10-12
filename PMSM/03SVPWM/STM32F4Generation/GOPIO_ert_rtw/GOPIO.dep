@@ -2,9 +2,6 @@ GOPIO.o: \
  D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO.c \
  D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO.h \
  D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h \
- D:/software/MATLAB2024a/simulink/include/rtw_extmode.h \
- D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h \
- D:/software/MATLAB2024a/simulink/include/sysran_types.h \
  D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rt_nonfinite.h \
  D:/Work/Matlab/STM32F4Generation/GPIO/Core/Inc/main.h \
  D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
@@ -50,25 +47,15 @@ GOPIO.o: \
  D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO_types.h \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_adc_ll.h \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_types.h \
+ D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_timer_ll.h \
  D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/MW_target_hardware_resources.h \
  D:/software/MATLAB2024a/toolbox/target/shared/armcortexmbase/scheduler/include/SysTickScheduler.h \
  D:/software/MATLAB2024a/toolbox/target/shared/armcortexmbase/scheduler/include/arm_cortex_m_multitasking.h \
  D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/MW_target_hardware_resources.h \
- D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO_private.h \
- D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/multiword_types.h \
- D:/software/MATLAB2024a/toolbox/coder/xcp/src/target/server/include/xcp.h \
- D:/software/MATLAB2024a/toolbox/coder/xcp/src/target/server/common/xcp_common.h \
- D:/software/MATLAB2024a/toolbox/coder/xcp/src/target/server/platform/include/xcp_platform.h \
- C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/xcp_platform_custom.h \
- D:/software/MATLAB2024a/toolbox/target/shared/armcortexmbase/xcp/include/sys_arch.h \
- D:/software/MATLAB2024a/toolbox/coder/xcp/src/target/ext_mode/include/ext_mode.h \
- D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/ext_mode_types.h
+ D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO_private.h
 D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO.h:
 D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h:
-D:/software/MATLAB2024a/simulink/include/rtw_extmode.h:
-D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h:
-D:/software/MATLAB2024a/simulink/include/sysran_types.h:
 D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rt_nonfinite.h:
 D:/Work/Matlab/STM32F4Generation/GPIO/Core/Inc/main.h:
 D:/Work/Matlab/STM32F4Generation/GPIO/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -114,17 +101,10 @@ C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm3
 D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO_types.h:
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_adc_ll.h:
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_types.h:
+D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/rtwtypes.h:
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_timer_ll.h:
 D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/MW_target_hardware_resources.h:
 D:/software/MATLAB2024a/toolbox/target/shared/armcortexmbase/scheduler/include/SysTickScheduler.h:
 D:/software/MATLAB2024a/toolbox/target/shared/armcortexmbase/scheduler/include/arm_cortex_m_multitasking.h:
 D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/MW_target_hardware_resources.h:
 D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/GOPIO_private.h:
-D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/multiword_types.h:
-D:/software/MATLAB2024a/toolbox/coder/xcp/src/target/server/include/xcp.h:
-D:/software/MATLAB2024a/toolbox/coder/xcp/src/target/server/common/xcp_common.h:
-D:/software/MATLAB2024a/toolbox/coder/xcp/src/target/server/platform/include/xcp_platform.h:
-C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/xcp_platform_custom.h:
-D:/software/MATLAB2024a/toolbox/target/shared/armcortexmbase/xcp/include/sys_arch.h:
-D:/software/MATLAB2024a/toolbox/coder/xcp/src/target/ext_mode/include/ext_mode.h:
-D:/Work/Matlab/PMSM/03SVPWM/STM32F4Generation/GOPIO_ert_rtw/ext_mode_types.h:

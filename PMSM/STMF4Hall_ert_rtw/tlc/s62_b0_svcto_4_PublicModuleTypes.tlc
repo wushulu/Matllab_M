@@ -1,0 +1,16 @@
+%implements s62_b0_svcto_4_PublicModuleTypes "C"
+
+%function PublicModuleTypes(block) Output
+
+#ifndef struct_tag_wiywjhRn0JhvylthmapQgB
+#define struct_tag_wiywjhRn0JhvylthmapQgB
+struct tag_wiywjhRn0JhvylthmapQgB
+{
+    int32_T isInitialized;
+};
+#endif /* struct_tag_wiywjhRn0JhvylthmapQgB */
+#ifndef typedef_stm32cube_blocks_DigitalPortR_T
+#define typedef_stm32cube_blocks_DigitalPortR_T
+typedef struct tag_wiywjhRn0JhvylthmapQgB stm32cube_blocks_DigitalPortR_T;
+#endif /* typedef_stm32cube_blocks_DigitalPortR_T */
+%endfunction
