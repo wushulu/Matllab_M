@@ -1,0 +1,11 @@
+config load "D:\Work\Matlab\PMSM\Hallharewredebug\Testbuilderror\Testbuilderror.ioc"
+project toolchain STM32CubeIDE
+
+SetStructure Advanced
+
+project setCustomFWPath "D:\software\STM32Cubepro\STM32Cube_FW_F4_V1.26.2"
+
+config save D:\Work\Matlab\PMSM\Hallharewredebug\Testbuilderror\Testbuilderror.ioc
+
+
+exit wait
