@@ -28,7 +28,10 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32g4xx_hal.h"
+<<<<<<< HEAD
 #include "stm32g4xx_ll_adc.h"
+=======
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
 #include "stm32g4xx_ll_dma.h"
 #include "stm32g4xx_ll_lpuart.h"
 #include "stm32g4xx_ll_rcc.h"
@@ -39,7 +42,10 @@ extern "C" {
 #include "stm32g4xx_ll_cortex.h"
 #include "stm32g4xx_ll_utils.h"
 #include "stm32g4xx_ll_pwr.h"
+<<<<<<< HEAD
 #include "stm32g4xx_ll_tim.h"
+=======
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
 #include "stm32g4xx_ll_gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -87,9 +93,12 @@ void Error_Handler(void);
 void   MX_GPIO_Init(void);
 void   MX_DMA_Init(void);
 void   MX_LPUART1_UART_Init(void);
+<<<<<<< HEAD
 void   MX_ADC1_Init(void);
 void   MX_TIM1_Init(void);
 void   MX_TIM3_Init(void);
+=======
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

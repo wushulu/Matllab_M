@@ -214,6 +214,7 @@ __attribute__((weak)) void DMA1_Channel1_IRQHandler (void)
 }
 
 /**
+<<<<<<< HEAD
   * @brief This function handles DMA1 channel2 global interrupt.
   */
 __attribute__((weak)) void DMA1_Channel2_IRQHandler (void)
@@ -270,6 +271,8 @@ __attribute__((weak)) void DMA1_Channel5_IRQHandler (void)
 }
 
 /**
+=======
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
   * @brief This function handles TIM2 global interrupt.
   */
 __attribute__((weak)) void TIM2_IRQHandler (void)
@@ -283,6 +286,7 @@ __attribute__((weak)) void TIM2_IRQHandler (void)
   /* USER CODE END TIM2_IRQn 1 */
 }
 
+<<<<<<< HEAD
 /**
   * @brief This function handles TIM3 global interrupt.
   */
@@ -296,6 +300,8 @@ __attribute__((weak)) void TIM3_IRQHandler (void)
   /* USER CODE END TIM3_IRQn 1 */
 }
 
+=======
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */

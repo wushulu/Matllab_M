@@ -117,11 +117,14 @@
 			<locationURI>PARENT-1-PROJECT_LOC/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c</locationURI>
 		</link>
 		<link>
+<<<<<<< HEAD
 			<name>Drivers/STM32G4xx_HAL_Driver/stm32g4xx_ll_adc.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c</locationURI>
 		</link>
 		<link>
+=======
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
 			<name>Drivers/STM32G4xx_HAL_Driver/stm32g4xx_ll_dma.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c</locationURI>
@@ -147,11 +150,14 @@
 			<locationURI>PARENT-1-PROJECT_LOC/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_rcc.c</locationURI>
 		</link>
 		<link>
+<<<<<<< HEAD
 			<name>Drivers/STM32G4xx_HAL_Driver/stm32g4xx_ll_tim.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c</locationURI>
 		</link>
 		<link>
+=======
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
 			<name>Drivers/STM32G4xx_HAL_Driver/stm32g4xx_ll_utils.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c</locationURI>

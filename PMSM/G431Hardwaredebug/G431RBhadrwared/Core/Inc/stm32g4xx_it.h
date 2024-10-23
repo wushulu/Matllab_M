@@ -56,12 +56,16 @@ void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
 void DMA1_Channel1_IRQHandler(void);
+<<<<<<< HEAD
 void DMA1_Channel2_IRQHandler(void);
 void DMA1_Channel3_IRQHandler(void);
 void DMA1_Channel4_IRQHandler(void);
 void DMA1_Channel5_IRQHandler(void);
 void TIM2_IRQHandler(void);
 void TIM3_IRQHandler(void);
+=======
+void TIM2_IRQHandler(void);
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */

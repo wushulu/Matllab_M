@@ -112,6 +112,7 @@ void SystemClock_Config(void)
 }
 
 /**
+<<<<<<< HEAD
   * @brief ADC1 Initialization Function
   * @param None
   * @retval None
@@ -248,6 +249,8 @@ void MX_ADC1_Init(void)
 }
 
 /**
+=======
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
   * @brief LPUART1 Initialization Function
   * @param None
   * @retval None
@@ -292,6 +295,7 @@ void MX_LPUART1_UART_Init(void)
   /* LPUART1 DMA Init */
 
   /* LPUART1_RX Init */
+<<<<<<< HEAD
   LL_DMA_SetPeriphRequest(DMA1, LL_DMA_CHANNEL_3, LL_DMAMUX_REQ_LPUART1_RX);
 
   LL_DMA_SetDataTransferDirection(DMA1, LL_DMA_CHANNEL_3, LL_DMA_DIRECTION_PERIPH_TO_MEMORY);
@@ -307,12 +311,33 @@ void MX_LPUART1_UART_Init(void)
   LL_DMA_SetPeriphSize(DMA1, LL_DMA_CHANNEL_3, LL_DMA_PDATAALIGN_BYTE);
 
   LL_DMA_SetMemorySize(DMA1, LL_DMA_CHANNEL_3, LL_DMA_MDATAALIGN_BYTE);
+=======
+  LL_DMA_SetPeriphRequest(DMA1, LL_DMA_CHANNEL_1, LL_DMAMUX_REQ_LPUART1_RX);
+
+  LL_DMA_SetDataTransferDirection(DMA1, LL_DMA_CHANNEL_1, LL_DMA_DIRECTION_PERIPH_TO_MEMORY);
+
+  LL_DMA_SetChannelPriorityLevel(DMA1, LL_DMA_CHANNEL_1, LL_DMA_PRIORITY_LOW);
+
+  LL_DMA_SetMode(DMA1, LL_DMA_CHANNEL_1, LL_DMA_MODE_NORMAL);
+
+  LL_DMA_SetPeriphIncMode(DMA1, LL_DMA_CHANNEL_1, LL_DMA_PERIPH_NOINCREMENT);
+
+  LL_DMA_SetMemoryIncMode(DMA1, LL_DMA_CHANNEL_1, LL_DMA_MEMORY_INCREMENT);
+
+  LL_DMA_SetPeriphSize(DMA1, LL_DMA_CHANNEL_1, LL_DMA_PDATAALIGN_BYTE);
+
+  LL_DMA_SetMemorySize(DMA1, LL_DMA_CHANNEL_1, LL_DMA_MDATAALIGN_BYTE);
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
 
   /* USER CODE BEGIN LPUART1_Init 1 */
 
   /* USER CODE END LPUART1_Init 1 */
   LPUART_InitStruct.PrescalerValue = LL_LPUART_PRESCALER_DIV1;
+<<<<<<< HEAD
   LPUART_InitStruct.BaudRate = 1400000;
+=======
+  LPUART_InitStruct.BaudRate = 115200;
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
   LPUART_InitStruct.DataWidth = LL_LPUART_DATAWIDTH_8B;
   LPUART_InitStruct.StopBits = LL_LPUART_STOPBITS_1;
   LPUART_InitStruct.Parity = LL_LPUART_PARITY_NONE;
@@ -340,6 +365,7 @@ void MX_LPUART1_UART_Init(void)
 }
 
 /**
+<<<<<<< HEAD
   * @brief TIM1 Initialization Function
   * @param None
   * @retval None
@@ -617,6 +643,8 @@ void MX_TIM3_Init(void)
 }
 
 /**
+=======
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
   * Enable DMA controller clock
   */
 void MX_DMA_Init(void)
@@ -631,6 +659,7 @@ void MX_DMA_Init(void)
   /* DMA1_Channel1_IRQn interrupt configuration */
   NVIC_SetPriority(DMA1_Channel1_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
   NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+<<<<<<< HEAD
   /* DMA1_Channel2_IRQn interrupt configuration */
   NVIC_SetPriority(DMA1_Channel2_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
   NVIC_EnableIRQ(DMA1_Channel2_IRQn);
@@ -643,6 +672,8 @@ void MX_DMA_Init(void)
   /* DMA1_Channel5_IRQn interrupt configuration */
   NVIC_SetPriority(DMA1_Channel5_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
   NVIC_EnableIRQ(DMA1_Channel5_IRQn);
+=======
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
 
 }
 
@@ -669,9 +700,12 @@ void MX_GPIO_Init(void)
   LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTC, LL_SYSCFG_EXTI_LINE13);
 
   /**/
+<<<<<<< HEAD
   LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTC, LL_SYSCFG_EXTI_LINE5);
 
   /**/
+=======
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
   EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_13;
   EXTI_InitStruct.LineCommand = ENABLE;
   EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
@@ -679,6 +713,7 @@ void MX_GPIO_Init(void)
   LL_EXTI_Init(&EXTI_InitStruct);
 
   /**/
+<<<<<<< HEAD
   EXTI_InitStruct.Line_0_31 = LL_EXTI_LINE_5;
   EXTI_InitStruct.LineCommand = ENABLE;
   EXTI_InitStruct.Mode = LL_EXTI_MODE_IT;
@@ -698,6 +733,14 @@ void MX_GPIO_Init(void)
   LL_GPIO_SetPinMode(GPIOC, LL_GPIO_PIN_5, LL_GPIO_MODE_INPUT);
 
   /**/
+=======
+  LL_GPIO_SetPinPull(B1_GPIO_Port, B1_Pin, LL_GPIO_PULL_NO);
+
+  /**/
+  LL_GPIO_SetPinMode(B1_GPIO_Port, B1_Pin, LL_GPIO_MODE_INPUT);
+
+  /**/
+>>>>>>> 8c5c8815c837aeb0b1129742f7d5913102816c6a
   GPIO_InitStruct.Pin = LD2_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
