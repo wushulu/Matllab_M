@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Hallhardwaredebugslx'.
  *
- * Model version                  : 1.7
+ * Model version                  : 1.8
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Mon Oct 14 17:50:09 2024
+ * C/C++ source code generated on : Fri Oct 18 13:52:34 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M

@@ -256,7 +256,7 @@ void MX_TIM1_Init(void)
   /* USER CODE END TIM1_Init 1 */
   TIM_InitStruct.Prescaler = 0;
   TIM_InitStruct.CounterMode = LL_TIM_COUNTERMODE_CENTER_UP;
-  TIM_InitStruct.Autoreload = 2100;
+  TIM_InitStruct.Autoreload = 4200;
   TIM_InitStruct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
   TIM_InitStruct.RepetitionCounter = 1;
   LL_TIM_Init(TIM1, &TIM_InitStruct);
@@ -344,7 +344,7 @@ void MX_TIM2_Init(void)
   TIM_InitStruct.Autoreload = 4294967295;
   TIM_InitStruct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
   LL_TIM_Init(TIM2, &TIM_InitStruct);
-  LL_TIM_DisableARRPreload(TIM2);
+  LL_TIM_EnableARRPreload(TIM2);
   LL_TIM_SetClockSource(TIM2, LL_TIM_CLOCKSOURCE_INTERNAL);
   LL_TIM_SetTriggerOutput(TIM2, LL_TIM_TRGO_RESET);
   LL_TIM_DisableMasterSlaveMode(TIM2);
@@ -410,7 +410,7 @@ void MX_USART2_UART_Init(void)
   /* USER CODE BEGIN USART2_Init 1 */
 
   /* USER CODE END USART2_Init 1 */
-  USART_InitStruct.BaudRate = 115200;
+  USART_InitStruct.BaudRate = 1000000;
   USART_InitStruct.DataWidth = LL_USART_DATAWIDTH_8B;
   USART_InitStruct.StopBits = LL_USART_STOPBITS_1;
   USART_InitStruct.Parity = LL_USART_PARITY_NONE;

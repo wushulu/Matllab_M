@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Hallhardwaredebugslx'.
  *
- * Model version                  : 1.7
+ * Model version                  : 1.8
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Mon Oct 14 17:50:09 2024
+ * C/C++ source code generated on : Fri Oct 18 13:52:34 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -155,7 +155,7 @@ P_Hallhardwaredebugslx_T Hallhardwaredebugslx_P = {
   /* Computed Parameter: Constant1_Value_e
    * Referenced by: '<S25>/Constant1'
    */
-  0.001F,
+  0.0002F,
 
   /* Computed Parameter: Delay_InitialCondition
    * Referenced by: '<S25>/Delay'
@@ -380,12 +380,12 @@ P_Hallhardwaredebugslx_T Hallhardwaredebugslx_P = {
   /* Computed Parameter: Vd_Ref_Value
    * Referenced by: '<S149>/Vd_Ref'
    */
-  0.16F,
+  0.0F,
 
   /* Computed Parameter: Vq_Value
    * Referenced by: '<S149>/Vq'
    */
-  0.0F,
+  0.18F,
 
   /* Computed Parameter: sine_table_values_Value
    * Referenced by: '<S148>/sine_table_values'

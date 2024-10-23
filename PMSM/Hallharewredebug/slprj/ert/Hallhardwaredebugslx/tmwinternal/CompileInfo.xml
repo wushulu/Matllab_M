@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/ci/19700101 http://schema.mathworks.com/mf0/sl_modelref_info/R2024a http://schema.mathworks.com/mf0/slexec_mm_sto/R2024a_202305081229 http://schema.mathworks.com/mf0/sltp_mm/R2023a_202209151115">
-  <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="47d5686c-5eb8-43bd-9574-3876f8554cd2">
-    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="bea25b52-57f7-42a9-b815-75ccf135a699">
+  <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="e1da000f-83f2-4ff8-9830-ad30bfbffcac">
+    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="7cb1c585-bc4f-49a5-b11a-be7131801d84">
       <modelName>Hallhardwaredebugslx</modelName>
       <modelPath>Hallhardwaredebugslx</modelPath>
     </childModelRefInfo>
-    <clockResolutions type="ModelRefInfoRepo.ClockResolutionInfo" uuid="986620a2-0ba5-4556-84d4-07879d06199e">
+    <clockResolutions type="ModelRefInfoRepo.ClockResolutionInfo" uuid="84284ef2-284a-48da-8b26-0293a4eae87a">
       <rateIdx>0</rateIdx>
       <resolution>.001</resolution>
       <source>DeducedFromSampleTime</source>
     </clockResolutions>
-    <clockResolutions type="ModelRefInfoRepo.ClockResolutionInfo" uuid="f91fbffa-120d-48ab-b602-b3362cae5ba1">
+    <clockResolutions type="ModelRefInfoRepo.ClockResolutionInfo" uuid="3293b693-e2e1-4ceb-8d83-62a40dad5543">
       <rateIdx>4</rateIdx>
       <resolution>.001</resolution>
       <source>DeducedFromSpecifiedFixedStepSize</source>
     </clockResolutions>
     <compiledTFinal>inf</compiledTFinal>
     <containsInitResetTermSampleTimes>true</containsInitResetTermSampleTimes>
-    <dataSourceInfo type="ModelRefInfoRepo.DataSourceInfo" uuid="41509911-8915-4d25-a8dc-4677db4edf2c">
-      <dataSources type="ModelRefInfoRepo.SourceInfo" uuid="74c9ca05-d755-4ad3-b256-1338f90b454e">
+    <dataSourceInfo type="ModelRefInfoRepo.DataSourceInfo" uuid="edf1c838-07b6-437c-bdac-f67aebda65fd">
+      <dataSources type="ModelRefInfoRepo.SourceInfo" uuid="ca72c334-5442-48ec-8b25-73fbf6735ce2">
         <includeAllSections>true</includeAllSections>
         <sourceName>base workspace</sourceName>
         <type>BaseWorkspace</type>
@@ -57,139 +57,139 @@
     <solverStatusFlags>335</solverStatusFlags>
     <timingAndTaskingRegistry>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;slexec_sto version=&quot;1.1&quot; packageUris=&quot;http://schema.mathworks.com/mf0/slexec_mm_sto/R2024a_202305081229&quot;&gt;
-  &lt;sto.Registry type=&quot;sto.Registry&quot; uuid=&quot;8df3cd82-8d0c-4681-a3ff-126b35c4adf6&quot;&gt;
+  &lt;sto.Registry type=&quot;sto.Registry&quot; uuid=&quot;2e516fd9-ab8a-4d16-a4bd-2aec94a9e782&quot;&gt;
     &lt;executionSpec&gt;Undetermined&lt;/executionSpec&gt;
     &lt;identifier&gt;Hallhardwaredebugslx&lt;/identifier&gt;
-    &lt;clockRegistry type=&quot;sto.ClockRegistry&quot; uuid=&quot;6f92ddf3-64e6-48c0-ae74-5083d5f95ce5&quot;&gt;
-      &lt;clocks type=&quot;sto.Timer&quot; uuid=&quot;ed742ff7-68be-4b26-afcb-fd45ae9b3275&quot;&gt;
+    &lt;clockRegistry type=&quot;sto.ClockRegistry&quot; uuid=&quot;2ee0572f-04c9-486a-b57d-e1ccd0717573&quot;&gt;
+      &lt;clocks type=&quot;sto.Timer&quot; uuid=&quot;f9629bb0-201b-42e6-89ee-5449f8febaf4&quot;&gt;
         &lt;computedFundamentalDiscretePeriod&gt;.001&lt;/computedFundamentalDiscretePeriod&gt;
-        &lt;fastestDiscreteRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;8ae301ec-9b09-4fec-9243-f82d293d86eb&quot;/&gt;
+        &lt;fastestDiscreteRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;e8c2dc25-b0af-4bf8-9309-608a7437dbe2&quot;/&gt;
         &lt;isDefaultTimer&gt;true&lt;/isDefaultTimer&gt;
         &lt;resolution&gt;.001&lt;/resolution&gt;
         &lt;timeAdvanceMode&gt;FixedStep&lt;/timeAdvanceMode&gt;
         &lt;identifier&gt;Hallhardwaredebugslx::defaultTimer&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;8ae301ec-9b09-4fec-9243-f82d293d86eb&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;e8c2dc25-b0af-4bf8-9309-608a7437dbe2&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;clockId&gt;Hallhardwaredebugslx::defaultTimer&lt;/clockId&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;3c6def11-3f81-442d-9280-48c9918d94d0&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;58860f0e-d625-4987-8c45-58624b8b9d82&quot;&gt;
             &lt;period&gt;.001&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
-        &lt;baseRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;6430345a-166d-45d6-8b67-07e2bb207c97&quot;&gt;
+        &lt;baseRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;45de6662-00a7-41c4-972e-77a4ed48dedd&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;clockId&gt;Hallhardwaredebugslx::defaultTimer&lt;/clockId&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;9dc73819-385c-4546-b030-8077db8c563d&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;663bc123-d34e-47c0-8106-68739d50884e&quot;&gt;
             &lt;period&gt;.001&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/baseRate&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;acf666b7-c319-46ad-8491-52e1de1facb7&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;26cbb18f-8e2e-4830-aa9e-129c29920f27&quot;&gt;
         &lt;eventType&gt;ASYNCHRONOUS_INTERRUPT&lt;/eventType&gt;
         &lt;cNum&gt;1&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;9adff098-49d1-419a-82c4-40bbec24fbf0&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;fbfc5afc-612c-476f-b598-020f98a4b200&quot;&gt;
           &lt;annotation&gt;A1&lt;/annotation&gt;
           &lt;clockId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 1&lt;/description&gt;
           &lt;rateIdx&gt;1&lt;/rateIdx&gt;
           &lt;taskId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;421507ca-e65a-450b-baf0-27346312d95a&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;8a27fbc0-5060-452e-948c-7f42b8f1f2ce&quot;&gt;
             &lt;offset&gt;-3.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;de6dae2b-80ca-4f10-809c-0eafa67ebf92&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;cb988c60-918e-47ba-8c67-eaa86e5f088b&quot;&gt;
         &lt;eventType&gt;ASYNCHRONOUS_INTERRUPT&lt;/eventType&gt;
         &lt;cNum&gt;2&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;ca3eaffa-fa9e-483c-a946-b50f5d83a1a6&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;02ff911e-925c-40ba-a29c-bc5479ea02da&quot;&gt;
           &lt;annotation&gt;A2&lt;/annotation&gt;
           &lt;clockId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 2&lt;/description&gt;
           &lt;rateIdx&gt;2&lt;/rateIdx&gt;
           &lt;taskId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;290380a7-81f9-407c-a10a-74a838ff5ccb&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;3e8f49ff-ea79-43ba-8a96-b3bd0b8b5244&quot;&gt;
             &lt;offset&gt;-4.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;665109fb-0e18-4fb3-9eae-d6d4b7c538a2&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;c79a6d75-bfe2-4603-bb7a-9ea24f6739e6&quot;&gt;
         &lt;eventType&gt;ASYNCHRONOUS_INTERRUPT&lt;/eventType&gt;
         &lt;cNum&gt;3&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;ca2c8b90-e3e4-406a-9424-514828670a84&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;4b50a3e7-bd6e-420e-bf7a-9a4fa94c4b60&quot;&gt;
           &lt;annotation&gt;A3&lt;/annotation&gt;
           &lt;clockId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 3&lt;/description&gt;
           &lt;rateIdx&gt;3&lt;/rateIdx&gt;
           &lt;taskId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;6fbf23e4-1f43-4644-a68a-16aff0efad3f&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;2fec509c-e7bb-45fb-be6a-5140b950aace&quot;&gt;
             &lt;offset&gt;-5.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;06e55f6c-5cc2-4e0c-9af4-88cd46ef61a6&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;9c0000fb-78f7-48a5-bf42-3b42ca682fe3&quot;&gt;
         &lt;eventType&gt;ASYNCHRONOUS_INTERRUPT&lt;/eventType&gt;
         &lt;cNum&gt;4&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;84968388-8a44-4da7-8a7b-f9c656e6902d&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;bffa75e0-6752-4b68-a9fe-635ee5698fbd&quot;&gt;
           &lt;annotation&gt;A4&lt;/annotation&gt;
           &lt;clockId&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 4&lt;/description&gt;
           &lt;rateIdx&gt;4&lt;/rateIdx&gt;
           &lt;taskId&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;0920ed49-06c1-44aa-ab1b-307faa7bb70c&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;143314ce-c249-4915-a4f5-fcba4518b51a&quot;&gt;
             &lt;offset&gt;-2.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;ec76c3c3-77b6-49b3-b0e9-d82c56ac91b1&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;0033bbcc-1be1-47b6-8768-435934a053e7&quot;&gt;
         &lt;eventType&gt;POWER_UP_EVENT&lt;/eventType&gt;
         &lt;cNum&gt;5&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;Init&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;ab4eba74-8809-45d8-8c6a-f6c9746b9a89&quot;&gt;
+        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;caf0895b-5783-428c-bea8-11675ce11e8a&quot;&gt;
           &lt;annotation&gt;IE&lt;/annotation&gt;
           &lt;clockId&gt;Init&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Initialize&lt;/description&gt;
           &lt;rateIdx&gt;5&lt;/rateIdx&gt;
           &lt;taskId&gt;ModelWideInitializeEvent&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;7fef2935-693b-4fb4-8882-fd379a83660e&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;e813c4f4-12a6-478a-bd5f-eb16afca1d82&quot;&gt;
             &lt;offset&gt;1.0&lt;/offset&gt;
             &lt;period&gt;inf&lt;/period&gt;
             &lt;rateType&gt;ModelWideInitializeEvent&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;edbcf9cd-0f58-4387-a981-3647ca7b7177&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;812557c3-c8bb-456c-a5ff-4697c424280d&quot;&gt;
         &lt;eventType&gt;PARAMETER_CHANGE_EVENT&lt;/eventType&gt;
         &lt;cNum&gt;6&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;ParameterChangeEvent&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;48dcbfda-e32a-42a0-ae1d-4df125c3a1c2&quot;&gt;
+        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;efed545b-7678-44f0-b7c0-b22459bb2a1c&quot;&gt;
           &lt;annotation&gt;Inf&lt;/annotation&gt;
           &lt;clockId&gt;ParameterChangeEvent&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
@@ -197,7 +197,7 @@
           &lt;rateIdx&gt;-1&lt;/rateIdx&gt;
           &lt;taskId&gt;ModelWideParameterChangeEvent&lt;/taskId&gt;
           &lt;useForExecution&gt;NotForExecution&lt;/useForExecution&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;28fb70fb-6cec-43f6-8f22-9c43ccecc40c&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;2a8d7636-fc28-4bd9-9fce-d10666ffa767&quot;&gt;
             &lt;period&gt;inf&lt;/period&gt;
             &lt;rateType&gt;ModelWideParameterChangeEvent&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -205,19 +205,19 @@
       &lt;/clocks&gt;
       &lt;timeAdvanceMode&gt;FixedStep&lt;/timeAdvanceMode&gt;
     &lt;/clockRegistry&gt;
-    &lt;taskRegistry type=&quot;sto.TaskRegistry&quot; uuid=&quot;f6fca845-54c2-4092-96d8-5e0a4549a0e7&quot;&gt;
+    &lt;taskRegistry type=&quot;sto.TaskRegistry&quot; uuid=&quot;993e6f2d-c668-459c-960e-1090b0680e2e&quot;&gt;
       &lt;hasUnknownEdges&gt;true&lt;/hasUnknownEdges&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;c5714551-d768-4eb6-98df-edd3f890b8dc&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;4a8059be-c129-4c66-a133-2d2f2cfcde5c&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;5e8e5a06-27ff-4df1-93bc-ec782aa6b0ae&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;428389de-551b-4f4d-af71-ff30b4b4669c&quot;&gt;
           &lt;annotation&gt;A4&lt;/annotation&gt;
           &lt;clockId&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 4&lt;/description&gt;
           &lt;rateIdx&gt;4&lt;/rateIdx&gt;
           &lt;taskId&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;c177a57e-2d8e-47f8-a330-3d5db121871a&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;9e8440b8-f354-4f39-9bbf-52ce80f03ce7&quot;&gt;
             &lt;offset&gt;-2.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
@@ -230,9 +230,9 @@
         &lt;identifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/identifier&gt;
         &lt;priority&gt;30&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;ff3851ab-1ff7-401b-9f83-08d0cfb83ea2&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;582f8fad-68c5-4fd4-9f77-244b3edc6f05&quot;&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;81a7280e-f4ca-4659-bf3d-b3cf85e6d94a&quot;&gt;
+        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;47a3e0fb-882c-4f01-81d3-60202e68f27d&quot;&gt;
           &lt;annotation&gt;Inf&lt;/annotation&gt;
           &lt;clockId&gt;ParameterChangeEvent&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
@@ -240,7 +240,7 @@
           &lt;rateIdx&gt;-1&lt;/rateIdx&gt;
           &lt;taskId&gt;ModelWideParameterChangeEvent&lt;/taskId&gt;
           &lt;useForExecution&gt;NotForExecution&lt;/useForExecution&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;d1410ecd-6552-40db-ba6f-a2478ad95ca5&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;e9bfdc89-9378-4d90-b005-3f6f60f5831d&quot;&gt;
             &lt;period&gt;inf&lt;/period&gt;
             &lt;rateType&gt;ModelWideParameterChangeEvent&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -251,17 +251,17 @@
         &lt;identifier&gt;ModelWideParameterChangeEvent&lt;/identifier&gt;
         &lt;priority&gt;-1&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;6f457677-4329-415b-b8bf-a263b52999e1&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;fc2673c9-fa90-457d-89e3-f7c81f559384&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;2068ab42-9637-404b-8e10-8daf43c2b0f2&quot;&gt;
+        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;74428097-39a3-4d96-bce9-4b4bf0fa0049&quot;&gt;
           &lt;annotation&gt;IE&lt;/annotation&gt;
           &lt;clockId&gt;Init&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Initialize&lt;/description&gt;
           &lt;rateIdx&gt;5&lt;/rateIdx&gt;
           &lt;taskId&gt;ModelWideInitializeEvent&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;7a768702-6fea-4ac1-8f06-50b667218b54&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;310b18c4-6fd4-45bf-803e-a55eadf7c9f3&quot;&gt;
             &lt;offset&gt;1.0&lt;/offset&gt;
             &lt;period&gt;inf&lt;/period&gt;
             &lt;rateType&gt;ModelWideInitializeEvent&lt;/rateType&gt;
@@ -274,17 +274,17 @@
         &lt;identifier&gt;ModelWideInitializeEvent&lt;/identifier&gt;
         &lt;priority&gt;-1&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;baa8d43f-e3ba-4f1b-8541-11ce473c59ce&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;e797633e-c541-47b5-b7ae-da54b73c2456&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;852faddb-49dc-4399-9f16-6d2046468210&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;0a4a8be1-fb63-4193-baf3-297e585797fe&quot;&gt;
           &lt;annotation&gt;A1&lt;/annotation&gt;
           &lt;clockId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 1&lt;/description&gt;
           &lt;rateIdx&gt;1&lt;/rateIdx&gt;
           &lt;taskId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;78ac467b-ab08-42b1-87be-3bf46281fafa&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;e906b33f-d512-40d6-aa48-5ea963ac8690&quot;&gt;
             &lt;offset&gt;-3.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
@@ -297,17 +297,17 @@
         &lt;identifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/identifier&gt;
         &lt;priority&gt;30&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;61012b5d-4fbf-41ad-87b9-17bba5316a12&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;4abab5d5-b992-407b-a058-cada68626c96&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;8d490cc9-5ff9-4c6b-bdad-df654fe4a856&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;6648ec16-204c-4f11-b4eb-d360532f9ad3&quot;&gt;
           &lt;annotation&gt;A2&lt;/annotation&gt;
           &lt;clockId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 2&lt;/description&gt;
           &lt;rateIdx&gt;2&lt;/rateIdx&gt;
           &lt;taskId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;2eb79740-c2f6-4250-b5d6-eb1ec3a2bd32&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;464a5632-86f7-4a86-a85b-c27f8925ad0d&quot;&gt;
             &lt;offset&gt;-4.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
@@ -320,17 +320,17 @@
         &lt;identifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/identifier&gt;
         &lt;priority&gt;30&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;864df2c3-e486-4f64-b339-c9ed1554c50f&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;9dff7cb5-a81a-4132-b865-a5e851d19225&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;9ff07d9d-ee67-4e9f-b18d-d7b29e04a828&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;c3018919-b5e0-4729-b628-a0dfdba6ca4b&quot;&gt;
           &lt;annotation&gt;A3&lt;/annotation&gt;
           &lt;clockId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 3&lt;/description&gt;
           &lt;rateIdx&gt;3&lt;/rateIdx&gt;
           &lt;taskId&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;af6a7dbc-2f26-4b74-96cb-6901c5a2d493&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;7b86accf-6f8c-486f-a2fe-e8a98524b9f5&quot;&gt;
             &lt;offset&gt;-5.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
@@ -343,15 +343,15 @@
         &lt;identifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/identifier&gt;
         &lt;priority&gt;30&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;64929bf3-c4e7-476f-afb1-abbde14628e2&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;9e34785c-f6aa-43a3-ab4a-8da7176fb029&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;orderIndex&gt;1&lt;/orderIndex&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;9b3f9ce8-d7b5-4a54-bddd-3b1f9b32f0ab&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;5f1d2380-8d8c-44cd-aa34-8aca3b034e5b&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;clockId&gt;Hallhardwaredebugslx::defaultTimer&lt;/clockId&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;79f4792d-3079-4922-ac6a-98a4262cad90&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;b5e00b8e-a8b7-45f0-9126-70421a4fbbf1&quot;&gt;
             &lt;period&gt;.001&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -362,128 +362,128 @@
         &lt;identifier&gt;_task0&lt;/identifier&gt;
         &lt;priority&gt;40&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;852899a3-600a-45e2-8e99-600e5f1f1891&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;69f4301b-8a98-489e-a98c-772b6fd6df99&quot;&gt;
         &lt;clockIdentifier&gt;Hallhardwaredebugslx::defaultTimer&lt;/clockIdentifier&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;69555874-f4d6-4520-a0df-5f86f990b4c3&quot;&gt;
-          &lt;isInternal&gt;true&lt;/isInternal&gt;
-          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;0243df1c-d668-47c7-81e9-ce2bc3dda625&quot;&gt;
-          &lt;isInternal&gt;true&lt;/isInternal&gt;
-          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;c6b3a85f-11e5-4e85-8ad6-785eaa5e79a1&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;5b53f706-4d31-4035-8c7c-1c6729595a41&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;a93e786c-ad4d-47f8-bbea-f6d3e34dc592&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;6e006319-fc21-43d0-8a1e-d01bf184682d&quot;&gt;
+          &lt;isInternal&gt;true&lt;/isInternal&gt;
+          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;06f68c21-46a2-478c-9b82-3d69e3e6940a&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;5f7ac92a-6ad0-4d9b-bdcf-1d9d08c2befb&quot;&gt;
+          &lt;isInternal&gt;true&lt;/isInternal&gt;
+          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
         &lt;taskIdentifier&gt;_task0&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;602a44f2-17ef-4254-8719-4f55b70f7472&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;ee475975-4450-41a9-85f9-8572580444df&quot;&gt;
         &lt;clockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/clockIdentifier&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;acf60c0e-434a-4cce-ad46-755b095af0cc&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;6f5979c3-0351-47ac-a2dd-d639198e8ba5&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx::defaultTimer&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;_task0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;a72dea7b-d337-4a0e-aabd-264d64975c78&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;765cce9d-5538-4f83-9d2d-b58e05836d19&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;29516603-a53d-4f0b-b902-656cd8bd18dc&quot;&gt;
-          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
-          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;b9eb169c-6ed1-4d01-8a1a-dd4472add5ca&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;e7af6d7f-e2d7-479f-98f9-fbe80803dd52&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;c01a1b7c-decd-4fcf-baa2-9c21eec26394&quot;&gt;
+          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
+          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
         &lt;taskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;6d4a5ac9-80d6-4005-8615-9b72478f2115&quot;&gt;
-        &lt;clockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockIdentifier&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;17e57dd0-e873-462f-b911-9e0374911c27&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;d418884e-797c-4023-9c6c-e3917fc38a76&quot;&gt;
+        &lt;clockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/clockIdentifier&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;61143486-7e4b-4a7b-9299-60e190dae252&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx::defaultTimer&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;_task0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;677eef00-244c-46bc-96e7-ee35b2fd847c&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;7a75ea92-9fb3-486d-8b67-8b53e3d9318d&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;4405f822-0e4f-4ff8-abb4-23f26f91a08b&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;a009ff09-65df-4f2e-9ed5-aa3b76bb649d&quot;&gt;
+          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
+          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;8d3fd961-a156-44c8-8dcf-7c02cfe5fb88&quot;&gt;
+          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
+          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;taskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/taskIdentifier&gt;
+      &lt;/taskDependencyGraph&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;d1e9bc8e-c89f-48ae-abef-4c46f8dc5b76&quot;&gt;
+        &lt;clockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockIdentifier&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;8683a398-b275-4daf-b934-ba7e398327c4&quot;&gt;
+          &lt;isInternal&gt;true&lt;/isInternal&gt;
+          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx::defaultTimer&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;_task0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;2ceabfd1-bc6e-4ae5-90d2-376ac2d11b90&quot;&gt;
+          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
+          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;c030c025-4753-426d-b995-1c8cc4df7479&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;b8eee789-8f18-4467-8149-9bad43445fbf&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;44884c11-a374-422f-aeef-d8764ce410f5&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
         &lt;taskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;eb3c5c25-6731-4bc2-b9a1-432417e27cd1&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;8f32254c-400b-43be-a84a-c7e286c285ea&quot;&gt;
         &lt;clockIdentifier&gt;Init&lt;/clockIdentifier&gt;
         &lt;taskIdentifier&gt;ModelWideInitializeEvent&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;26922358-f5f8-46ce-a627-be9b74711c2f&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;be6c61c5-14e3-48d7-aa29-3598bf1a7f85&quot;&gt;
         &lt;clockIdentifier&gt;ParameterChangeEvent&lt;/clockIdentifier&gt;
         &lt;taskIdentifier&gt;ModelWideParameterChangeEvent&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;413c6cf3-44f1-4c45-aea9-07a163efe691&quot;&gt;
-        &lt;clockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/clockIdentifier&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;b825f250-a568-49b4-aab5-4e8eb135f58c&quot;&gt;
-          &lt;isInternal&gt;true&lt;/isInternal&gt;
-          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx::defaultTimer&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;_task0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;6291dbde-539d-4c27-acf0-1a0e4fa9391f&quot;&gt;
-          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
-          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;74af9e3e-8776-407d-83a4-c98569d81b9d&quot;&gt;
-          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
-          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;648ca181-864b-44ac-8212-3209a847281d&quot;&gt;
-          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
-          &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;taskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/taskIdentifier&gt;
-      &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;70b414ec-51f4-4490-acaf-fcdf0b53742b&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;8b3beb41-08c5-459e-8892-bb454d87efc0&quot;&gt;
         &lt;clockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockIdentifier&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;ebeb8acc-5ad2-4410-b1ec-95bd5a26b2b3&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;9f6f433c-0c95-4647-b605-e2626604e1c1&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx::defaultTimer&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;_task0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;1eab7600-9f4f-425f-b51e-ee01d35cca78&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;70299153-449a-4416-9509-6ddb16988aeb&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;3784bd45-8b3f-4146-9652-c5f06da97db8&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;2fae2991-0958-445f-ad97-24ebd7338c4c&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;ba04f5d2-4d0e-482b-8015-5cd84bb50cad&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;ecc87cce-2c0d-4e02-a104-c305f81fe61b&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
@@ -496,10 +496,10 @@
   &lt;/sto.Registry&gt;
 &lt;/slexec_sto&gt;</timingAndTaskingRegistry>
     <zeroInternalMemoryAtStartupUnchecked>true</zeroInternalMemoryAtStartupUnchecked>
-    <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="eaee530e-6681-40f1-92d6-4b71c0e7b3da"/>
-    <codeGenInfo type="ModelRefInfoRepo.CodeGenInformation" uuid="c5e0b7a6-737f-4e5b-bca2-f7d8864552eb"/>
-    <compiledVariantInfos type="ModelRefInfoRepo.CompiledVariantInfoMap" uuid="871f50b2-892f-4316-b5f0-c7cbfca8ca7a"/>
-    <configSettingsForConsistencyChecks type="ModelRefInfoRepo.ConfigSettingsForConsistencyChecks" uuid="4ec9c17d-b562-4a04-b389-bdc883eb0467">
+    <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="3c123996-f337-4a45-97ba-ac6d621a51fd"/>
+    <codeGenInfo type="ModelRefInfoRepo.CodeGenInformation" uuid="5ee4f3ca-28f3-4926-8bdf-f21500cab11b"/>
+    <compiledVariantInfos type="ModelRefInfoRepo.CompiledVariantInfoMap" uuid="9f11908e-f2c2-4329-9afb-dfdf351f3b98"/>
+    <configSettingsForConsistencyChecks type="ModelRefInfoRepo.ConfigSettingsForConsistencyChecks" uuid="6c1db683-2971-40bd-a5e8-52f590d2a552">
       <consistentOutportInitialization>true</consistentOutportInitialization>
       <fixedStepSize>.001</fixedStepSize>
       <frameDiagnosticSetting>2</frameDiagnosticSetting>
@@ -509,7 +509,7 @@
       <simSIMDOptimization>1</simSIMDOptimization>
       <solverName>FixedStepDiscrete</solverName>
       <solverType>SOLVER_TYPE_FIXEDSTEP</solverType>
-      <hardwareSettings type="ModelRefInfoRepo.HardwareSettings" uuid="c7da3c25-54d4-4b09-9592-0fcb6865dea3">
+      <hardwareSettings type="ModelRefInfoRepo.HardwareSettings" uuid="452286b6-32bc-47ec-a790-e215b9665c83">
         <prodBitPerChar>8</prodBitPerChar>
         <prodBitPerDouble>64</prodBitPerDouble>
         <prodBitPerFloat>32</prodBitPerFloat>
@@ -528,33 +528,33 @@
         <prodWordSize>32</prodWordSize>
       </hardwareSettings>
     </configSettingsForConsistencyChecks>
-    <controllableInputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="dbee6859-c4fc-41a0-afc4-85d24a605383"/>
-    <controllableOutputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="59783060-f1b9-435b-ae7e-0b396163d427"/>
-    <dataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="b47958d6-fedf-473a-aa3f-70770705b6e9"/>
-    <expFcnUnconnectedDataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="ac35e492-1039-4755-bb41-ea0e80205da8"/>
-    <interfaceParameterInfo type="ModelRefInfoRepo.InterfaceParameterInfo" uuid="dceec58a-15fd-419e-a8df-affd4dabfca8"/>
-    <messageInfo type="ModelRefInfoRepo.MessageInformation" uuid="249b7cc2-d177-4c5c-9304-283cf8c26ad1"/>
-    <methodInfo type="ModelRefInfoRepo.MethodExistenceInfo" uuid="2b317b52-9159-4a70-8968-3b585587528c">
+    <controllableInputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="f266df3b-759f-4778-a110-4a45a2545105"/>
+    <controllableOutputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="6430a70b-9d62-47d2-9631-4258ba911ce1"/>
+    <dataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="7b9f8f2f-6bb4-46c8-9559-27d818716267"/>
+    <expFcnUnconnectedDataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="8d08d644-8362-4345-b9ed-fc48a7c55837"/>
+    <interfaceParameterInfo type="ModelRefInfoRepo.InterfaceParameterInfo" uuid="2ac05e88-6b93-41d0-aef7-d2ebe666fb33"/>
+    <messageInfo type="ModelRefInfoRepo.MessageInformation" uuid="4afbf95f-90db-43b3-a281-2857c2a4a4f6"/>
+    <methodInfo type="ModelRefInfoRepo.MethodExistenceInfo" uuid="06b82ea3-5b63-428a-bcee-02cfefa83372">
       <hasTerminateMethod>true</hasTerminateMethod>
     </methodInfo>
-    <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="9014b2cf-31a0-4e69-84c5-0c9ea46eaae0">
+    <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="04c8fe35-2254-47e5-b914-9c27b32f191a">
       <multiRateBlocks>Hallhardwaredebugslx/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt</multiRateBlocks>
       <multiRateBlocks>Hallhardwaredebugslx/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt</multiRateBlocks>
     </periodicEventPortUnsupportedBlockInfo>
-    <portGroupsRequireSameRate type="ModelRefInfoRepo.PortGroupsRequireSameRate" uuid="ce0df4c3-4e1c-47c7-b68c-935d54e44b1a">
-      <DSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="39cf095d-8cc6-42ea-9d79-504138700651"/>
-      <GlobalDSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="a932a390-2fcd-4183-9b9f-598e366eddc2"/>
-      <mergedPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="fb049e6f-3f7f-4cd8-a26d-9bd193ccc50f"/>
+    <portGroupsRequireSameRate type="ModelRefInfoRepo.PortGroupsRequireSameRate" uuid="7fb07964-db56-491b-ba51-59bf886e7618">
+      <DSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="48cabe32-f866-4faf-866d-7a41f8a6ea86"/>
+      <GlobalDSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="58c87bde-4d0d-4b1e-876b-c95298ea8078"/>
+      <mergedPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="86422d65-c722-479e-a858-5539ef946ed0"/>
     </portGroupsRequireSameRate>
-    <rateBasedMdlGlobalDSMRateSpec type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="73e65582-cce2-4ce7-8be4-fb978af7f38b"/>
-    <rateSpecOfGlobalDSMAccessedByDescExpFcnMdlMap type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="a4072bfb-78ad-437b-b6a0-671027425f5b"/>
-    <rootBlockDiagramInterface type="ci.Model" uuid="d8edce2f-8bcc-4442-99c9-2ef8082962fc">
-      <p_RootComponentInterface type="ci.ComponentInterface" uuid="8a29e908-e0ff-4b84-84bf-037b73745300">
+    <rateBasedMdlGlobalDSMRateSpec type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="c2cc6888-e1fa-4c9e-9195-1a12e3cfe152"/>
+    <rateSpecOfGlobalDSMAccessedByDescExpFcnMdlMap type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="84d31d07-c156-4db8-a332-e7628ea48bfd"/>
+    <rootBlockDiagramInterface type="ci.Model" uuid="395a9616-8cf9-439d-9199-56b74f47fb10">
+      <p_RootComponentInterface type="ci.ComponentInterface" uuid="65419317-2ffb-4898-8fad-cda3b1d14b57">
         <p_Name>Hallhardwaredebugslx</p_Name>
         <p_Type>ROOT</p_Type>
       </p_RootComponentInterface>
     </rootBlockDiagramInterface>
-    <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="9efe3093-32c7-477f-83f3-2c28cbb1cc7b">
+    <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="17158091-9a1d-4b46-8646-1b1565a150b0">
       <compSimulinkFunctionCatalog></compSimulinkFunctionCatalog>
     </simulinkFunctions>
     <sltpContext type="sltp.mm.core.Context" uuid="7eb3d3bf-39ac-4b7b-80af-4ec5445fbcba">
@@ -604,19 +604,19 @@
         </subgraph>
       </rootTask>
     </sltpContext>
-    <stateWriterToOwnerMap type="ModelRefInfoRepo.StateWriterInfo" uuid="6686ed23-7521-40a2-9086-a39684bf3f3a"/>
-    <stoClientDataRegistry type="sto.ClientDataRegistry" uuid="3b87b344-7ffd-43a9-8e7b-467767565407">
-      <dataSets type="sto.ClientClockNamedDataSet" uuid="81ea9033-794b-4f5e-ba58-622b0a21aab1">
+    <stateWriterToOwnerMap type="ModelRefInfoRepo.StateWriterInfo" uuid="a6b2c73d-e71f-45c6-9139-2cb314b02ce1"/>
+    <stoClientDataRegistry type="sto.ClientDataRegistry" uuid="52252b12-506f-43b4-82b0-601290b7948e">
+      <dataSets type="sto.ClientClockNamedDataSet" uuid="f5de7c7f-b503-45c9-8152-e965b9e57b06">
         <tag>sltpEvents</tag>
       </dataSets>
-      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="780e3dc4-a5e4-487a-8c33-427280d5c68f">
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="8435711a-1bc6-402f-ac60-9ba72a1c38e5">
         <tag>sltpTaskGroups</tag>
       </dataSets>
-      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="39782ae2-f02d-4c31-9ffd-dc9d66f10ac6">
-        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="9a3aa08e-bcab-454c-a5f5-b9879a9995db"/>
-        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="9a3aa08e-bcab-454c-a5f5-b9879a9995db">
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="df98efee-662a-4efa-a7e6-a2e08246f5b4">
+        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="f9587118-4513-428a-a63f-553856871bfd"/>
+        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="f9587118-4513-428a-a63f-553856871bfd">
           <dataName>D1</dataName>
-          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="39782ae2-f02d-4c31-9ffd-dc9d66f10ac6"/>
+          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="df98efee-662a-4efa-a7e6-a2e08246f5b4"/>
           <id type="sto.TaskHierarchyElementId">
             <clockId>Hallhardwaredebugslx::defaultTimer</clockId>
             <id>_task0</id>
@@ -625,6 +625,6 @@
         <tag>sltpTasks</tag>
       </dataSets>
     </stoClientDataRegistry>
-    <varTsUIDMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="bc19f1f2-360b-41d5-9736-1883466bc51e"/>
+    <varTsUIDMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="4e2d1315-7429-429b-b521-69e17ce144ad"/>
   </ModelRefInfoRepo.ModelRefInfoRoot>
 </MF0>
