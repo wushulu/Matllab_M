@@ -1,0 +1,6 @@
+rt_nonfinite.o: \
+ D:/Work/Matlab/PMSM/09G431Hallcorrection/Simulink/G431Hallcorrection_ert_rtw/rt_nonfinite.c \
+ D:/Work/Matlab/PMSM/09G431Hallcorrection/Simulink/G431Hallcorrection_ert_rtw/rtwtypes.h \
+ D:/Work/Matlab/PMSM/09G431Hallcorrection/Simulink/G431Hallcorrection_ert_rtw/rt_nonfinite.h
+D:/Work/Matlab/PMSM/09G431Hallcorrection/Simulink/G431Hallcorrection_ert_rtw/rtwtypes.h:
+D:/Work/Matlab/PMSM/09G431Hallcorrection/Simulink/G431Hallcorrection_ert_rtw/rt_nonfinite.h:

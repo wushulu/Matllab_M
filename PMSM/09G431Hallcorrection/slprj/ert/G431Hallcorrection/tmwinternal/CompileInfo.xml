@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/ci/19700101 http://schema.mathworks.com/mf0/sl_modelref_info/R2024a http://schema.mathworks.com/mf0/slexec_mm_sto/R2024a_202305081229 http://schema.mathworks.com/mf0/sltp_mm/R2023a_202209151115">
-  <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="3b7b3a86-0911-40f6-99d4-dd4ede03c038">
-    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="a591989b-8c53-4c51-9ed7-910162c8872d">
+  <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="e5dce229-b438-4b81-b5b4-6ccf0e02c998">
+    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="3e53aabc-e244-43f4-8721-c903aeaabf33">
       <modelName>G431Hallcorrection</modelName>
       <modelPath>G431Hallcorrection</modelPath>
     </childModelRefInfo>
-    <clockResolutions type="ModelRefInfoRepo.ClockResolutionInfo" uuid="143faccc-0df3-45d7-9ae3-b2d0b07643fc">
+    <clockResolutions type="ModelRefInfoRepo.ClockResolutionInfo" uuid="733dd847-edb1-408f-94c8-ee01374e1bf7">
       <rateIdx>0</rateIdx>
       <resolution>.001</resolution>
       <source>DeducedFromSampleTime</source>
     </clockResolutions>
-    <clockResolutions type="ModelRefInfoRepo.ClockResolutionInfo" uuid="cf754cba-4f4b-48bf-a18a-82132e2234d4">
+    <clockResolutions type="ModelRefInfoRepo.ClockResolutionInfo" uuid="9e2640c9-1a64-4742-ab13-9a547e0aaa2a">
       <rateIdx>2</rateIdx>
       <resolution>.001</resolution>
       <source>DeducedFromSpecifiedFixedStepSize</source>
     </clockResolutions>
     <compiledTFinal>inf</compiledTFinal>
-    <dataSourceInfo type="ModelRefInfoRepo.DataSourceInfo" uuid="cd85c2ce-5581-43c9-ba2b-4ab855a346da">
-      <dataSources type="ModelRefInfoRepo.SourceInfo" uuid="0d828761-68b5-40c5-94d1-16b28a233dea">
+    <dataSourceInfo type="ModelRefInfoRepo.DataSourceInfo" uuid="ffc53508-65cb-4e27-89bd-175ae6c3a598">
+      <dataSources type="ModelRefInfoRepo.SourceInfo" uuid="de1fbd17-b768-45c8-9f7b-1fe6ab67e022">
         <includeAllSections>true</includeAllSections>
         <sourceName>base workspace</sourceName>
         <type>BaseWorkspace</type>
@@ -64,132 +64,132 @@
     <solverStatusFlags>335</solverStatusFlags>
     <timingAndTaskingRegistry>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;slexec_sto version=&quot;1.1&quot; packageUris=&quot;http://schema.mathworks.com/mf0/slexec_mm_sto/R2024a_202305081229&quot;&gt;
-  &lt;sto.Registry type=&quot;sto.Registry&quot; uuid=&quot;dc23f6df-bbac-4cf9-9482-63322487966f&quot;&gt;
+  &lt;sto.Registry type=&quot;sto.Registry&quot; uuid=&quot;d260f7c4-b92d-44ad-a05b-aeaf3d27d09d&quot;&gt;
     &lt;executionSpec&gt;Undetermined&lt;/executionSpec&gt;
     &lt;identifier&gt;G431Hallcorrection&lt;/identifier&gt;
-    &lt;clockRegistry type=&quot;sto.ClockRegistry&quot; uuid=&quot;96111ac5-ea95-4263-affe-36d6e2ec9771&quot;&gt;
-      &lt;clocks type=&quot;sto.Timer&quot; uuid=&quot;53468981-f530-4610-a897-c6b1355455d1&quot;&gt;
+    &lt;clockRegistry type=&quot;sto.ClockRegistry&quot; uuid=&quot;da417879-9dce-429b-952d-0618fceafcc4&quot;&gt;
+      &lt;clocks type=&quot;sto.Timer&quot; uuid=&quot;d69bf74a-0ef4-4fef-b154-953c4b6bff37&quot;&gt;
         &lt;computedFundamentalDiscretePeriod&gt;.001&lt;/computedFundamentalDiscretePeriod&gt;
-        &lt;fastestDiscreteRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;6edad67f-9a97-4c7e-9ea5-1a71af01db1d&quot;/&gt;
+        &lt;fastestDiscreteRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;f568fd35-9bf6-4f4e-93a9-84911be85a0c&quot;/&gt;
         &lt;isDefaultTimer&gt;true&lt;/isDefaultTimer&gt;
         &lt;resolution&gt;.001&lt;/resolution&gt;
         &lt;timeAdvanceMode&gt;FixedStep&lt;/timeAdvanceMode&gt;
         &lt;identifier&gt;G431Hallcorrection::defaultTimer&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;6edad67f-9a97-4c7e-9ea5-1a71af01db1d&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;f568fd35-9bf6-4f4e-93a9-84911be85a0c&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection::defaultTimer&lt;/clockId&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;bbbe9347-342d-48d1-82ad-3e5bab866a29&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;d2c57f6d-9f2c-4f97-bed7-629839760e0f&quot;&gt;
             &lt;period&gt;.001&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;b70c0d29-6a0e-435a-884e-1f619870bf33&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;5a6debdb-2d46-4488-81d2-f912c30aa87b&quot;&gt;
           &lt;annotation&gt;D2&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection::defaultTimer&lt;/clockId&gt;
           &lt;colorIndex&gt;1&lt;/colorIndex&gt;
           &lt;description&gt;Discrete 2&lt;/description&gt;
           &lt;rateIdx&gt;1&lt;/rateIdx&gt;
           &lt;taskId&gt;_task1&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;06f9e753-a7b8-44e3-91a2-a585326e030b&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;869063ca-7cdc-4250-9fab-47ced1f33436&quot;&gt;
             &lt;period&gt;.1&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
-        &lt;baseRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;eb29450f-ae92-4c2f-b6ae-b67d317df1f3&quot;&gt;
+        &lt;baseRate type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;d2a84922-b3d8-4c6d-a222-a98d3d2399cb&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection::defaultTimer&lt;/clockId&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;3c73434c-134b-4e28-a86f-f5ea4145b558&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;40a4d55c-4c8d-4f59-af3a-e5f1df6426b8&quot;&gt;
             &lt;period&gt;.001&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/baseRate&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;fc079d3a-f746-4a87-9d36-02914e6b36f9&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;5037cdd7-eb31-4f9f-8d91-cd1bd55ba213&quot;&gt;
         &lt;eventType&gt;ASYNCHRONOUS_INTERRUPT&lt;/eventType&gt;
         &lt;cNum&gt;1&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;1b28c20e-cd32-4dab-9145-81b73fe5aa66&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;49dffb20-36d3-49d1-9a77-68558b4ea93e&quot;&gt;
           &lt;annotation&gt;A1&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 1&lt;/description&gt;
           &lt;rateIdx&gt;2&lt;/rateIdx&gt;
           &lt;taskId&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;b2256ed2-556d-46b7-9922-01d81339d737&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;4b088ba7-4312-4da4-b333-8d0d0806d72d&quot;&gt;
             &lt;offset&gt;-2.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;f40cc148-c695-40b2-b300-344207509fff&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;fdde1efc-4823-4c2f-9060-27ab3896b32c&quot;&gt;
         &lt;eventType&gt;ASYNCHRONOUS_INTERRUPT&lt;/eventType&gt;
         &lt;cNum&gt;2&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;84e2332f-2540-4e54-8f37-76680e6684a1&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;fa745930-c158-485e-adb4-78fac4e6eb04&quot;&gt;
           &lt;annotation&gt;A2&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 2&lt;/description&gt;
           &lt;rateIdx&gt;3&lt;/rateIdx&gt;
           &lt;taskId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;28973e00-4d2a-4fb2-81ca-7db59fd2be61&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;61c5b54c-9764-418e-8911-726e4c5a49cd&quot;&gt;
             &lt;offset&gt;-3.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;0f48ef25-f4c9-428b-b001-dd856e225098&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;510cbc62-7f73-4419-a90f-77015d681ab5&quot;&gt;
         &lt;eventType&gt;ASYNCHRONOUS_INTERRUPT&lt;/eventType&gt;
         &lt;cNum&gt;3&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;c5135b5d-78d1-4311-bc91-a91b4641609f&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;203ce1e9-5834-4c15-ae05-78b05de25e9c&quot;&gt;
           &lt;annotation&gt;A3&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 3&lt;/description&gt;
           &lt;rateIdx&gt;4&lt;/rateIdx&gt;
           &lt;taskId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;97387c5b-3ad1-41d2-91b4-0a7353e6dbb0&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;9ee1b993-8222-4693-8a4a-c8e14c16e969&quot;&gt;
             &lt;offset&gt;-4.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;ad48cf42-de5f-4623-a9bd-1aac94268002&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;060cb563-b5d3-4b92-b048-3342d6c7df93&quot;&gt;
         &lt;eventType&gt;ASYNCHRONOUS_INTERRUPT&lt;/eventType&gt;
         &lt;cNum&gt;4&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;230ecf44-5b10-4aff-a2a6-08189c08ee8a&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;225119f1-ea53-431a-864e-06d9ddebcc77&quot;&gt;
           &lt;annotation&gt;A4&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 4&lt;/description&gt;
           &lt;rateIdx&gt;5&lt;/rateIdx&gt;
           &lt;taskId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;b89861a2-3f48-4763-95f8-57eb0675b40b&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;f3af79fd-e743-4031-950a-9cfb1d9192a3&quot;&gt;
             &lt;offset&gt;-5.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
           &lt;/rateSpec&gt;
         &lt;/rates&gt;
       &lt;/clocks&gt;
-      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;971b56b0-9301-4b2e-9880-488383e2cd46&quot;&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;13a42753-356b-47ff-b4b8-6aeca6cdad30&quot;&gt;
         &lt;eventType&gt;PARAMETER_CHANGE_EVENT&lt;/eventType&gt;
         &lt;cNum&gt;5&lt;/cNum&gt;
         &lt;clockType&gt;Event&lt;/clockType&gt;
         &lt;identifier&gt;ParameterChangeEvent&lt;/identifier&gt;
-        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;11b3d103-c2ea-4108-a2bc-456e07279d05&quot;&gt;
+        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;7c8d43d4-5229-4b3f-a270-0840681340f8&quot;&gt;
           &lt;annotation&gt;Inf&lt;/annotation&gt;
           &lt;clockId&gt;ParameterChangeEvent&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
@@ -197,7 +197,7 @@
           &lt;rateIdx&gt;-1&lt;/rateIdx&gt;
           &lt;taskId&gt;ModelWideParameterChangeEvent&lt;/taskId&gt;
           &lt;useForExecution&gt;NotForExecution&lt;/useForExecution&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;7c88fd81-60d1-42b9-8f9f-a1bf0b1b6e9b&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;e8166e17-f79b-4349-9223-0837e95eddb5&quot;&gt;
             &lt;period&gt;inf&lt;/period&gt;
             &lt;rateType&gt;ModelWideParameterChangeEvent&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -205,19 +205,19 @@
       &lt;/clocks&gt;
       &lt;timeAdvanceMode&gt;FixedStep&lt;/timeAdvanceMode&gt;
     &lt;/clockRegistry&gt;
-    &lt;taskRegistry type=&quot;sto.TaskRegistry&quot; uuid=&quot;f5351a0c-6c07-4578-96ad-096c69535866&quot;&gt;
+    &lt;taskRegistry type=&quot;sto.TaskRegistry&quot; uuid=&quot;6dfcfa76-ba0d-4dff-86c5-f23e831b97ac&quot;&gt;
       &lt;hasUnknownEdges&gt;true&lt;/hasUnknownEdges&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;76d18e52-6e0c-45bd-94fa-557c7f167330&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;f0c97916-ad73-4500-8afd-43f1a8226fe3&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;d18a97ac-dc4d-4351-bfcb-cbd6a4e33c8a&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;439ee570-7566-43ff-8d90-85f29447f9d8&quot;&gt;
           &lt;annotation&gt;A1&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 1&lt;/description&gt;
           &lt;rateIdx&gt;2&lt;/rateIdx&gt;
           &lt;taskId&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;2d34b971-4bf6-4cd8-abfc-8bb7f23def4c&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;76a0c4be-b966-465f-8327-adf64746955f&quot;&gt;
             &lt;offset&gt;-2.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
@@ -230,9 +230,9 @@
         &lt;identifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/identifier&gt;
         &lt;priority&gt;30&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;774fb69b-88b2-4832-8c9f-79f0f586a3e5&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;505335dc-bed0-42bd-99f7-00e5d5c84b54&quot;&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;e7f31baa-eb6f-4e94-99f5-9c50764c25a5&quot;&gt;
+        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;bb743b07-77e7-4a1e-b16b-4ae1ed8d4a2c&quot;&gt;
           &lt;annotation&gt;Inf&lt;/annotation&gt;
           &lt;clockId&gt;ParameterChangeEvent&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
@@ -240,7 +240,7 @@
           &lt;rateIdx&gt;-1&lt;/rateIdx&gt;
           &lt;taskId&gt;ModelWideParameterChangeEvent&lt;/taskId&gt;
           &lt;useForExecution&gt;NotForExecution&lt;/useForExecution&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;12f9aab8-839d-4429-befc-3ed7cf65ca1c&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;d8f45bd9-0010-45ce-8080-421a0504c770&quot;&gt;
             &lt;period&gt;inf&lt;/period&gt;
             &lt;rateType&gt;ModelWideParameterChangeEvent&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -251,17 +251,17 @@
         &lt;identifier&gt;ModelWideParameterChangeEvent&lt;/identifier&gt;
         &lt;priority&gt;-1&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;12b79a60-e17f-47ce-b331-68270d109b59&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;87fe5fa0-a65c-42e4-b5b0-54369e56cf07&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;a064d47b-d5bc-412e-ac5c-c90dfcc089f7&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;23409d22-e4ab-470f-ba5f-115ddc96ca8f&quot;&gt;
           &lt;annotation&gt;A2&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 2&lt;/description&gt;
           &lt;rateIdx&gt;3&lt;/rateIdx&gt;
           &lt;taskId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;bce35ed8-dc5d-4ed0-a984-31ab43dccbe0&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;431ffc18-76a9-4d3b-9b4a-ad9e4a9b7ee5&quot;&gt;
             &lt;offset&gt;-3.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
@@ -274,17 +274,17 @@
         &lt;identifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/identifier&gt;
         &lt;priority&gt;29&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;38adbe48-8ce6-4f68-8cce-c6b6cdf20583&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;143c241b-8199-410b-a738-64fa92b292e2&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;da8f9376-a7a2-4437-b9e0-514344d63605&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;73f46cf9-36fe-4c5b-ad96-09e9d295d89d&quot;&gt;
           &lt;annotation&gt;A3&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 3&lt;/description&gt;
           &lt;rateIdx&gt;4&lt;/rateIdx&gt;
           &lt;taskId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;dbce56c8-7594-4e7b-a28e-bf8aa22a7281&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;56c8357d-2d71-4892-9bdc-dee2b55ac266&quot;&gt;
             &lt;offset&gt;-4.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
@@ -297,17 +297,17 @@
         &lt;identifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/identifier&gt;
         &lt;priority&gt;29&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;24778c17-0433-44e5-aabc-2c860b31d5d6&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;43f8a4ce-d385-4e78-8e13-be7e4fdfb77e&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;isExplicit&gt;true&lt;/isExplicit&gt;
-        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;879d1c4b-4e4e-4768-b848-02cb2c909e60&quot;&gt;
+        &lt;rates type=&quot;sto.LegacyAsyncRate&quot; uuid=&quot;0b55f6e8-6f4a-40c3-8152-a17cae990761&quot;&gt;
           &lt;annotation&gt;A4&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/clockId&gt;
           &lt;colorIndex&gt;-1&lt;/colorIndex&gt;
           &lt;description&gt;Asynchronous 4&lt;/description&gt;
           &lt;rateIdx&gt;5&lt;/rateIdx&gt;
           &lt;taskId&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;eef92f04-4d3d-4fa8-a3f5-7e81e1fed703&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;9db1552a-55db-4fc0-b514-328da7709c18&quot;&gt;
             &lt;offset&gt;-5.0&lt;/offset&gt;
             &lt;period&gt;-1.0&lt;/period&gt;
             &lt;rateType&gt;LegacyAsync&lt;/rateType&gt;
@@ -320,15 +320,15 @@
         &lt;identifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/identifier&gt;
         &lt;priority&gt;29&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;05f80de4-996f-4c36-89af-ea49dd4d08fc&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;15ccf239-17c6-44c8-b042-6458ffc5bc37&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;orderIndex&gt;1&lt;/orderIndex&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;af605b6b-ef41-4444-9911-60a1cacdb983&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;dafe3ba9-921c-4631-b3b3-132b2363767d&quot;&gt;
           &lt;annotation&gt;D1&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection::defaultTimer&lt;/clockId&gt;
           &lt;description&gt;Discrete 1&lt;/description&gt;
           &lt;taskId&gt;_task0&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;7c02166d-dc54-4507-96fb-722c13eb5565&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;e9105160-ee9a-473d-963f-d3cc826137cf&quot;&gt;
             &lt;period&gt;.001&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -339,17 +339,17 @@
         &lt;identifier&gt;_task0&lt;/identifier&gt;
         &lt;priority&gt;40&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;aa36f680-6412-4e83-a9a5-13647454df13&quot;&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;a699028e-eea2-4b7a-8c28-000ec5dfc580&quot;&gt;
         &lt;isExecutable&gt;true&lt;/isExecutable&gt;
         &lt;orderIndex&gt;2&lt;/orderIndex&gt;
-        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;fd4bfcc9-dc9c-4fc3-81f4-41eb4bbfc869&quot;&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;7bc368b4-b3d3-407c-b8a7-8e5aa06305b7&quot;&gt;
           &lt;annotation&gt;D2&lt;/annotation&gt;
           &lt;clockId&gt;G431Hallcorrection::defaultTimer&lt;/clockId&gt;
           &lt;colorIndex&gt;1&lt;/colorIndex&gt;
           &lt;description&gt;Discrete 2&lt;/description&gt;
           &lt;rateIdx&gt;1&lt;/rateIdx&gt;
           &lt;taskId&gt;_task1&lt;/taskId&gt;
-          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;7fbb4c92-62cc-45df-a0cc-cf20302f237d&quot;&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;ec1d5e2f-d46a-4a48-b9d6-a334cafdee90&quot;&gt;
             &lt;period&gt;.1&lt;/period&gt;
             &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
           &lt;/rateSpec&gt;
@@ -361,128 +361,128 @@
         &lt;identifier&gt;_task1&lt;/identifier&gt;
         &lt;priority&gt;41&lt;/priority&gt;
       &lt;/rootTaskHierarchyElements&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;3956ecc7-4498-4d1c-91a6-68983d6c2072&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;2a8bed93-7371-48f8-8a86-611b54e9c05d&quot;&gt;
         &lt;clockIdentifier&gt;G431Hallcorrection::defaultTimer&lt;/clockIdentifier&gt;
-        &lt;taskIdentifier&gt;_task1&lt;/taskIdentifier&gt;
-      &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;21a44d46-7d0e-482d-af50-275dc13ae09d&quot;&gt;
-        &lt;clockIdentifier&gt;G431Hallcorrection::defaultTimer&lt;/clockIdentifier&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;b3ff0d49-83ad-4b62-9edb-cf74826fb6d4&quot;&gt;
-          &lt;isInternal&gt;true&lt;/isInternal&gt;
-          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;c9e6e1dc-3f11-4ac0-81cf-242ddb0c6ed5&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;15c2e15e-f6f3-40c1-9bd7-42406ccaa2d6&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;908ed5ea-95ed-4042-8907-210523d10dac&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;9c1d7a2b-11f8-48f8-9204-826eeb5ae6dd&quot;&gt;
+          &lt;isInternal&gt;true&lt;/isInternal&gt;
+          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;daf2d22d-c7d0-4697-9020-82c0e6bf41e3&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;6453150f-e9f8-4eff-9403-87ffefc3bc79&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;f6afbec0-6ea0-4618-ba2a-94256ca3ce5a&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
         &lt;taskIdentifier&gt;_task0&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;04ce7225-dca1-49ad-8e42-9284a0681007&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;45ac8fde-75df-4aea-afd2-5b90bc18f3e4&quot;&gt;
         &lt;clockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/clockIdentifier&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;8ff70c92-c402-4581-93f5-047365153072&quot;&gt;
-          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
-          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;b3ae4ffc-4630-4eef-95dd-84c289d71913&quot;&gt;
-          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
-          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;7a5c0800-9eb8-4305-a9d4-d01376c203f4&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;cdd2b576-5190-422b-98aa-fd6f23216c75&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection::defaultTimer&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;_task0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;b09ea1b4-e91f-440a-ad00-76b3da5f4c09&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;3f3fbd8f-a298-465f-b10d-347ad0da1db4&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;a236b35c-eb92-47ff-9a12-40806a9eeff7&quot;&gt;
+          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
+          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;74b82c03-a7f6-4297-a777-bca5089eea02&quot;&gt;
+          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
+          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
         &lt;taskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;b81e7dee-f1f4-45c9-9bb4-49a7e1036800&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;45d46692-5a22-4160-95e6-804d8fcbf56b&quot;&gt;
         &lt;clockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/clockIdentifier&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;40b29eb8-63e6-44d2-a49c-6819bfaf07dc&quot;&gt;
-          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
-          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;719e20d9-e28e-4472-a3d1-7838346fc035&quot;&gt;
-          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
-          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;2019ef2f-7ef1-41f5-ad8c-2e2e2a5e7999&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;c3acdc6e-afdc-4699-9619-94831b4edfbe&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection::defaultTimer&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;_task0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;17dd2b2c-96e4-4434-999f-f9685f61144d&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;315639d9-4519-44d7-8b30-c52bedfbb8c1&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;ccd2bb45-4b09-4d5e-a2fd-09368e2fcfaa&quot;&gt;
+          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
+          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;46a2ca25-b4e2-42ab-a533-426de2df5611&quot;&gt;
+          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
+          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
         &lt;taskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;9155b305-aff4-4614-aafd-15232592ef25&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;70fbbbab-607a-43c9-92f6-76e5c047e0ea&quot;&gt;
         &lt;clockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockIdentifier&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;c976e023-6b0a-479b-99e4-b4f18fe2b47b&quot;&gt;
-          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
-          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;174069e5-8502-4b0d-8f62-bb962249b535&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;a4e89df0-c097-4d12-8e66-ea1c267aaed8&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection::defaultTimer&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;_task0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;12e59c09-d5fa-42b6-b6ef-1c382d56e037&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;da9a97f5-24b0-4e65-a846-4be27b392203&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;1fac9f0b-b93d-45e2-901a-d4a25924a1b8&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;cbb153b0-4ef4-4ea2-8513-52ab0af3b08a&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;e897d9b1-0ce8-4763-91b6-75891dc1eef1&quot;&gt;
+          &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
+          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
         &lt;taskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;d96d64a1-3354-43f1-88d3-3d0231e276b4&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;fb6fff98-65d6-4506-a3c0-6305b4b92020&quot;&gt;
         &lt;clockIdentifier&gt;ParameterChangeEvent&lt;/clockIdentifier&gt;
         &lt;taskIdentifier&gt;ModelWideParameterChangeEvent&lt;/taskIdentifier&gt;
       &lt;/taskDependencyGraph&gt;
-      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;d7398ec1-4107-4463-a391-fe486e55c8b7&quot;&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;b1bef76f-dd3c-4109-9ace-e700cc20a055&quot;&gt;
+        &lt;clockIdentifier&gt;G431Hallcorrection::defaultTimer&lt;/clockIdentifier&gt;
+        &lt;taskIdentifier&gt;_task1&lt;/taskIdentifier&gt;
+      &lt;/taskDependencyGraph&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;983991d3-4417-49ff-a791-95e0110ce56c&quot;&gt;
         &lt;clockIdentifier&gt;G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/clockIdentifier&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;d53d3927-10d4-488b-8083-d23cc526c113&quot;&gt;
-          &lt;isInternal&gt;true&lt;/isInternal&gt;
-          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
-          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
-        &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;b608860f-c9e5-40ab-bbc5-3cdf3dde70cc&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;4d2d0959-7b11-499a-b351-a169094ec631&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,1.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;cdc644da-c7bc-4d3d-9be5-a9fe4f78c178&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;d91505fd-e722-4311-a24b-bdf3cf095556&quot;&gt;
+          &lt;isInternal&gt;true&lt;/isInternal&gt;
+          &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,2.ExplicitTask0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;caf24332-6aac-4da3-9c69-e344ff226948&quot;&gt;
           &lt;isInternal&gt;true&lt;/isInternal&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt,0,0.ExplicitTask0&lt;/targetTaskIdentifier&gt;
         &lt;/serializedConnectionProperties&gt;
-        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;721b6e08-efdb-4fea-a1ce-5923dfd03b18&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;fa95deb0-aa05-417e-ad1a-e1309ef38d76&quot;&gt;
           &lt;orderingImpact&gt;Impacted&lt;/orderingImpact&gt;
           &lt;targetClockIdentifier&gt;G431Hallcorrection::defaultTimer&lt;/targetClockIdentifier&gt;
           &lt;targetTaskIdentifier&gt;_task0&lt;/targetTaskIdentifier&gt;
@@ -494,7 +494,7 @@
     &lt;/taskRegistry&gt;
   &lt;/sto.Registry&gt;
 &lt;/slexec_sto&gt;</timingAndTaskingRegistry>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c8230db7-558d-4da0-a7f3-aeb5ed5901fe">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2d603f12-f887-4a2d-a20e-ab5b8a2668c2">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -503,7 +503,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2c0965f0-747c-48d1-8747-e278b30cfb0d">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="cd9f3b2e-2fa1-4263-9b94-ec2dc4f736f9">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -512,7 +512,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="348993ca-fe74-4952-a979-892b4215fed2">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="6d695003-03bf-4b78-8709-1444c5f86db2">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -521,7 +521,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="483fa267-77ef-4242-954d-1ab5eae7a830">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="95f4473e-dacd-44ac-bd51-6ee253b5a3fc">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -530,7 +530,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a4c02826-da60-4c57-9d4a-c99a2fb0e0fc">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2b3da88d-c142-48d9-9bd9-680869270738">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -539,7 +539,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="7fc6bd07-49f2-4a15-9fa5-55fc7c2fa645">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="baadd4ca-f3d1-4af2-94ce-41cdfac9fc7e">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -548,7 +548,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="15fda9b1-4be5-4377-a071-914bb7c51263">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="035059a5-7f58-4fff-a884-abf36e36f803">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -557,7 +557,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f0239261-5101-4336-aecc-3bf64c232c48">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="6b55ffa6-372f-4b69-b314-e1377081b33a">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -566,7 +566,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="57924d61-fff3-453d-bc94-02c9e350b6f1">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d852e15d-018b-4634-93af-563235a3d226">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -575,7 +575,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="bd7f891f-42ea-4c16-9902-2c8099f7e916">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f12cdfba-5f93-4308-874b-d74aebbb22d0">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -584,7 +584,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a364c85f-33f5-40a1-9e26-fa1653c43318">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="da1f16f9-157c-43b4-a311-9a41f63e8f62">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -593,7 +593,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c97bb78f-1ca5-4f56-ad6a-abdc4e125fef">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="bc5a12ca-6f22-4964-bea9-eb384894ed02">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -602,7 +602,7 @@
       <type>1</type>
       <width>1</width>
     </zeroCrossingInfo>
-    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="dcc54fb7-4d4f-4a80-a1a5-058186a30167">
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9be0e757-2ade-410d-9a87-f14de28eb175">
       <direction>63</direction>
       <isDiscrete>true</isDiscrete>
       <name>Reset</name>
@@ -612,10 +612,10 @@
       <width>1</width>
     </zeroCrossingInfo>
     <zeroInternalMemoryAtStartupUnchecked>true</zeroInternalMemoryAtStartupUnchecked>
-    <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="fb960062-3269-477a-8add-637fa757376f"/>
-    <codeGenInfo type="ModelRefInfoRepo.CodeGenInformation" uuid="07e457b7-cc6f-486d-814b-12cbfc3f8853"/>
-    <compiledVariantInfos type="ModelRefInfoRepo.CompiledVariantInfoMap" uuid="b23c0fdf-cb9d-4f7b-8cc0-245a4feb057c"/>
-    <configSettingsForConsistencyChecks type="ModelRefInfoRepo.ConfigSettingsForConsistencyChecks" uuid="7457e21c-3d16-4e2a-a957-dd421eb686eb">
+    <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="bc452f84-a8fc-4662-b348-f529a7510fee"/>
+    <codeGenInfo type="ModelRefInfoRepo.CodeGenInformation" uuid="40f42ab3-e4b5-41cd-a94e-5ef1ec999d7a"/>
+    <compiledVariantInfos type="ModelRefInfoRepo.CompiledVariantInfoMap" uuid="6172241b-fc85-41e2-b01d-8686266738cf"/>
+    <configSettingsForConsistencyChecks type="ModelRefInfoRepo.ConfigSettingsForConsistencyChecks" uuid="1bd61ff3-f52c-4aec-9be8-8e1d1a39c4ff">
       <consistentOutportInitialization>true</consistentOutportInitialization>
       <fixedStepSize>.001</fixedStepSize>
       <frameDiagnosticSetting>2</frameDiagnosticSetting>
@@ -627,7 +627,7 @@
       <solverMode>SOLVER_MODE_MULTITASKING</solverMode>
       <solverName>FixedStepDiscrete</solverName>
       <solverType>SOLVER_TYPE_FIXEDSTEP</solverType>
-      <hardwareSettings type="ModelRefInfoRepo.HardwareSettings" uuid="a76ccd6b-654b-4a7b-95a0-06170082b70e">
+      <hardwareSettings type="ModelRefInfoRepo.HardwareSettings" uuid="1edfe38f-bddf-4a84-ad94-ee80a6a7f16e">
         <prodBitPerChar>8</prodBitPerChar>
         <prodBitPerDouble>64</prodBitPerDouble>
         <prodBitPerFloat>32</prodBitPerFloat>
@@ -646,39 +646,37 @@
         <prodWordSize>32</prodWordSize>
       </hardwareSettings>
     </configSettingsForConsistencyChecks>
-    <controllableInputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="8b3305f0-bf38-49a7-a840-dc2e9f11ddab"/>
-    <controllableOutputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="b15a2fb6-38d2-47dc-b050-31a616e0e7b4"/>
-    <dataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="3066d54e-80f1-4db2-ae2e-8cdb6c678d1d"/>
-    <expFcnUnconnectedDataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="07a85347-00ee-45f5-a060-d99e8f24c512"/>
-    <interfaceParameterInfo type="ModelRefInfoRepo.InterfaceParameterInfo" uuid="8cfbb51f-edf4-4453-9056-128f23de34b4"/>
-    <messageInfo type="ModelRefInfoRepo.MessageInformation" uuid="d2756876-35de-4de5-a398-aedc91341d9c"/>
-    <methodInfo type="ModelRefInfoRepo.MethodExistenceInfo" uuid="01514f1b-970b-47ef-8eb2-1e3a9f53797a">
+    <controllableInputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="979398ed-c47d-4d11-a7bf-78d0c16af57e"/>
+    <controllableOutputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="bedef0ff-3fa5-4d07-9eb0-ff33427808b7"/>
+    <dataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="00c53768-c696-4e17-91aa-25b65ac67b54"/>
+    <expFcnUnconnectedDataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="0525fd92-0668-41ec-890f-88dbdbc75142"/>
+    <interfaceParameterInfo type="ModelRefInfoRepo.InterfaceParameterInfo" uuid="0db68c88-54a1-4bf4-86e1-9f7c7ee9100d"/>
+    <messageInfo type="ModelRefInfoRepo.MessageInformation" uuid="0fb4544c-9d95-4c66-9002-d0ee8c1e0eb5"/>
+    <methodInfo type="ModelRefInfoRepo.MethodExistenceInfo" uuid="1875f76a-4acf-4e2c-9099-7a6e5a2810a5">
       <hasTerminateMethod>true</hasTerminateMethod>
     </methodInfo>
-    <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="6b411199-0dab-4f0b-80f3-3db3732c772b">
+    <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="f36230c5-2a29-4277-aed5-e7cf0a1538ce">
       <multiRateBlocks>G431Hallcorrection/Hardware Interrupt/ECSoC/ECSimCodegen/Hardware Interrupt</multiRateBlocks>
       <multiRateBlocks>G431Hallcorrection/Hardware Interrupt2/ECSoC/ECSimCodegen/Hardware Interrupt</multiRateBlocks>
     </periodicEventPortUnsupportedBlockInfo>
-    <portGroupsRequireSameRate type="ModelRefInfoRepo.PortGroupsRequireSameRate" uuid="0c06f4c3-0129-4f7e-b7c4-d89670ca6f60">
-      <DSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="40419c25-7af1-47e2-a4fa-6870a29c2090"/>
-      <GlobalDSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="0bb7225e-39c1-476a-85f3-5951da675407"/>
-      <mergedPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="0324b3f6-c3d8-451c-bd34-7a3af23e14b4"/>
+    <portGroupsRequireSameRate type="ModelRefInfoRepo.PortGroupsRequireSameRate" uuid="9958c47c-8cca-4147-a3b1-40da88066a5c">
+      <DSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="c233f6d2-25c4-4f5f-9bec-37d889bf47be"/>
+      <GlobalDSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="e33d4c31-25d6-4c57-8052-facaac109d29"/>
+      <mergedPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="f8a9c90d-427c-495f-939f-f8279b9cf500"/>
     </portGroupsRequireSameRate>
-    <rateBasedMdlGlobalDSMRateSpec type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="a00c801c-1270-4858-93e8-af4ae412cc48"/>
-    <rateSpecOfGlobalDSMAccessedByDescExpFcnMdlMap type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="749b200a-d7b5-4d1b-b98c-04a7ee6fba5f"/>
-    <rootBlockDiagramInterface type="ci.Model" uuid="d731bc0d-7c11-4b2f-8c86-234ba1dcc157">
-      <p_RootComponentInterface type="ci.ComponentInterface" uuid="93a3a43d-1fd2-4512-8af5-a3d94e772bdb">
+    <rateBasedMdlGlobalDSMRateSpec type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="acc131ed-213b-48d1-88c7-ef487dd32412"/>
+    <rateSpecOfGlobalDSMAccessedByDescExpFcnMdlMap type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="87973b66-ac29-4cd9-b79d-b8adf1461892"/>
+    <rootBlockDiagramInterface type="ci.Model" uuid="0ae684d3-3437-4e71-a0fa-4646f61b6dd3">
+      <p_RootComponentInterface type="ci.ComponentInterface" uuid="aadac8e2-01b3-4c23-9a41-65c31b2ddea9">
         <p_Name>G431Hallcorrection</p_Name>
         <p_Type>ROOT</p_Type>
       </p_RootComponentInterface>
     </rootBlockDiagramInterface>
-    <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="d51419e5-aac5-4e56-9706-aea58d9af49b">
+    <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="d3a65cb0-aed9-4ddd-bf52-649c5d6892d9">
       <compSimulinkFunctionCatalog></compSimulinkFunctionCatalog>
     </simulinkFunctions>
     <sltpContext type="sltp.mm.core.Context" uuid="fc305e09-920c-425b-98c8-d9bbd52db92b">
       <priorityDirection>HighNumberLast</priorityDirection>
-      <unusedTaskIds>3</unusedTaskIds>
-      <unusedTaskIds>4</unusedTaskIds>
       <defaultEventBehavior type="sltp.mm.core.EventBehavior" uuid="6841a87d-e2a1-41c3-822a-9da38f200836"/>
       <editorState type="sltp.mm.core.EditorState" uuid="ad35cb09-8284-42a7-979b-0ce06ac9a7c1">
         <isSynchronized>true</isSynchronized>
@@ -731,28 +729,28 @@
         </subgraph>
       </rootTask>
     </sltpContext>
-    <stateWriterToOwnerMap type="ModelRefInfoRepo.StateWriterInfo" uuid="6aabb991-8324-42f2-a149-3804c3a3fd9f"/>
-    <stoClientDataRegistry type="sto.ClientDataRegistry" uuid="416358dd-9ef4-4a2d-8b90-a13c729b2676">
-      <dataSets type="sto.ClientClockNamedDataSet" uuid="269318f0-d9b8-4c7e-aefb-7ba57a120d90">
+    <stateWriterToOwnerMap type="ModelRefInfoRepo.StateWriterInfo" uuid="7a9c8271-a760-49f6-a478-85dc0bf512db"/>
+    <stoClientDataRegistry type="sto.ClientDataRegistry" uuid="4bb5b113-158a-4bf1-bfc3-488c72cca774">
+      <dataSets type="sto.ClientClockNamedDataSet" uuid="cdf2d328-889d-43dd-a96c-002163bbc3c0">
         <tag>sltpEvents</tag>
       </dataSets>
-      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="66b2eb49-cde7-4df7-bcf8-65a7a42f30c7">
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="2e42fc2b-d0e6-477a-9d59-5f6ab73b5481">
         <tag>sltpTaskGroups</tag>
       </dataSets>
-      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="152cae1e-b081-4445-8622-b65c5fbabcd7">
-        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="d52a0e82-ef2c-4ed7-9ff4-19f9a0773269"/>
-        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="bef541b5-5df6-4399-a92f-dc33bf3ae15f"/>
-        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="d52a0e82-ef2c-4ed7-9ff4-19f9a0773269">
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="1e596e18-d668-48ba-a692-c9ebab1b9035">
+        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="42e40594-11bf-4bfa-93da-78523357fb9d"/>
+        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="ca047219-dccb-46b4-80d4-fdbd5c280952"/>
+        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="42e40594-11bf-4bfa-93da-78523357fb9d">
           <dataName>D1</dataName>
-          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="152cae1e-b081-4445-8622-b65c5fbabcd7"/>
+          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="1e596e18-d668-48ba-a692-c9ebab1b9035"/>
           <id type="sto.TaskHierarchyElementId">
             <clockId>G431Hallcorrection::defaultTimer</clockId>
             <id>_task0</id>
           </id>
         </tSet>
-        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="bef541b5-5df6-4399-a92f-dc33bf3ae15f">
+        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="ca047219-dccb-46b4-80d4-fdbd5c280952">
           <dataName>D2</dataName>
-          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="152cae1e-b081-4445-8622-b65c5fbabcd7"/>
+          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="1e596e18-d668-48ba-a692-c9ebab1b9035"/>
           <id type="sto.TaskHierarchyElementId">
             <clockId>G431Hallcorrection::defaultTimer</clockId>
             <id>_task1</id>
@@ -761,6 +759,6 @@
         <tag>sltpTasks</tag>
       </dataSets>
     </stoClientDataRegistry>
-    <varTsUIDMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="71489ad4-1fde-4470-bf21-c11211105037"/>
+    <varTsUIDMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="6d768664-9a61-47f7-afcc-f4e916cd8060"/>
   </ModelRefInfoRepo.ModelRefInfoRoot>
 </MF0>

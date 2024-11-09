@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'G431Hallcorrection'.
  *
- * Model version                  : 1.19
+ * Model version                  : 1.20
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Thu Oct 24 14:38:06 2024
+ * C/C++ source code generated on : Wed Nov  6 11:03:14 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -1581,10 +1581,10 @@ void G431Hallcorrection_initialize(void)
   G431Hallcorrection_M->Timing.stepSize0 = 0.001;
 
   /* External mode info */
-  G431Hallcorrection_M->Sizes.checksums[0] = (2931066614U);
-  G431Hallcorrection_M->Sizes.checksums[1] = (2421320140U);
-  G431Hallcorrection_M->Sizes.checksums[2] = (833302564U);
-  G431Hallcorrection_M->Sizes.checksums[3] = (4127047858U);
+  G431Hallcorrection_M->Sizes.checksums[0] = (1618639037U);
+  G431Hallcorrection_M->Sizes.checksums[1] = (3173770748U);
+  G431Hallcorrection_M->Sizes.checksums[2] = (1877920315U);
+  G431Hallcorrection_M->Sizes.checksums[3] = (66436241U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;

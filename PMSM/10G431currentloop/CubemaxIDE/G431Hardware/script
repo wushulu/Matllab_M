@@ -1,0 +1,10 @@
+config load "D:\Work\Matlab\PMSM\10G431currentloop\CubemaxIDE\G431Hardware\G431Hardware.ioc"
+project toolchain STM32CubeIDE
+
+SetStructure Advanced
+
+project setCustomFWPath "D:\software\STM32Cubepro\STM32Cube_FW_G4_V1.5.0"
+
+project generate 
+
+exit wait

@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'G431Hallcorrection'.
  *
- * Model version                  : 1.19
+ * Model version                  : 1.20
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Thu Oct 24 14:38:06 2024
+ * C/C++ source code generated on : Wed Nov  6 11:03:14 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
