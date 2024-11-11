@@ -585,6 +585,14 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:8964"] = {rtwname: "<S290>"};
 	this.rtwnameHashMap["<Root>/Code generation"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:8467"};
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:8467"] = {rtwname: "<Root>/Code generation"};
+	this.rtwnameHashMap["<Root>/Constant1"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:9074"};
+	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:9074"] = {rtwname: "<Root>/Constant1"};
+	this.rtwnameHashMap["<Root>/Constant2"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:9075"};
+	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:9075"] = {rtwname: "<Root>/Constant2"};
+	this.rtwnameHashMap["<Root>/Constant3"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:9076"};
+	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:9076"] = {rtwname: "<Root>/Constant3"};
+	this.rtwnameHashMap["<Root>/Constant4"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:9086"};
+	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:9086"] = {rtwname: "<Root>/Constant4"};
 	this.rtwnameHashMap["<Root>/Current Control"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:7689"};
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:7689"] = {rtwname: "<Root>/Current Control"};
 	this.rtwnameHashMap["<Root>/Data Store Memory1"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:8395"};
@@ -597,6 +605,10 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:8991"] = {rtwname: "<Root>/Data Type Conversion1"};
 	this.rtwnameHashMap["<Root>/Data Type Conversion2"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:8992"};
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:8992"] = {rtwname: "<Root>/Data Type Conversion2"};
+	this.rtwnameHashMap["<Root>/Demux"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:9050"};
+	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:9050"] = {rtwname: "<Root>/Demux"};
+	this.rtwnameHashMap["<Root>/For Iterator Subsystem"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:9079"};
+	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:9079"] = {rtwname: "<Root>/For Iterator Subsystem"};
 	this.rtwnameHashMap["<Root>/From1"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:7982"};
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:7982"] = {rtwname: "<Root>/From1"};
 	this.rtwnameHashMap["<Root>/Goto"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:7983"};
@@ -607,6 +619,8 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:8477"] = {rtwname: "<Root>/Heartbeat LED"};
 	this.rtwnameHashMap["<Root>/Inverter and Motor - Plant Model"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:8068"};
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:8068"] = {rtwname: "<Root>/Inverter and Motor - Plant Model"};
+	this.rtwnameHashMap["<Root>/Mux"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:9051"};
+	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:9051"] = {rtwname: "<Root>/Mux"};
 	this.rtwnameHashMap["<Root>/Push Button"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:8843"};
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:8843"] = {rtwname: "<Root>/Push Button"};
 	this.rtwnameHashMap["<Root>/RT"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:8935"};
@@ -633,6 +647,10 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:8204"] = {rtwname: "<Root>/Speed Control"};
 	this.rtwnameHashMap["<Root>/Subsystem1"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:8982"};
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:8982"] = {rtwname: "<Root>/Subsystem1"};
+	this.rtwnameHashMap["<Root>/Subsystem5"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:9010"};
+	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:9010"] = {rtwname: "<Root>/Subsystem5"};
+	this.rtwnameHashMap["<Root>/UART//USART Write1"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:9084"};
+	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:9084"] = {rtwname: "<Root>/UART//USART Write1"};
 	this.rtwnameHashMap["<Root>/Variant Source"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:8475"};
 	this.sidHashMap["mcb_pmsm_foc_sensorless_nucleo_f401re:8475"] = {rtwname: "<Root>/Variant Source"};
 	this.rtwnameHashMap["<S1>/Hardware Interrupt"] = {sid: "mcb_pmsm_foc_sensorless_nucleo_f401re:8880"};

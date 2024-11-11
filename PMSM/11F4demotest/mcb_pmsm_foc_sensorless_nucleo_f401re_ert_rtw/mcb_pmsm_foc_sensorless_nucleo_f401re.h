@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'mcb_pmsm_foc_sensorless_nucleo_f401re'.
  *
- * Model version                  : 8.1
+ * Model version                  : 8.3
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Fri Nov  8 22:37:46 2024
+ * C/C++ source code generated on : Sat Nov  9 19:29:55 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -133,13 +133,13 @@ typedef struct {
   uint32_T Sum[4];                     /* '<S21>/Sum' */
   uint32_T PositionToCount;            /* '<S183>/PositionToCount' */
   uint32_T Delay;                      /* '<S183>/Delay' */
+  real32_T RT3;                        /* '<Root>/RT3' */
   real32_T DataTypeConversion;         /* '<Root>/Data Type Conversion' */
   real32_T Assignment[3];              /* '<S7>/Assignment' */
   real32_T DataTypeConversion1;        /* '<Root>/Data Type Conversion1' */
   real32_T Assignment1[3];             /* '<S7>/Assignment1' */
   real32_T DataTypeConversion2;        /* '<Root>/Data Type Conversion2' */
   real32_T Assignment2[3];             /* '<S7>/Assignment2' */
-  real32_T RT3;                        /* '<Root>/RT3' */
   real32_T RT1;                        /* '<Root>/RT1' */
   real32_T GetADCVoltage[2];           /* '<S174>/Get ADC Voltage' */
   real32_T GetCurrents[2];             /* '<S174>/Get Currents' */

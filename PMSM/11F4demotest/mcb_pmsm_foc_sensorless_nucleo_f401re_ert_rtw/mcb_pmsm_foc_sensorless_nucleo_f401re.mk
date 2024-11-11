@@ -2,7 +2,7 @@
 ## Makefile generated for component 'mcb_pmsm_foc_sensorless_nucleo_f401re'. 
 ## 
 ## Makefile     : mcb_pmsm_foc_sensorless_nucleo_f401re.mk
-## Generated on : Fri Nov 08 22:35:34 2024
+## Generated on : Sat Nov 09 18:30:54 2024
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/mcb_pmsm_foc_sensorless_nucleo_f401re.elf
 ## Product type : executable
 ## 

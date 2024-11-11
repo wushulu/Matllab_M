@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'G431currentloop'.
  *
- * Model version                  : 1.59
+ * Model version                  : 1.61
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Fri Nov  8 16:32:23 2024
+ * C/C++ source code generated on : Mon Nov 11 12:27:47 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -18,8 +18,6 @@
 #ifndef G431currentloop_COMMON_INCLUDES_
 #define G431currentloop_COMMON_INCLUDES_
 #include "rtwtypes.h"
-#include "rtw_extmode.h"
-#include "sysran_types.h"
 #include "rt_nonfinite.h"
 #include "math.h"
 #include "main.h"
@@ -28,19 +26,12 @@
 #include "mw_stm32_nvic.h"
 #include "G431currentloop_types.h"
 #include "rtGetNaN.h"
+#include <stddef.h>
 #include <string.h>
 #include "zero_crossing_types.h"
 #include "MW_target_hardware_resources.h"
 
 /* Macros for accessing real-time model data structure */
-#ifndef rtmGetFinalTime
-#define rtmGetFinalTime(rtm)           ((rtm)->Timing.tFinal)
-#endif
-
-#ifndef rtmGetRTWExtModeInfo
-#define rtmGetRTWExtModeInfo(rtm)      ((rtm)->extModeInfo)
-#endif
-
 #ifndef rtmGetErrorStatus
 #define rtmGetErrorStatus(rtm)         ((rtm)->errorStatus)
 #endif
@@ -49,41 +40,8 @@
 #define rtmSetErrorStatus(rtm, val)    ((rtm)->errorStatus = (val))
 #endif
 
-#ifndef rtmStepTask
-#define rtmStepTask(rtm, idx)          ((rtm)->Timing.TaskCounters.TID[(idx)] == 0)
-#endif
-
-#ifndef rtmGetStopRequested
-#define rtmGetStopRequested(rtm)       ((rtm)->Timing.stopRequestedFlag)
-#endif
-
-#ifndef rtmSetStopRequested
-#define rtmSetStopRequested(rtm, val)  ((rtm)->Timing.stopRequestedFlag = (val))
-#endif
-
-#ifndef rtmGetStopRequestedPtr
-#define rtmGetStopRequestedPtr(rtm)    (&((rtm)->Timing.stopRequestedFlag))
-#endif
-
-#ifndef rtmGetT
-#define rtmGetT(rtm)                   ((rtm)->Timing.taskTime0)
-#endif
-
-#ifndef rtmGetTFinal
-#define rtmGetTFinal(rtm)              ((rtm)->Timing.tFinal)
-#endif
-
-#ifndef rtmGetTPtr
-#define rtmGetTPtr(rtm)                (&(rtm)->Timing.taskTime0)
-#endif
-
-#ifndef rtmTaskCounter
-#define rtmTaskCounter(rtm, idx)       ((rtm)->Timing.TaskCounters.TID[(idx)])
-#endif
-
 /* Block signals (default storage) */
 typedef struct {
-  real_T ab;                           /* '<Root>/Rate Transition1' */
   real_T LED;                          /* '<S5>/Pulse Generator' */
   real_T DataStoreRead;                /* '<S45>/Data Store Read' */
   real_T DataStoreRead1;               /* '<S45>/Data Store Read1' */
@@ -188,10 +146,8 @@ typedef struct {
   uint32_T Delay_o;                    /* '<S25>/Delay' */
   uint32_T DataStoreRead_p;            /* '<S47>/Data Store Read' */
   uint32_T Add1_g;                     /* '<S47>/Add1' */
-  real32_T RateTransition;             /* '<Root>/Rate Transition' */
   real32_T Delay_i;                    /* '<S18>/Delay' */
   real32_T PhaseDelay;                 /* '<S18>/PhaseDelay' */
-  real32_T AngleConversion;            /* '<S18>/AngleConversion' */
   real32_T Merge_i;                    /* '<S49>/Merge' */
   real32_T scaleIn;                    /* '<S52>/scaleIn' */
   real32_T UnitDelay_e;                /* '<S52>/Unit Delay' */
@@ -278,6 +234,7 @@ typedef struct {
   real32_T SaturatetomotorcalibSpeedRPM;
                                 /* '<S51>/Saturate to 'motor.calibSpeed' RPM' */
   real32_T scaleOut;                   /* '<S52>/scaleOut' */
+  real32_T AngleConversion;            /* '<S18>/AngleConversion' */
   real32_T DataTypeConversion1_f;      /* '<S43>/Data Type Conversion1' */
   real32_T DataTypeConversion2;        /* '<S43>/Data Type Conversion2' */
   real32_T Atan2;                      /* '<S43>/Atan2' */
@@ -376,27 +333,8 @@ typedef struct {
   boolean_T UnitDelay_DSTATE_m;        /* '<S1>/Unit Delay' */
   boolean_T Delay_DSTATE_j;            /* '<S53>/Delay' */
   boolean_T UnitDelay_DSTATE_g;        /* '<S7>/Unit Delay' */
-  int8_T FunctionCallSubsystem_SubsysRan;/* '<Root>/Function-Call Subsystem' */
   int8_T Integrator_PrevResetState;    /* '<S185>/Integrator' */
   int8_T Integrator_PrevResetState_n;  /* '<S132>/Integrator' */
-  int8_T DQEquivalence_SubsysRanBC;    /* '<S79>/D-Q Equivalence' */
-  int8_T Passthrough_SubsysRanBC;      /* '<S82>/Passthrough' */
-  int8_T Limiter_SubsysRanBC;          /* '<S82>/Limiter' */
-  int8_T DQAxisPriority_SubsysRanBC;   /* '<S79>/D//Q Axis Priority' */
-  int8_T limitRef2_SubsysRanBC;        /* '<S92>/limitRef2' */
-  int8_T passThrough_SubsysRanBC;      /* '<S92>/passThrough' */
-  int8_T IfActionSubsystem1_SubsysRanBC;/* '<S75>/If Action Subsystem1' */
-  int8_T IfActionSubsystem_SubsysRanBC;/* '<S75>/If Action Subsystem' */
-  int8_T Accumulate_SubsysRanBC;       /* '<S52>/Accumulate' */
-  int8_T Subsystem_SubsysRanBC;        /* '<S53>/Subsystem' */
-  int8_T IfActionSubsystem2_SubsysRanBC;/* '<S49>/If Action Subsystem2' */
-  int8_T IfActionSubsystem_SubsysRanBC_e;/* '<S49>/If Action Subsystem' */
-  int8_T IfActionSubsystem3_SubsysRanBC;/* '<S13>/If Action Subsystem3' */
-  int8_T IfActionSubsystem2_SubsysRanB_l;/* '<S13>/If Action Subsystem2' */
-  int8_T Subsystem3_SubsysRanBC;       /* '<S19>/Subsystem3' */
-  int8_T Subsystem2_SubsysRanBC;       /* '<S19>/Subsystem2' */
-  int8_T Dir_Sense_SubsysRanBC;        /* '<S19>/Dir_Sense' */
-  int8_T EnabledSubsystem_SubsysRanBC; /* '<S1>/Enabled Subsystem' */
   boolean_T Enable;                    /* '<Root>/Data Store Memory9' */
   boolean_T objisempty;                /* '<S209>/Digital Port Write' */
   boolean_T AlphaRelay_Mode;           /* '<S19>/AlphaRelay' */
@@ -650,6 +588,9 @@ struct P_G431currentloop_T_ {
   real32_T OneMinusFilterConstant_Value_f;/* Expression: 1 - Filter_constant
                                            * Referenced by: '<S24>/OneMinusFilterConstant'
                                            */
+  real32_T AngleConversion_Gain;     /* Computed Parameter: AngleConversion_Gain
+                                      * Referenced by: '<S18>/AngleConversion'
+                                      */
   real32_T scaleOut_Gain;              /* Computed Parameter: scaleOut_Gain
                                         * Referenced by: '<S52>/scaleOut'
                                         */
@@ -747,9 +688,6 @@ struct P_G431currentloop_T_ {
                                 /* Computed Parameter: Delay_InitialCondition_m4
                                  * Referenced by: '<S18>/Delay'
                                  */
-  real32_T AngleConversion_Gain;     /* Computed Parameter: AngleConversion_Gain
-                                      * Referenced by: '<S18>/AngleConversion'
-                                      */
   real32_T scaleIn_Gain;               /* Computed Parameter: scaleIn_Gain
                                         * Referenced by: '<S52>/scaleIn'
                                         */
@@ -942,47 +880,7 @@ struct P_G431currentloop_T_ {
 
 /* Real-time Model Data Structure */
 struct tag_RTM_G431currentloop_T {
-  const char_T *errorStatus;
-  RTWExtModeInfo *extModeInfo;
-
-  /*
-   * Sizes:
-   * The following substructure contains sizes information
-   * for many of the model attributes such as inputs, outputs,
-   * dwork, sample times, etc.
-   */
-  struct {
-    uint32_T checksums[4];
-  } Sizes;
-
-  /*
-   * SpecialInfo:
-   * The following substructure contains special information
-   * related to other components that are dependent on RTW.
-   */
-  struct {
-    const void *mappingInfo;
-  } SpecialInfo;
-
-  /*
-   * Timing:
-   * The following substructure contains information regarding
-   * the timing information for the model.
-   */
-  struct {
-    time_T taskTime0;
-    uint32_T clockTick0;
-    time_T stepSize0;
-    uint32_T clockTick1;
-    uint32_T clockTick2;
-    uint32_T clockTick3;
-    struct {
-      uint8_T TID[2];
-    } TaskCounters;
-
-    time_T tFinal;
-    boolean_T stopRequestedFlag;
-  } Timing;
+  const char_T * volatile errorStatus;
 };
 
 /* Block parameters (default storage) */
@@ -997,13 +895,9 @@ extern DW_G431currentloop_T G431currentloop_DW;
 /* Zero-crossing (trigger) state */
 extern PrevZCX_G431currentloop_T G431currentloop_PrevZCX;
 
-/* External function called from main */
-extern void G431currentloop_SetEventsForThisBaseStep(boolean_T *eventFlags);
-
 /* Model entry point functions */
 extern void G431currentloop_initialize(void);
-extern void G431currentloop_step0(void);
-extern void G431currentloop_step1(void);
+extern void G431currentloop_step(void);
 extern void G431currentloop_terminate(void);
 
 /* Real-time Model object */

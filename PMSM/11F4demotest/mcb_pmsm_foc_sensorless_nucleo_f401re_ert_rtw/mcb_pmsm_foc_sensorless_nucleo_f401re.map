@@ -1730,7 +1730,7 @@ LOAD c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.i
                 0x08000000                g_pfnVectors
                 0x08000194                . = ALIGN (0x4)
 
-.text           0x08000198     0x6474
+.text           0x08000198     0x6464
                 0x08000198                . = ALIGN (0x4)
  *(.text)
  .text          0x08000198      0x378 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
@@ -1875,416 +1875,416 @@ LOAD c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.i
                 0x08001924     0x1034 mcb_pmsm_foc_sensorless_nucleo_f401re.o
                 0x08001924                ADC_IRQHandler
  .text.mcb_pmsm_foc_sensorless_nucleo_f401re_step0
-                0x08002958      0x1a8 mcb_pmsm_foc_sensorless_nucleo_f401re.o
+                0x08002958      0x568 mcb_pmsm_foc_sensorless_nucleo_f401re.o
                 0x08002958                mcb_pmsm_foc_sensorless_nucleo_f401re_step0
  .text.mcb_pmsm_foc_sensorless_nucleo_f401re_step1
-                0x08002b00      0x54c mcb_pmsm_foc_sensorless_nucleo_f401re.o
-                0x08002b00                mcb_pmsm_foc_sensorless_nucleo_f401re_step1
+                0x08002ec0      0x17c mcb_pmsm_foc_sensorless_nucleo_f401re.o
+                0x08002ec0                mcb_pmsm_foc_sensorless_nucleo_f401re_step1
  .text.mcb_pmsm_foc_sensorless_nucleo_f401re_step2
-                0x0800304c       0x48 mcb_pmsm_foc_sensorless_nucleo_f401re.o
-                0x0800304c                mcb_pmsm_foc_sensorless_nucleo_f401re_step2
+                0x0800303c       0x48 mcb_pmsm_foc_sensorless_nucleo_f401re.o
+                0x0800303c                mcb_pmsm_foc_sensorless_nucleo_f401re_step2
  .text.mcb_pmsm_foc_sensorless_nucleo_f401re_initialize
-                0x08003094      0x270 mcb_pmsm_foc_sensorless_nucleo_f401re.o
-                0x08003094                mcb_pmsm_foc_sensorless_nucleo_f401re_initialize
+                0x08003084      0x270 mcb_pmsm_foc_sensorless_nucleo_f401re.o
+                0x08003084                mcb_pmsm_foc_sensorless_nucleo_f401re_initialize
  .text.mcb_pmsm_foc_sensorless_nucleo_f401re_terminate
-                0x08003304       0xec mcb_pmsm_foc_sensorless_nucleo_f401re.o
-                0x08003304                mcb_pmsm_foc_sensorless_nucleo_f401re_terminate
+                0x080032f4       0xec mcb_pmsm_foc_sensorless_nucleo_f401re.o
+                0x080032f4                mcb_pmsm_foc_sensorless_nucleo_f401re_terminate
  .text.mcb_pmsm_foc_sensorless_nucleo_f401re_configure_interrupts
-                0x080033f0       0x20 mcb_pmsm_foc_sensorless_nucleo_f401re.o
-                0x080033f0                mcb_pmsm_foc_sensorless_nucleo_f401re_configure_interrupts
+                0x080033e0       0x20 mcb_pmsm_foc_sensorless_nucleo_f401re.o
+                0x080033e0                mcb_pmsm_foc_sensorless_nucleo_f401re_configure_interrupts
  .text.mcb_pmsm_foc_sensorless_nucleo_f401re_unconfigure_interrupts
-                0x08003410       0x18 mcb_pmsm_foc_sensorless_nucleo_f401re.o
-                0x08003410                mcb_pmsm_foc_sensorless_nucleo_f401re_unconfigure_interrupts
+                0x08003400       0x18 mcb_pmsm_foc_sensorless_nucleo_f401re.o
+                0x08003400                mcb_pmsm_foc_sensorless_nucleo_f401re_unconfigure_interrupts
  .text.rtIsInfF
-                0x08003428       0x34 rt_nonfinite.o
-                0x08003428                rtIsInfF
+                0x08003418       0x34 rt_nonfinite.o
+                0x08003418                rtIsInfF
  .text.rtIsNaNF
-                0x0800345c       0x10 rt_nonfinite.o
-                0x0800345c                rtIsNaNF
+                0x0800344c       0x10 rt_nonfinite.o
+                0x0800344c                rtIsNaNF
  .text.PeriphCommonClock_Config
-                0x0800346c        0x4 platform_timer.o
-                0x0800346c                PeriphCommonClock_Config
+                0x0800345c        0x4 platform_timer.o
+                0x0800345c                PeriphCommonClock_Config
  .text.returnTimeElapsed
-                0x08003470       0x54 platform_timer.o
-                0x08003470                returnTimeElapsed
+                0x08003460       0x54 platform_timer.o
+                0x08003460                returnTimeElapsed
  .text.SysTick_Isr
-                0x080034c4       0x38 SysTickScheduler.o
+                0x080034b4       0x38 SysTickScheduler.o
  .text.SysTick_Handler
-                0x080034fc       0x10 SysTickScheduler.o
-                0x080034fc                SysTick_Handler
+                0x080034ec       0x10 SysTickScheduler.o
+                0x080034ec                SysTick_Handler
  .text.ARMCM_SysTick_Config
-                0x0800350c       0xbc SysTickScheduler.o
-                0x0800350c                ARMCM_SysTick_Config
+                0x080034fc       0xbc SysTickScheduler.o
+                0x080034fc                ARMCM_SysTick_Config
  .text.PendSV_Handler
-                0x080035c8       0x44 m3m4m4f_multitasking.o
-                0x080035c8                PendSV_Handler
+                0x080035b8       0x44 m3m4m4f_multitasking.o
+                0x080035b8                PendSV_Handler
  .text.SVC_Handler
-                0x0800360c       0x58 m3m4m4f_multitasking.o
-                0x0800360c                SVC_Handler
+                0x080035fc       0x58 m3m4m4f_multitasking.o
+                0x080035fc                SVC_Handler
  .text.SystemClock_Config
-                0x08003664       0xd8 main.o
-                0x08003664                SystemClock_Config
+                0x08003654       0xd8 main.o
+                0x08003654                SystemClock_Config
  .text.MX_ADC1_Init
-                0x0800373c      0x2c0 main.o
-                0x0800373c                MX_ADC1_Init
+                0x0800372c      0x2c0 main.o
+                0x0800372c                MX_ADC1_Init
  .text.MX_TIM1_Init
-                0x080039fc      0x13c main.o
-                0x080039fc                MX_TIM1_Init
+                0x080039ec      0x13c main.o
+                0x080039ec                MX_TIM1_Init
  .text.MX_USART2_UART_Init
-                0x08003b38      0x118 main.o
-                0x08003b38                MX_USART2_UART_Init
+                0x08003b28      0x118 main.o
+                0x08003b28                MX_USART2_UART_Init
  .text.MX_DMA_Init
-                0x08003c50       0x5c main.o
-                0x08003c50                MX_DMA_Init
+                0x08003c40       0x5c main.o
+                0x08003c40                MX_DMA_Init
  .text.MX_GPIO_Init
-                0x08003cac      0x130 main.o
-                0x08003cac                MX_GPIO_Init
+                0x08003c9c      0x130 main.o
+                0x08003c9c                MX_GPIO_Init
  .text.HAL_TIM_PeriodElapsedCallback
-                0x08003ddc       0x14 main.o
-                0x08003ddc                HAL_TIM_PeriodElapsedCallback
+                0x08003dcc       0x14 main.o
+                0x08003dcc                HAL_TIM_PeriodElapsedCallback
  .text.NMI_Handler
-                0x08003df0        0x4 stm32f4xx_it.o
-                0x08003df0                NMI_Handler
+                0x08003de0        0x4 stm32f4xx_it.o
+                0x08003de0                NMI_Handler
  .text.HardFault_Handler
-                0x08003df4        0x4 stm32f4xx_it.o
-                0x08003df4                HardFault_Handler
+                0x08003de4        0x4 stm32f4xx_it.o
+                0x08003de4                HardFault_Handler
  .text.MemManage_Handler
-                0x08003df8        0x4 stm32f4xx_it.o
-                0x08003df8                MemManage_Handler
+                0x08003de8        0x4 stm32f4xx_it.o
+                0x08003de8                MemManage_Handler
  .text.BusFault_Handler
-                0x08003dfc        0x4 stm32f4xx_it.o
-                0x08003dfc                BusFault_Handler
+                0x08003dec        0x4 stm32f4xx_it.o
+                0x08003dec                BusFault_Handler
  .text.UsageFault_Handler
-                0x08003e00        0x4 stm32f4xx_it.o
-                0x08003e00                UsageFault_Handler
+                0x08003df0        0x4 stm32f4xx_it.o
+                0x08003df0                UsageFault_Handler
  .text.DebugMon_Handler
-                0x08003e04        0x4 stm32f4xx_it.o
-                0x08003e04                DebugMon_Handler
+                0x08003df4        0x4 stm32f4xx_it.o
+                0x08003df4                DebugMon_Handler
  .text.DMA1_Stream5_IRQHandler
-                0x08003e08        0x4 stm32f4xx_it.o
-                0x08003e08                DMA1_Stream5_IRQHandler
+                0x08003df8        0x4 stm32f4xx_it.o
+                0x08003df8                DMA1_Stream5_IRQHandler
  .text.TIM5_IRQHandler
-                0x08003e0c        0xc stm32f4xx_it.o
-                0x08003e0c                TIM5_IRQHandler
+                0x08003dfc        0xc stm32f4xx_it.o
+                0x08003dfc                TIM5_IRQHandler
  .text.HAL_MspInit
-                0x08003e18       0x3c stm32f4xx_hal_msp.o
-                0x08003e18                HAL_MspInit
+                0x08003e08       0x3c stm32f4xx_hal_msp.o
+                0x08003e08                HAL_MspInit
  .text.HAL_InitTick
-                0x08003e54       0x80 stm32f4xx_hal_timebase_tim.o
-                0x08003e54                HAL_InitTick
+                0x08003e44       0x80 stm32f4xx_hal_timebase_tim.o
+                0x08003e44                HAL_InitTick
  .text.LL_GPIO_Init
-                0x08003ed4      0x174 stm32f4xx_ll_gpio.o
-                0x08003ed4                LL_GPIO_Init
+                0x08003ec4      0x174 stm32f4xx_ll_gpio.o
+                0x08003ec4                LL_GPIO_Init
  .text.LL_ADC_CommonInit
-                0x08004048       0x24 stm32f4xx_ll_adc.o
-                0x08004048                LL_ADC_CommonInit
+                0x08004038       0x24 stm32f4xx_ll_adc.o
+                0x08004038                LL_ADC_CommonInit
  .text.LL_ADC_Init
-                0x0800406c       0x3c stm32f4xx_ll_adc.o
-                0x0800406c                LL_ADC_Init
+                0x0800405c       0x3c stm32f4xx_ll_adc.o
+                0x0800405c                LL_ADC_Init
  .text.LL_ADC_REG_Init
-                0x080040a8       0x54 stm32f4xx_ll_adc.o
-                0x080040a8                LL_ADC_REG_Init
+                0x08004098       0x54 stm32f4xx_ll_adc.o
+                0x08004098                LL_ADC_REG_Init
  .text.LL_ADC_INJ_Init
-                0x080040fc       0x50 stm32f4xx_ll_adc.o
-                0x080040fc                LL_ADC_INJ_Init
+                0x080040ec       0x50 stm32f4xx_ll_adc.o
+                0x080040ec                LL_ADC_INJ_Init
  .text.LL_RCC_GetSystemClocksFreq
-                0x0800414c       0x94 stm32f4xx_ll_rcc.o
-                0x0800414c                LL_RCC_GetSystemClocksFreq
+                0x0800413c       0x94 stm32f4xx_ll_rcc.o
+                0x0800413c                LL_RCC_GetSystemClocksFreq
  .text.LL_SetSystemCoreClock
-                0x080041e0        0xc stm32f4xx_ll_utils.o
-                0x080041e0                LL_SetSystemCoreClock
+                0x080041d0        0xc stm32f4xx_ll_utils.o
+                0x080041d0                LL_SetSystemCoreClock
  .text.LL_EXTI_Init
-                0x080041ec       0xbc stm32f4xx_ll_exti.o
-                0x080041ec                LL_EXTI_Init
+                0x080041dc       0xbc stm32f4xx_ll_exti.o
+                0x080041dc                LL_EXTI_Init
  .text.HAL_RCC_GetPCLK1Freq
-                0x080042a8       0x20 stm32f4xx_hal_rcc.o
-                0x080042a8                HAL_RCC_GetPCLK1Freq
+                0x08004298       0x20 stm32f4xx_hal_rcc.o
+                0x08004298                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetClockConfig
-                0x080042c8       0x44 stm32f4xx_hal_rcc.o
-                0x080042c8                HAL_RCC_GetClockConfig
+                0x080042b8       0x44 stm32f4xx_hal_rcc.o
+                0x080042b8                HAL_RCC_GetClockConfig
  .text.HAL_NVIC_SetPriorityGrouping
-                0x0800430c       0x24 stm32f4xx_hal_cortex.o
-                0x0800430c                HAL_NVIC_SetPriorityGrouping
+                0x080042fc       0x24 stm32f4xx_hal_cortex.o
+                0x080042fc                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x08004330       0x7c stm32f4xx_hal_cortex.o
-                0x08004330                HAL_NVIC_SetPriority
+                0x08004320       0x7c stm32f4xx_hal_cortex.o
+                0x08004320                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x080043ac       0x1c stm32f4xx_hal_cortex.o
-                0x080043ac                HAL_NVIC_EnableIRQ
+                0x0800439c       0x1c stm32f4xx_hal_cortex.o
+                0x0800439c                HAL_NVIC_EnableIRQ
  .text.HAL_Init
-                0x080043c8       0x34 stm32f4xx_hal.o
-                0x080043c8                HAL_Init
+                0x080043b8       0x34 stm32f4xx_hal.o
+                0x080043b8                HAL_Init
  .text.HAL_IncTick
-                0x080043fc       0x18 stm32f4xx_hal.o
-                0x080043fc                HAL_IncTick
+                0x080043ec       0x18 stm32f4xx_hal.o
+                0x080043ec                HAL_IncTick
  .text.HAL_GetTick
-                0x08004414        0xc stm32f4xx_hal.o
-                0x08004414                HAL_GetTick
+                0x08004404        0xc stm32f4xx_hal.o
+                0x08004404                HAL_GetTick
  .text.HAL_TIM_Base_MspInit
-                0x08004420        0x4 stm32f4xx_hal_tim.o
-                0x08004420                HAL_TIM_Base_MspInit
+                0x08004410        0x4 stm32f4xx_hal_tim.o
+                0x08004410                HAL_TIM_Base_MspInit
  .text.HAL_TIM_Base_Init
-                0x08004424       0xfc stm32f4xx_hal_tim.o
-                0x08004424                HAL_TIM_Base_Init
+                0x08004414       0xfc stm32f4xx_hal_tim.o
+                0x08004414                HAL_TIM_Base_Init
  .text.HAL_TIM_Base_Start_IT
-                0x08004520       0x68 stm32f4xx_hal_tim.o
-                0x08004520                HAL_TIM_Base_Start_IT
+                0x08004510       0x68 stm32f4xx_hal_tim.o
+                0x08004510                HAL_TIM_Base_Start_IT
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x08004588        0x4 stm32f4xx_hal_tim.o
-                0x08004588                HAL_TIM_OC_DelayElapsedCallback
+                0x08004578        0x4 stm32f4xx_hal_tim.o
+                0x08004578                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_IC_CaptureCallback
-                0x0800458c        0x4 stm32f4xx_hal_tim.o
-                0x0800458c                HAL_TIM_IC_CaptureCallback
+                0x0800457c        0x4 stm32f4xx_hal_tim.o
+                0x0800457c                HAL_TIM_IC_CaptureCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x08004590        0x4 stm32f4xx_hal_tim.o
-                0x08004590                HAL_TIM_PWM_PulseFinishedCallback
+                0x08004580        0x4 stm32f4xx_hal_tim.o
+                0x08004580                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x08004594        0x4 stm32f4xx_hal_tim.o
-                0x08004594                HAL_TIM_TriggerCallback
+                0x08004584        0x4 stm32f4xx_hal_tim.o
+                0x08004584                HAL_TIM_TriggerCallback
  .text.HAL_TIM_IRQHandler
-                0x08004598      0x154 stm32f4xx_hal_tim.o
-                0x08004598                HAL_TIM_IRQHandler
+                0x08004588      0x154 stm32f4xx_hal_tim.o
+                0x08004588                HAL_TIM_IRQHandler
  .text.HAL_TIMEx_CommutCallback
-                0x080046ec        0x4 stm32f4xx_hal_tim_ex.o
-                0x080046ec                HAL_TIMEx_CommutCallback
+                0x080046dc        0x4 stm32f4xx_hal_tim_ex.o
+                0x080046dc                HAL_TIMEx_CommutCallback
  .text.HAL_TIMEx_BreakCallback
-                0x080046f0        0x4 stm32f4xx_hal_tim_ex.o
-                0x080046f0                HAL_TIMEx_BreakCallback
+                0x080046e0        0x4 stm32f4xx_hal_tim_ex.o
+                0x080046e0                HAL_TIMEx_BreakCallback
  .text.LL_TIM_Init
-                0x080046f4       0x98 stm32f4xx_ll_tim.o
-                0x080046f4                LL_TIM_Init
+                0x080046e4       0x98 stm32f4xx_ll_tim.o
+                0x080046e4                LL_TIM_Init
  .text.LL_TIM_OC_Init
-                0x0800478c      0x1b0 stm32f4xx_ll_tim.o
-                0x0800478c                LL_TIM_OC_Init
+                0x0800477c      0x1b0 stm32f4xx_ll_tim.o
+                0x0800477c                LL_TIM_OC_Init
  .text.LL_TIM_BDTR_Init
-                0x0800493c       0x3c stm32f4xx_ll_tim.o
-                0x0800493c                LL_TIM_BDTR_Init
+                0x0800492c       0x3c stm32f4xx_ll_tim.o
+                0x0800492c                LL_TIM_BDTR_Init
  .text.LL_USART_Init
-                0x08004978      0x104 stm32f4xx_ll_usart.o
-                0x08004978                LL_USART_Init
+                0x08004968      0x104 stm32f4xx_ll_usart.o
+                0x08004968                LL_USART_Init
  .text.SystemInit
-                0x08004a7c       0x14 system_stm32f4xx.o
-                0x08004a7c                SystemInit
+                0x08004a6c       0x14 system_stm32f4xx.o
+                0x08004a6c                SystemInit
  .text.Reset_Handler
-                0x08004a90       0x50 startup_stm32f401retx.o
-                0x08004a90                Reset_Handler
+                0x08004a80       0x50 startup_stm32f401retx.o
+                0x08004a80                Reset_Handler
  .text.Default_Handler
-                0x08004ae0        0x2 startup_stm32f401retx.o
-                0x08004ae0                RTC_Alarm_IRQHandler
-                0x08004ae0                EXTI2_IRQHandler
-                0x08004ae0                SPI4_IRQHandler
-                0x08004ae0                TIM1_CC_IRQHandler
-                0x08004ae0                DMA2_Stream5_IRQHandler
-                0x08004ae0                PVD_IRQHandler
-                0x08004ae0                SDIO_IRQHandler
-                0x08004ae0                TAMP_STAMP_IRQHandler
-                0x08004ae0                EXTI3_IRQHandler
-                0x08004ae0                TIM1_UP_TIM10_IRQHandler
-                0x08004ae0                I2C3_ER_IRQHandler
-                0x08004ae0                EXTI0_IRQHandler
-                0x08004ae0                I2C2_EV_IRQHandler
-                0x08004ae0                DMA1_Stream2_IRQHandler
-                0x08004ae0                FPU_IRQHandler
-                0x08004ae0                DMA2_Stream2_IRQHandler
-                0x08004ae0                SPI1_IRQHandler
-                0x08004ae0                TIM1_BRK_TIM9_IRQHandler
-                0x08004ae0                DMA2_Stream3_IRQHandler
-                0x08004ae0                USART6_IRQHandler
-                0x08004ae0                TIM4_IRQHandler
-                0x08004ae0                I2C1_EV_IRQHandler
-                0x08004ae0                DMA1_Stream6_IRQHandler
-                0x08004ae0                DMA1_Stream1_IRQHandler
-                0x08004ae0                TIM3_IRQHandler
-                0x08004ae0                RCC_IRQHandler
-                0x08004ae0                Default_Handler
-                0x08004ae0                EXTI15_10_IRQHandler
-                0x08004ae0                DMA1_Stream7_IRQHandler
-                0x08004ae0                DMA2_Stream7_IRQHandler
-                0x08004ae0                I2C3_EV_IRQHandler
-                0x08004ae0                EXTI9_5_IRQHandler
-                0x08004ae0                RTC_WKUP_IRQHandler
-                0x08004ae0                SPI2_IRQHandler
-                0x08004ae0                DMA1_Stream0_IRQHandler
-                0x08004ae0                EXTI4_IRQHandler
-                0x08004ae0                WWDG_IRQHandler
-                0x08004ae0                TIM2_IRQHandler
-                0x08004ae0                OTG_FS_WKUP_IRQHandler
-                0x08004ae0                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08004ae0                EXTI1_IRQHandler
-                0x08004ae0                I2C2_ER_IRQHandler
-                0x08004ae0                DMA2_Stream1_IRQHandler
-                0x08004ae0                FLASH_IRQHandler
-                0x08004ae0                DMA2_Stream4_IRQHandler
-                0x08004ae0                USART1_IRQHandler
-                0x08004ae0                OTG_FS_IRQHandler
-                0x08004ae0                SPI3_IRQHandler
-                0x08004ae0                DMA1_Stream4_IRQHandler
-                0x08004ae0                I2C1_ER_IRQHandler
-                0x08004ae0                DMA2_Stream6_IRQHandler
-                0x08004ae0                DMA1_Stream3_IRQHandler
- *fill*         0x08004ae2        0x6 
- .text.sin      0x08004ae8       0x90 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_sin.o)
-                0x08004ae8                sin
- .text.atan2f   0x08004b78        0x4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_atan2.o)
-                0x08004b78                atan2f
- .text.fmaxf    0x08004b7c       0x3c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fmax.o)
-                0x08004b7c                fmaxf
- .text.fminf    0x08004bb8       0x3c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fmin.o)
-                0x08004bb8                fminf
+                0x08004ad0        0x2 startup_stm32f401retx.o
+                0x08004ad0                RTC_Alarm_IRQHandler
+                0x08004ad0                EXTI2_IRQHandler
+                0x08004ad0                SPI4_IRQHandler
+                0x08004ad0                TIM1_CC_IRQHandler
+                0x08004ad0                DMA2_Stream5_IRQHandler
+                0x08004ad0                PVD_IRQHandler
+                0x08004ad0                SDIO_IRQHandler
+                0x08004ad0                TAMP_STAMP_IRQHandler
+                0x08004ad0                EXTI3_IRQHandler
+                0x08004ad0                TIM1_UP_TIM10_IRQHandler
+                0x08004ad0                I2C3_ER_IRQHandler
+                0x08004ad0                EXTI0_IRQHandler
+                0x08004ad0                I2C2_EV_IRQHandler
+                0x08004ad0                DMA1_Stream2_IRQHandler
+                0x08004ad0                FPU_IRQHandler
+                0x08004ad0                DMA2_Stream2_IRQHandler
+                0x08004ad0                SPI1_IRQHandler
+                0x08004ad0                TIM1_BRK_TIM9_IRQHandler
+                0x08004ad0                DMA2_Stream3_IRQHandler
+                0x08004ad0                USART6_IRQHandler
+                0x08004ad0                TIM4_IRQHandler
+                0x08004ad0                I2C1_EV_IRQHandler
+                0x08004ad0                DMA1_Stream6_IRQHandler
+                0x08004ad0                DMA1_Stream1_IRQHandler
+                0x08004ad0                TIM3_IRQHandler
+                0x08004ad0                RCC_IRQHandler
+                0x08004ad0                Default_Handler
+                0x08004ad0                EXTI15_10_IRQHandler
+                0x08004ad0                DMA1_Stream7_IRQHandler
+                0x08004ad0                DMA2_Stream7_IRQHandler
+                0x08004ad0                I2C3_EV_IRQHandler
+                0x08004ad0                EXTI9_5_IRQHandler
+                0x08004ad0                RTC_WKUP_IRQHandler
+                0x08004ad0                SPI2_IRQHandler
+                0x08004ad0                DMA1_Stream0_IRQHandler
+                0x08004ad0                EXTI4_IRQHandler
+                0x08004ad0                WWDG_IRQHandler
+                0x08004ad0                TIM2_IRQHandler
+                0x08004ad0                OTG_FS_WKUP_IRQHandler
+                0x08004ad0                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08004ad0                EXTI1_IRQHandler
+                0x08004ad0                I2C2_ER_IRQHandler
+                0x08004ad0                DMA2_Stream1_IRQHandler
+                0x08004ad0                FLASH_IRQHandler
+                0x08004ad0                DMA2_Stream4_IRQHandler
+                0x08004ad0                USART1_IRQHandler
+                0x08004ad0                OTG_FS_IRQHandler
+                0x08004ad0                SPI3_IRQHandler
+                0x08004ad0                DMA1_Stream4_IRQHandler
+                0x08004ad0                I2C1_ER_IRQHandler
+                0x08004ad0                DMA2_Stream6_IRQHandler
+                0x08004ad0                DMA1_Stream3_IRQHandler
+ *fill*         0x08004ad2        0x6 
+ .text.sin      0x08004ad8       0x90 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_sin.o)
+                0x08004ad8                sin
+ .text.atan2f   0x08004b68        0x4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_atan2.o)
+                0x08004b68                atan2f
+ .text.fmaxf    0x08004b6c       0x3c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fmax.o)
+                0x08004b6c                fmaxf
+ .text.fminf    0x08004ba8       0x3c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fmin.o)
+                0x08004ba8                fminf
  .text.__fpclassifyf
-                0x08004bf4       0x38 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fpclassify.o)
-                0x08004bf4                __fpclassifyf
- .text.floorf   0x08004c2c       0x90 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_floor.o)
-                0x08004c2c                floorf
- *fill*         0x08004cbc        0x4 
+                0x08004be4       0x38 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fpclassify.o)
+                0x08004be4                __fpclassifyf
+ .text.floorf   0x08004c1c       0x90 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_floor.o)
+                0x08004c1c                floorf
+ *fill*         0x08004cac        0x4 
  .text.__kernel_cos
-                0x08004cc0      0x27c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_cos.o)
-                0x08004cc0                __kernel_cos
- *fill*         0x08004f3c        0x4 
+                0x08004cb0      0x27c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_cos.o)
+                0x08004cb0                __kernel_cos
+ *fill*         0x08004f2c        0x4 
  .text.__kernel_sin
-                0x08004f40      0x17c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_sin.o)
-                0x08004f40                __kernel_sin
- *fill*         0x080050bc        0x4 
+                0x08004f30      0x17c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_sin.o)
+                0x08004f30                __kernel_sin
+ *fill*         0x080050ac        0x4 
  .text.__ieee754_rem_pio2
-                0x080050c0      0x44c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
-                0x080050c0                __ieee754_rem_pio2
- .text.fabs     0x0800550c       0x14 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_fabs.o)
-                0x0800550c                fabs
+                0x080050b0      0x44c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
+                0x080050b0                __ieee754_rem_pio2
+ .text.fabs     0x080054fc       0x14 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_fabs.o)
+                0x080054fc                fabs
  .text.__ieee754_atan2f
-                0x08005520      0x150 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
-                0x08005520                __ieee754_atan2f
- .text.atanf    0x08005670      0x1b4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
-                0x08005670                atanf
- .text.fabsf    0x08005824       0x10 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
-                0x08005824                fabsf
- *fill*         0x08005834        0x4 
+                0x08005510      0x150 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x08005510                __ieee754_atan2f
+ .text.atanf    0x08005660      0x1b4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+                0x08005660                atanf
+ .text.fabsf    0x08005814       0x10 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
+                0x08005814                fabsf
+ *fill*         0x08005824        0x4 
  .text.__kernel_rem_pio2
-                0x08005838      0x844 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
-                0x08005838                __kernel_rem_pio2
- *fill*         0x0800607c        0x4 
- .text.scalbn   0x08006080      0x11c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_scalbn.o)
-                0x08006080                scalbn
- *fill*         0x0800619c        0x4 
- .text.floor    0x080061a0      0x118 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_floor.o)
-                0x080061a0                floor
+                0x08005828      0x844 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
+                0x08005828                __kernel_rem_pio2
+ *fill*         0x0800606c        0x4 
+ .text.scalbn   0x08006070      0x11c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_scalbn.o)
+                0x08006070                scalbn
+ *fill*         0x0800618c        0x4 
+ .text.floor    0x08006190      0x118 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-s_floor.o)
+                0x08006190                floor
  .text.__udivmoddi4
-                0x080062b8      0x2c8 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x080062b8                __udivmoddi4
- .text.memset   0x08006580       0x10 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
-                0x08006580                memset
+                0x080062a8      0x2c8 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x080062a8                __udivmoddi4
+ .text.memset   0x08006570       0x10 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
+                0x08006570                memset
  .text.__libc_init_array
-                0x08006590       0x48 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
-                0x08006590                __libc_init_array
- .text.memcpy   0x080065d8       0x1c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
-                0x080065d8                memcpy
+                0x08006580       0x48 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
+                0x08006580                __libc_init_array
+ .text.memcpy   0x080065c8       0x1c c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
+                0x080065c8                memcpy
  *(.glue_7)
- .glue_7        0x080065f4        0x0 linker stubs
+ .glue_7        0x080065e4        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x080065f4        0x0 linker stubs
+ .glue_7t       0x080065e4        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x080065f4        0x0 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x080065e4        0x0 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x080065f4        0x4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x080065f4                _init
- .init          0x080065f8        0x8 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x080065e4        0x4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080065e4                _init
+ .init          0x080065e8        0x8 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08006600        0x4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08006600                _fini
- .fini          0x08006604        0x8 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x0800660c                . = ALIGN (0x4)
-                0x0800660c                _etext = .
+ .fini          0x080065f0        0x4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080065f0                _fini
+ .fini          0x080065f4        0x8 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x080065fc                . = ALIGN (0x4)
+                0x080065fc                _etext = .
 
-.vfp11_veneer   0x0800660c        0x0
- .vfp11_veneer  0x0800660c        0x0 linker stubs
+.vfp11_veneer   0x080065fc        0x0
+ .vfp11_veneer  0x080065fc        0x0 linker stubs
 
-.v4_bx          0x0800660c        0x0
- .v4_bx         0x0800660c        0x0 linker stubs
+.v4_bx          0x080065fc        0x0
+ .v4_bx         0x080065fc        0x0 linker stubs
 
-.iplt           0x0800660c        0x0
- .iplt          0x0800660c        0x0 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x080065fc        0x0
+ .iplt          0x080065fc        0x0 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08006610     0x11e8
-                0x08006610                . = ALIGN (0x4)
+.rodata         0x08006600     0x11e8
+                0x08006600                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.STREAM_OFFSET_TAB
-                0x08006610        0x8 stm_adc_ll.o
+                0x08006600        0x8 stm_adc_ll.o
  .rodata.STREAM_OFFSET_TAB
-                0x08006618        0x8 stm_usart.o
+                0x08006608        0x8 stm_usart.o
  .rodata.mcb_pmsm_foc_sensorless_nucl_M
-                0x08006620        0x4 mcb_pmsm_foc_sensorless_nucleo_f401re.o
-                0x08006620                mcb_pmsm_foc_sensorless_nucl_M
+                0x08006610        0x4 mcb_pmsm_foc_sensorless_nucleo_f401re.o
+                0x08006610                mcb_pmsm_foc_sensorless_nucl_M
  .rodata.mcb_pmsm_foc_sensorless__ConstP
-                0x08006624      0xfa8 mcb_pmsm_foc_sensorless_nucleo_f401re_data.o
-                0x08006624                mcb_pmsm_foc_sensorless__ConstP
+                0x08006614      0xfa8 mcb_pmsm_foc_sensorless_nucleo_f401re_data.o
+                0x08006614                mcb_pmsm_foc_sensorless__ConstP
  .rodata.AHBPrescTable
-                0x080075cc       0x10 system_stm32f4xx.o
-                0x080075cc                AHBPrescTable
+                0x080075bc       0x10 system_stm32f4xx.o
+                0x080075bc                AHBPrescTable
  .rodata.APBPrescTable
-                0x080075dc        0x8 system_stm32f4xx.o
-                0x080075dc                APBPrescTable
+                0x080075cc        0x8 system_stm32f4xx.o
+                0x080075cc                APBPrescTable
  .rodata.npio2_hw
-                0x080075e4       0x80 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
+                0x080075d4       0x80 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
  .rodata.two_over_pi
-                0x08007664      0x108 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
+                0x08007654      0x108 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-e_rem_pio2.o)
  .rodata.CSWTCH.8
-                0x0800776c        0xc c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x0800775c        0xc c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
  .rodata.CSWTCH.9
-                0x08007778        0xc c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x08007768        0xc c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
  .rodata.atanhi
-                0x08007784       0x10 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+                0x08007774       0x10 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
  .rodata.atanlo
-                0x08007794       0x10 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
- *fill*         0x080077a4        0x4 
- .rodata.PIo2   0x080077a8       0x40 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
+                0x08007784       0x10 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+ *fill*         0x08007794        0x4 
+ .rodata.PIo2   0x08007798       0x40 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
  .rodata.init_jk
-                0x080077e8       0x10 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
-                0x080077f8                . = ALIGN (0x4)
+                0x080077d8       0x10 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libm.a(libm_a-k_rem_pio2.o)
+                0x080077e8                . = ALIGN (0x4)
 
-.ARM.extab      0x080077f8        0x0
-                0x080077f8                . = ALIGN (0x4)
+.ARM.extab      0x080077e8        0x0
+                0x080077e8                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x080077f8                . = ALIGN (0x4)
+                0x080077e8                . = ALIGN (0x4)
 
-.ARM            0x080077f8        0x8
-                0x080077f8                . = ALIGN (0x4)
-                0x080077f8                __exidx_start = .
+.ARM            0x080077e8        0x8
+                0x080077e8                . = ALIGN (0x4)
+                0x080077e8                __exidx_start = .
  *(.ARM.exidx*)
  .ARM.exidx.text.__udivmoddi4
-                0x080077f8        0x8 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08007800                __exidx_end = .
-                0x08007800                . = ALIGN (0x4)
+                0x080077e8        0x8 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x080077f0                __exidx_end = .
+                0x080077f0                . = ALIGN (0x4)
 
-.rel.dyn        0x08007800        0x0
- .rel.iplt      0x08007800        0x0 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x080077f0        0x0
+ .rel.iplt      0x080077f0        0x0 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x08007800        0x0
-                0x08007800                . = ALIGN (0x4)
-                0x08007800                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080077f0        0x0
+                0x080077f0                . = ALIGN (0x4)
+                0x080077f0                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08007800                PROVIDE (__preinit_array_end = .)
-                0x08007800                . = ALIGN (0x4)
+                0x080077f0                PROVIDE (__preinit_array_end = .)
+                0x080077f0                . = ALIGN (0x4)
 
-.init_array     0x08007800        0x4
-                0x08007800                . = ALIGN (0x4)
-                0x08007800                PROVIDE (__init_array_start = .)
+.init_array     0x080077f0        0x4
+                0x080077f0                . = ALIGN (0x4)
+                0x080077f0                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08007800        0x4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08007804                PROVIDE (__init_array_end = .)
-                0x08007804                . = ALIGN (0x4)
+ .init_array    0x080077f0        0x4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080077f4                PROVIDE (__init_array_end = .)
+                0x080077f4                . = ALIGN (0x4)
 
-.fini_array     0x08007804        0x4
-                0x08007804                . = ALIGN (0x4)
+.fini_array     0x080077f4        0x4
+                0x080077f4                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08007804        0x4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x080077f4        0x4 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end = .)
-                0x08007808                . = ALIGN (0x4)
-                0x08007808                _sidata = LOADADDR (.data)
+                0x080077f8                . = ALIGN (0x4)
+                0x080077f8                _sidata = LOADADDR (.data)
 
-.data           0x20000000       0x14 load address 0x08007808
+.data           0x20000000       0x14 load address 0x080077f8
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -2309,17 +2309,17 @@ LOAD c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.i
                 0x20000014                _edata = .
 
 .tm_clone_table
-                0x20000014        0x0 load address 0x0800781c
+                0x20000014        0x0 load address 0x0800780c
  .tm_clone_table
                 0x20000014        0x0 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .tm_clone_table
                 0x20000014        0x0 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtend.o
 
-.igot.plt       0x20000014        0x0 load address 0x0800781c
+.igot.plt       0x20000014        0x0 load address 0x0800780c
  .igot.plt      0x20000014        0x0 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x20000014                . = ALIGN (0x4)
 
-.bss            0x20000018      0x888 load address 0x0800781c
+.bss            0x20000018      0x888 load address 0x0800780c
                 0x20000018                _sbss = .
                 0x20000018                __bss_start__ = _sbss
  *(.bss)
@@ -2383,7 +2383,7 @@ LOAD c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.i
                 0x200008a0                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200008a0      0x600 load address 0x0800781c
+                0x200008a0      0x600 load address 0x0800780c
                 0x200008a0                . = ALIGN (0x8)
                 [!provide]                PROVIDE (end = .)
                 0x200008a0                PROVIDE (_end = .)

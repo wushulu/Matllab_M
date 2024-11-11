@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'mcb_pmsm_foc_sensorless_nucleo_f401re'.
  *
- * Model version                  : 8.1
+ * Model version                  : 8.3
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Fri Nov  8 22:37:46 2024
+ * C/C++ source code generated on : Sat Nov  9 19:29:55 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -82,12 +82,12 @@ static void rate_monotonic_scheduler(void)
    * counter is reset when it reaches its limit (zero means run).
    */
   (mcb_pmsm_foc_sensorless_nucl_M->Timing.TaskCounters.TID[1])++;
-  if ((mcb_pmsm_foc_sensorless_nucl_M->Timing.TaskCounters.TID[1]) > 4) {/* Sample time: [0.0005s, 0.0s] */
+  if ((mcb_pmsm_foc_sensorless_nucl_M->Timing.TaskCounters.TID[1]) > 1) {/* Sample time: [0.001s, 0.0s] */
     mcb_pmsm_foc_sensorless_nucl_M->Timing.TaskCounters.TID[1] = 0;
   }
 
   (mcb_pmsm_foc_sensorless_nucl_M->Timing.TaskCounters.TID[2])++;
-  if ((mcb_pmsm_foc_sensorless_nucl_M->Timing.TaskCounters.TID[2]) > 4999) {/* Sample time: [0.5s, 0.0s] */
+  if ((mcb_pmsm_foc_sensorless_nucl_M->Timing.TaskCounters.TID[2]) > 999) {/* Sample time: [0.5s, 0.0s] */
     mcb_pmsm_foc_sensorless_nucl_M->Timing.TaskCounters.TID[2] = 0;
   }
 }
@@ -644,20 +644,47 @@ static void mcb_pmsm_fo_UARTWrite_setupImpl(stm32cube_blocks_UARTWrite_mcb_ *obj
 }
 
 /* Model step function for TID0 */
-void mcb_pmsm_foc_sensorless_nucleo_f401re_step0(void) /* Sample time: [0.0001s, 0.0s] */
+void mcb_pmsm_foc_sensorless_nucleo_f401re_step0(void) /* Sample time: [0.0005s, 0.0s] */
+{
+  {                                    /* Sample time: [0.0005s, 0.0s] */
+    rate_monotonic_scheduler();
+  }
+
+  /* RateTransition: '<Root>/RT3' */
+  mcb_pmsm_foc_sensorless_nucle_B.RT3 =
+    mcb_pmsm_foc_sensorless_nucle_B.SpeedConversion;
+
+  /* Outputs for Atomic SubSystem: '<Root>/Speed Control' */
+  mcb_pmsm_foc_s_SpeedControl(mcb_pmsm_foc_sensorless_nucle_B.RT3,
+    &mcb_pmsm_foc_sensorless_nucle_B.SpeedControl,
+    &mcb_pmsm_foc_sensorless_n_DWork.SpeedControl);
+
+  /* End of Outputs for SubSystem: '<Root>/Speed Control' */
+
+  /* RateTransition: '<Root>/RT' */
+  mcb_pmsm_foc_sensorless_n_DWork.RT_Buffer0 =
+    mcb_pmsm_foc_sensorless_nucle_B.SpeedControl.UnitDelay_k;
+
+  /* RateTransition: '<Root>/RT1' */
+  mcb_pmsm_foc_sensorless_n_DWork.RT1_Buffer0 =
+    mcb_pmsm_foc_sensorless_nucle_B.SpeedControl.Switch_i;
+
+  /* RateTransition: '<Root>/RT5' */
+  mcb_pmsm_foc_sensorless_n_DWork.RT5_Buffer0 =
+    mcb_pmsm_foc_sensorless_nucle_B.SpeedControl.Switch2_m;
+}
+
+/* Model step function for TID1 */
+void mcb_pmsm_foc_sensorless_nucleo_f401re_step1(void) /* Sample time: [0.001s, 0.0s] */
 {
   real32_T uartWriteData[3];
   uint32_T sentLength;
   uint16_T status;
   uint8_T uartWriteData_0[4];
 
-  {                                    /* Sample time: [0.0001s, 0.0s] */
-    rate_monotonic_scheduler();
-  }
-
   /* Sin: '<Root>/Sine Wave' */
   mcb_pmsm_foc_sensorless_nucle_B.SineWave = sin((real_T)
-    mcb_pmsm_foc_sensorless_n_DWork.counter * 2.0 * 3.1415926535897931 / 10.0);
+    mcb_pmsm_foc_sensorless_n_DWork.counter * 2.0 * 3.1415926535897931 / 100.0);
 
   /* DataTypeConversion: '<Root>/Data Type Conversion' */
   mcb_pmsm_foc_sensorless_nucle_B.DataTypeConversion = (real32_T)
@@ -677,8 +704,8 @@ void mcb_pmsm_foc_sensorless_nucleo_f401re_step0(void) /* Sample time: [0.0001s,
 
   /* Sin: '<Root>/Sine Wave1' */
   mcb_pmsm_foc_sensorless_nucle_B.SineWave1 = sin(((real_T)
-    mcb_pmsm_foc_sensorless_n_DWork.counter_g + 3.0) * 2.0 * 3.1415926535897931 /
-    10.0);
+    mcb_pmsm_foc_sensorless_n_DWork.counter_g + 33.0) * 2.0 * 3.1415926535897931
+    / 100.0);
 
   /* DataTypeConversion: '<Root>/Data Type Conversion1' */
   mcb_pmsm_foc_sensorless_nucle_B.DataTypeConversion1 = (real32_T)
@@ -687,8 +714,7 @@ void mcb_pmsm_foc_sensorless_nucleo_f401re_step0(void) /* Sample time: [0.0001s,
   /* Assignment: '<S7>/Assignment1' */
   mcb_pmsm_foc_sensorless_nucle_B.Assignment1[0] =
     mcb_pmsm_foc_sensorless_nucle_B.Assignment[0];
-  mcb_pmsm_foc_sensorless_nucle_B.Assignment1[2] =
-    mcb_pmsm_foc_sensorless_nucle_B.Assignment[2];
+  mcb_pmsm_foc_sensorless_nucle_B.Assignment1[2] = 22.0F;
 
   /* Assignment: '<S7>/Assignment1' incorporates:
    *  Constant: '<S7>/Constant3'
@@ -698,8 +724,8 @@ void mcb_pmsm_foc_sensorless_nucleo_f401re_step0(void) /* Sample time: [0.0001s,
 
   /* Sin: '<Root>/Sine Wave2' */
   mcb_pmsm_foc_sensorless_nucle_B.SineWave2 = sin(((real_T)
-    mcb_pmsm_foc_sensorless_n_DWork.counter_k + 7.0) * 2.0 * 3.1415926535897931 /
-    10.0);
+    mcb_pmsm_foc_sensorless_n_DWork.counter_k + 66.0) * 2.0 * 3.1415926535897931
+    / 100.0);
 
   /* DataTypeConversion: '<Root>/Data Type Conversion2' */
   mcb_pmsm_foc_sensorless_nucle_B.DataTypeConversion2 = (real32_T)
@@ -752,7 +778,7 @@ void mcb_pmsm_foc_sensorless_nucleo_f401re_step0(void) /* Sample time: [0.0001s,
 
   /* Update for Sin: '<Root>/Sine Wave' */
   mcb_pmsm_foc_sensorless_n_DWork.counter++;
-  if (mcb_pmsm_foc_sensorless_n_DWork.counter == 10) {
+  if (mcb_pmsm_foc_sensorless_n_DWork.counter == 100) {
     mcb_pmsm_foc_sensorless_n_DWork.counter = 0;
   }
 
@@ -760,7 +786,7 @@ void mcb_pmsm_foc_sensorless_nucleo_f401re_step0(void) /* Sample time: [0.0001s,
 
   /* Update for Sin: '<Root>/Sine Wave1' */
   mcb_pmsm_foc_sensorless_n_DWork.counter_g++;
-  if (mcb_pmsm_foc_sensorless_n_DWork.counter_g == 10) {
+  if (mcb_pmsm_foc_sensorless_n_DWork.counter_g == 100) {
     mcb_pmsm_foc_sensorless_n_DWork.counter_g = 0;
   }
 
@@ -768,38 +794,11 @@ void mcb_pmsm_foc_sensorless_nucleo_f401re_step0(void) /* Sample time: [0.0001s,
 
   /* Update for Sin: '<Root>/Sine Wave2' */
   mcb_pmsm_foc_sensorless_n_DWork.counter_k++;
-  if (mcb_pmsm_foc_sensorless_n_DWork.counter_k == 10) {
+  if (mcb_pmsm_foc_sensorless_n_DWork.counter_k == 100) {
     mcb_pmsm_foc_sensorless_n_DWork.counter_k = 0;
   }
 
   /* End of Update for Sin: '<Root>/Sine Wave2' */
-}
-
-/* Model step function for TID1 */
-void mcb_pmsm_foc_sensorless_nucleo_f401re_step1(void) /* Sample time: [0.0005s, 0.0s] */
-{
-  /* RateTransition: '<Root>/RT3' */
-  mcb_pmsm_foc_sensorless_nucle_B.RT3 =
-    mcb_pmsm_foc_sensorless_nucle_B.SpeedConversion;
-
-  /* Outputs for Atomic SubSystem: '<Root>/Speed Control' */
-  mcb_pmsm_foc_s_SpeedControl(mcb_pmsm_foc_sensorless_nucle_B.RT3,
-    &mcb_pmsm_foc_sensorless_nucle_B.SpeedControl,
-    &mcb_pmsm_foc_sensorless_n_DWork.SpeedControl);
-
-  /* End of Outputs for SubSystem: '<Root>/Speed Control' */
-
-  /* RateTransition: '<Root>/RT' */
-  mcb_pmsm_foc_sensorless_n_DWork.RT_Buffer0 =
-    mcb_pmsm_foc_sensorless_nucle_B.SpeedControl.UnitDelay_k;
-
-  /* RateTransition: '<Root>/RT1' */
-  mcb_pmsm_foc_sensorless_n_DWork.RT1_Buffer0 =
-    mcb_pmsm_foc_sensorless_nucle_B.SpeedControl.Switch_i;
-
-  /* RateTransition: '<Root>/RT5' */
-  mcb_pmsm_foc_sensorless_n_DWork.RT5_Buffer0 =
-    mcb_pmsm_foc_sensorless_nucle_B.SpeedControl.Switch2_m;
 }
 
 /* Model step function for TID2 */
@@ -854,6 +853,7 @@ void mcb_pmsm_foc_sensorless_nucleo_f401re_initialize(void)
     mcb_pmsm_foc_sensorless_nucle_B.SineWave = 0.0;
     mcb_pmsm_foc_sensorless_nucle_B.SineWave1 = 0.0;
     mcb_pmsm_foc_sensorless_nucle_B.SineWave2 = 0.0;
+    mcb_pmsm_foc_sensorless_nucle_B.RT3 = 0.0F;
     mcb_pmsm_foc_sensorless_nucle_B.DataTypeConversion = 0.0F;
     mcb_pmsm_foc_sensorless_nucle_B.Assignment[0] = 0.0F;
     mcb_pmsm_foc_sensorless_nucle_B.Assignment[1] = 0.0F;
@@ -866,7 +866,6 @@ void mcb_pmsm_foc_sensorless_nucleo_f401re_initialize(void)
     mcb_pmsm_foc_sensorless_nucle_B.Assignment2[0] = 0.0F;
     mcb_pmsm_foc_sensorless_nucle_B.Assignment2[1] = 0.0F;
     mcb_pmsm_foc_sensorless_nucle_B.Assignment2[2] = 0.0F;
-    mcb_pmsm_foc_sensorless_nucle_B.RT3 = 0.0F;
     mcb_pmsm_foc_sensorless_nucle_B.RT1 = 0.0F;
     mcb_pmsm_foc_sensorless_nucle_B.GetADCVoltage[0] = 0.0F;
     mcb_pmsm_foc_sensorless_nucle_B.GetADCVoltage[1] = 0.0F;
@@ -1288,6 +1287,11 @@ void mcb_pmsm_foc_sensorless_nucleo_f401re_terminate(void)
 
   /* End of Terminate for S-Function (HardwareInterrupt_sfun): '<S10>/Hardware Interrupt' */
 
+  /* Terminate for Atomic SubSystem: '<Root>/Speed Control' */
+  mcb_pmsm__SpeedControl_Term(&mcb_pmsm_foc_sensorless_n_DWork.SpeedControl);
+
+  /* End of Terminate for SubSystem: '<Root>/Speed Control' */
+
   /* Terminate for MATLABSystem: '<S289>/UART//USART Write' */
   if (!mcb_pmsm_foc_sensorless_n_DWork.obj.matlabCodegenIsDeleted) {
     mcb_pmsm_foc_sensorless_n_DWork.obj.matlabCodegenIsDeleted = true;
@@ -1311,11 +1315,6 @@ void mcb_pmsm_foc_sensorless_nucleo_f401re_terminate(void)
 
   /* End of Terminate for MATLABSystem: '<S290>/UART//USART Write1' */
   /* End of Terminate for SubSystem: '<S289>/Enabled Subsystem' */
-
-  /* Terminate for Atomic SubSystem: '<Root>/Speed Control' */
-  mcb_pmsm__SpeedControl_Term(&mcb_pmsm_foc_sensorless_n_DWork.SpeedControl);
-
-  /* End of Terminate for SubSystem: '<Root>/Speed Control' */
 }
 
 void mcb_pmsm_foc_sensorless_nucleo_f401re_configure_interrupts(void)

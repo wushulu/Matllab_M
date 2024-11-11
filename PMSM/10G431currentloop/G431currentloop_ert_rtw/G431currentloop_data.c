@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'G431currentloop'.
  *
- * Model version                  : 1.59
+ * Model version                  : 1.61
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Fri Nov  8 16:32:23 2024
+ * C/C++ source code generated on : Mon Nov 11 12:27:47 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -34,7 +34,7 @@ P_G431currentloop_T G431currentloop_P = {
    *   '<S30>/b_inv*g'
    *   '<S31>/b_inv*g'
    */
-  0.9,
+  0.85,
 
   /* Mask Parameter: DiscretePIControllerwithantiwin
    * Referenced by:
@@ -379,6 +379,11 @@ P_G431currentloop_T G431currentloop_P = {
    */
   0.995F,
 
+  /* Computed Parameter: AngleConversion_Gain
+   * Referenced by: '<S18>/AngleConversion'
+   */
+  0.159154937F,
+
   /* Computed Parameter: scaleOut_Gain
    * Referenced by: '<S52>/scaleOut'
    */
@@ -392,12 +397,12 @@ P_G431currentloop_T G431currentloop_P = {
   /* Computed Parameter: Constant2_Value
    * Referenced by: '<S51>/Constant2'
    */
-  0.0002F,
+  0.0008F,
 
   /* Computed Parameter: SaturatetomotorcalibSpeedRPM_Up
    * Referenced by: '<S51>/Saturate to 'motor.calibSpeed' RPM'
    */
-  8.0F,
+  15.0F,
 
   /* Computed Parameter: SaturatetomotorcalibSpeedRPM_Lo
    * Referenced by: '<S51>/Saturate to 'motor.calibSpeed' RPM'
@@ -492,7 +497,7 @@ P_G431currentloop_T G431currentloop_P = {
   /* Computed Parameter: Constant2_Value_c
    * Referenced by: '<S14>/Constant2'
    */
-  0.45F,
+  0.4F,
 
   /* Computed Parameter: ADvoltage_Gain
    * Referenced by: '<S45>/AD voltage'
@@ -728,11 +733,6 @@ P_G431currentloop_T G431currentloop_P = {
    * Referenced by: '<S18>/Delay'
    */
   0.0F,
-
-  /* Computed Parameter: AngleConversion_Gain
-   * Referenced by: '<S18>/AngleConversion'
-   */
-  0.159154937F,
 
   /* Computed Parameter: scaleIn_Gain
    * Referenced by: '<S52>/scaleIn'

@@ -2,9 +2,6 @@ G431currentloop_data.o: \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/G431currentloop_data.c \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/G431currentloop.h \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rtwtypes.h \
- D:/software/MATLAB2024a/simulink/include/rtw_extmode.h \
- D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rtwtypes.h \
- D:/software/MATLAB2024a/simulink/include/sysran_types.h \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rt_nonfinite.h \
  D:/Work/Matlab/PMSM/10G431currentloop/CubemaxIDE/G431Hardware/Core/Inc/main.h \
  D:/Work/Matlab/PMSM/10G431currentloop/CubemaxIDE/G431Hardware/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h \
@@ -52,6 +49,7 @@ G431currentloop_data.o: \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/G431currentloop_types.h \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_timer_ll.h \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_types.h \
+ D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rtwtypes.h \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_adc_ll.h \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rtGetNaN.h \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/zero_crossing_types.h \
@@ -61,9 +59,6 @@ G431currentloop_data.o: \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/MW_target_hardware_resources.h
 D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/G431currentloop.h:
 D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rtwtypes.h:
-D:/software/MATLAB2024a/simulink/include/rtw_extmode.h:
-D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rtwtypes.h:
-D:/software/MATLAB2024a/simulink/include/sysran_types.h:
 D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rt_nonfinite.h:
 D:/Work/Matlab/PMSM/10G431currentloop/CubemaxIDE/G431Hardware/Core/Inc/main.h:
 D:/Work/Matlab/PMSM/10G431currentloop/CubemaxIDE/G431Hardware/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
@@ -111,6 +106,7 @@ C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm3
 D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/G431currentloop_types.h:
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_timer_ll.h:
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_types.h:
+D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rtwtypes.h:
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/stm_adc_ll.h:
 D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rtGetNaN.h:
 D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/zero_crossing_types.h:

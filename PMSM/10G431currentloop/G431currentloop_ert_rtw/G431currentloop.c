@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'G431currentloop'.
  *
- * Model version                  : 1.59
+ * Model version                  : 1.61
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Fri Nov  8 16:32:23 2024
+ * C/C++ source code generated on : Mon Nov 11 12:27:47 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -26,10 +26,6 @@
 #include "zero_crossing_types.h"
 #include <string.h>
 #include "rt_defines.h"
-#include "xcp.h"
-#include "ext_mode.h"
-
-extmodeSimulationTime_T currentTime = (extmodeSimulationTime_T) 0;
 
 /* Block signals (default storage) */
 B_G431currentloop_T G431currentloop_B;
@@ -47,40 +43,6 @@ RT_MODEL_G431currentloop_T *const G431currentloop_M = &G431currentloop_M_;
 /* Forward declaration for local functions */
 static void G431currentloo_SystemCore_setup(stm32cube_blocks_AnalogInput__T *obj);
 static void G431current_PWMOutput_setupImpl(stm32cube_blocks_PWMOutput_G4_T *obj);
-static void rate_monotonic_scheduler(void);
-
-/*
- * Set which subrates need to run this base step (base rate always runs).
- * This function must be called prior to calling the model step function
- * in order to remember which rates need to run this base step.  The
- * buffering of events allows for overlapping preemption.
- */
-void G431currentloop_SetEventsForThisBaseStep(boolean_T *eventFlags)
-{
-  /* Task runs when its counter is zero, computed via rtmStepTask macro */
-  eventFlags[1] = ((boolean_T)rtmStepTask(G431currentloop_M, 1));
-}
-
-/*
- *         This function updates active task flag for each subrate
- *         and rate transition flags for tasks that exchange data.
- *         The function assumes rate-monotonic multitasking scheduler.
- *         The function must be called at model base rate so that
- *         the generated code self-manages all its subrates and rate
- *         transition flags.
- */
-static void rate_monotonic_scheduler(void)
-{
-  /* Compute which subrates run during the next base time step.  Subrates
-   * are an integer multiple of the base rate counter.  Therefore, the subtask
-   * counter is reset when it reaches its limit (zero means run).
-   */
-  (G431currentloop_M->Timing.TaskCounters.TID[1])++;
-  if ((G431currentloop_M->Timing.TaskCounters.TID[1]) > 99) {/* Sample time: [0.1s, 0.0s] */
-    G431currentloop_M->Timing.TaskCounters.TID[1] = 0;
-  }
-}
-
 static void G431currentloo_SystemCore_setup(stm32cube_blocks_AnalogInput__T *obj)
 {
   void * internalBufferPtr;
@@ -170,18 +132,12 @@ real32_T rt_atan2f_snf(real32_T u0, real32_T u1)
   return y;
 }
 
-/* Model step function for TID0 */
-void G431currentloop_step0(void)       /* Sample time: [0.001s, 0.0s] */
+/* Model step function */
+void G431currentloop_step(void)
 {
+  GPIO_TypeDef * portNameLoc;
   uint32_T pinReadLoc;
   boolean_T tmp;
-
-  {                                    /* Sample time: [0.001s, 0.0s] */
-    rate_monotonic_scheduler();
-  }
-
-  /* Reset subsysRan breadcrumbs */
-  srClearBC(G431currentloop_DW.EnabledSubsystem_SubsysRanBC);
 
   /* MATLABSystem: '<S9>/Digital Port Read' */
   pinReadLoc = LL_GPIO_ReadInputPort(GPIOC);
@@ -212,39 +168,12 @@ void G431currentloop_step0(void)       /* Sample time: [0.001s, 0.0s] */
 
     /* Update for UnitDelay: '<S7>/Unit Delay' */
     G431currentloop_DW.UnitDelay_DSTATE_g = G431currentloop_B.NOT_h;
-    srUpdateBC(G431currentloop_DW.EnabledSubsystem_SubsysRanBC);
   }
 
   /* End of Outputs for SubSystem: '<S1>/Enabled Subsystem' */
 
   /* DataStoreWrite: '<S1>/Data Store Write' */
   G431currentloop_DW.Enable = G431currentloop_B.UnitDelay_p;
-
-  /* RateTransition: '<Root>/Rate Transition1' */
-  G431currentloop_B.ab = G431currentloop_B.OP_GainR_shunt1[0];
-
-  /* RateTransition: '<Root>/Rate Transition' */
-  G431currentloop_B.RateTransition = G431currentloop_B.AngleConversion;
-
-  /* Update for UnitDelay: '<S1>/Unit Delay' */
-  G431currentloop_DW.UnitDelay_DSTATE_m = G431currentloop_B.DigitalPortRead;
-
-  /* Update absolute time */
-  /* The "clockTick0" counts the number of times the code of this task has
-   * been executed. The absolute time is the multiplication of "clockTick0"
-   * and "Timing.stepSize0". Size of "clockTick0" ensures timer will not
-   * overflow during the application lifespan selected.
-   */
-  G431currentloop_M->Timing.taskTime0 =
-    ((time_T)(++G431currentloop_M->Timing.clockTick0)) *
-    G431currentloop_M->Timing.stepSize0;
-}
-
-/* Model step function for TID1 */
-void G431currentloop_step1(void)       /* Sample time: [0.1s, 0.0s] */
-{
-  GPIO_TypeDef * portNameLoc;
-  int32_T c;
 
   /* DiscretePulseGenerator: '<S5>/Pulse Generator' */
   G431currentloop_B.LED = (G431currentloop_DW.clockTickCounter <
@@ -263,23 +192,18 @@ void G431currentloop_step1(void)       /* Sample time: [0.1s, 0.0s] */
   /* MATLABSystem: '<S209>/Digital Port Write' */
   portNameLoc = GPIOA;
   if (G431currentloop_B.LED != 0.0) {
-    c = 32;
+    pinReadLoc = 32U;
   } else {
-    c = 0;
+    pinReadLoc = 0U;
   }
 
-  LL_GPIO_SetOutputPin(portNameLoc, (uint32_T)c);
-  LL_GPIO_ResetOutputPin(portNameLoc, ~(uint32_T)c & 32U);
+  LL_GPIO_SetOutputPin(portNameLoc, pinReadLoc);
+  LL_GPIO_ResetOutputPin(portNameLoc, ~pinReadLoc & 32U);
 
   /* End of MATLABSystem: '<S209>/Digital Port Write' */
 
-  /* Update absolute time */
-  /* The "clockTick1" counts the number of times the code of this task has
-   * been executed. The resolution of this integer timer is 0.1, which is the step size
-   * of the task. Size of "clockTick1" ensures timer will not overflow during the
-   * application lifespan selected.
-   */
-  G431currentloop_M->Timing.clockTick1++;
+  /* Update for UnitDelay: '<S1>/Unit Delay' */
+  G431currentloop_DW.UnitDelay_DSTATE_m = G431currentloop_B.DigitalPortRead;
 }
 
 /* Model initialize function */
@@ -287,137 +211,8 @@ void G431currentloop_initialize(void)
 {
   /* Registration code */
 
-  /* initialize real-time model */
-  (void) memset((void *)G431currentloop_M, 0,
-                sizeof(RT_MODEL_G431currentloop_T));
-  rtmSetTFinal(G431currentloop_M, -1);
-  G431currentloop_M->Timing.stepSize0 = 0.001;
-
-  /* External mode info */
-  G431currentloop_M->Sizes.checksums[0] = (295478085U);
-  G431currentloop_M->Sizes.checksums[1] = (2088159891U);
-  G431currentloop_M->Sizes.checksums[2] = (3653877242U);
-  G431currentloop_M->Sizes.checksums[3] = (3160752343U);
-
-  {
-    static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;
-    static RTWExtModeInfo rt_ExtModeInfo;
-    static const sysRanDType *systemRan[63];
-    G431currentloop_M->extModeInfo = (&rt_ExtModeInfo);
-    rteiSetSubSystemActiveVectorAddresses(&rt_ExtModeInfo, systemRan);
-    systemRan[0] = &rtAlwaysEnabled;
-    systemRan[1] = &rtAlwaysEnabled;
-    systemRan[2] = (sysRanDType *)
-      &G431currentloop_DW.EnabledSubsystem_SubsysRanBC;
-    systemRan[3] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[4] = (sysRanDType *)&G431currentloop_DW.Dir_Sense_SubsysRanBC;
-    systemRan[5] = (sysRanDType *)&G431currentloop_DW.Dir_Sense_SubsysRanBC;
-    systemRan[6] = (sysRanDType *)&G431currentloop_DW.Dir_Sense_SubsysRanBC;
-    systemRan[7] = (sysRanDType *)&G431currentloop_DW.Subsystem2_SubsysRanBC;
-    systemRan[8] = (sysRanDType *)&G431currentloop_DW.Subsystem3_SubsysRanBC;
-    systemRan[9] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[10] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[11] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[12] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[13] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[14] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[15] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[16] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[17] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[18] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[19] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[20] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[21] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[22] = (sysRanDType *)
-      &G431currentloop_DW.IfActionSubsystem2_SubsysRanB_l;
-    systemRan[23] = (sysRanDType *)
-      &G431currentloop_DW.IfActionSubsystem3_SubsysRanBC;
-    systemRan[24] = (sysRanDType *)
-      &G431currentloop_DW.IfActionSubsystem_SubsysRanBC_e;
-    systemRan[25] = (sysRanDType *)
-      &G431currentloop_DW.IfActionSubsystem2_SubsysRanBC;
-    systemRan[26] = (sysRanDType *)&G431currentloop_DW.Subsystem_SubsysRanBC;
-    systemRan[27] = (sysRanDType *)&G431currentloop_DW.Accumulate_SubsysRanBC;
-    systemRan[28] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[29] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[30] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[31] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[32] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[33] = (sysRanDType *)
-      &G431currentloop_DW.IfActionSubsystem_SubsysRanBC;
-    systemRan[34] = (sysRanDType *)
-      &G431currentloop_DW.IfActionSubsystem1_SubsysRanBC;
-    systemRan[35] = (sysRanDType *)&G431currentloop_DW.Limiter_SubsysRanBC;
-    systemRan[36] = (sysRanDType *)&G431currentloop_DW.Limiter_SubsysRanBC;
-    systemRan[37] = (sysRanDType *)&G431currentloop_DW.Passthrough_SubsysRanBC;
-    systemRan[38] = (sysRanDType *)&G431currentloop_DW.DQEquivalence_SubsysRanBC;
-    systemRan[39] = (sysRanDType *)
-      &G431currentloop_DW.DQAxisPriority_SubsysRanBC;
-    systemRan[40] = (sysRanDType *)&G431currentloop_DW.limitRef2_SubsysRanBC;
-    systemRan[41] = (sysRanDType *)&G431currentloop_DW.limitRef2_SubsysRanBC;
-    systemRan[42] = (sysRanDType *)&G431currentloop_DW.limitRef2_SubsysRanBC;
-    systemRan[43] = (sysRanDType *)&G431currentloop_DW.passThrough_SubsysRanBC;
-    systemRan[44] = (sysRanDType *)
-      &G431currentloop_DW.DQAxisPriority_SubsysRanBC;
-    systemRan[45] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[46] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[47] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[48] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[49] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[50] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[51] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[52] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[53] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[54] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[55] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[56] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[57] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[58] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[59] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[60] = (sysRanDType *)
-      &G431currentloop_DW.FunctionCallSubsystem_SubsysRan;
-    systemRan[61] = &rtAlwaysEnabled;
-    systemRan[62] = &rtAlwaysEnabled;
-    rteiSetModelMappingInfoPtr(G431currentloop_M->extModeInfo,
-      &G431currentloop_M->SpecialInfo.mappingInfo);
-    rteiSetChecksumsPtr(G431currentloop_M->extModeInfo,
-                        G431currentloop_M->Sizes.checksums);
-    rteiSetTPtr(G431currentloop_M->extModeInfo, rtmGetTPtr(G431currentloop_M));
-  }
+  /* initialize error status */
+  rtmSetErrorStatus(G431currentloop_M, (NULL));
 
   /* block I/O */
   (void) memset(((void *) &G431currentloop_B), 0,
@@ -468,7 +263,6 @@ void G431currentloop_initialize(void)
   /* System initialize for function-call system: '<Root>/Function-Call Subsystem' */
   {
     int32_T i;
-    G431currentloop_M->Timing.clockTick2 = G431currentloop_M->Timing.clockTick0;
 
     /* Start for Constant: '<S81>/Vq_OpenLoop' */
     G431currentloop_B.Vq_OpenLoop = G431currentloop_P.Vq_OpenLoop_Value;
@@ -706,60 +500,6 @@ void ADC1_2_IRQHandler(void)
     LL_ADC_ClearFlag_JEOS(ADC1);
     if (1 == runModel) {
       {
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.Dir_Sense_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.Subsystem2_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.Subsystem3_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.IfActionSubsystem2_SubsysRanB_l);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.IfActionSubsystem3_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.IfActionSubsystem_SubsysRanBC_e);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.IfActionSubsystem2_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.Subsystem_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.Accumulate_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.IfActionSubsystem_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.IfActionSubsystem1_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.passThrough_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.limitRef2_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.DQAxisPriority_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.Limiter_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.Passthrough_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.DQEquivalence_SubsysRanBC);
-
-        /* Reset subsysRan breadcrumbs */
-        srClearBC(G431currentloop_DW.FunctionCallSubsystem_SubsysRan);
-
         /* S-Function (HardwareInterrupt_sfun): '<S206>/Hardware Interrupt' */
 
         /* Output and update for function-call system: '<Root>/Function-Call Subsystem' */
@@ -776,8 +516,6 @@ void ADC1_2_IRQHandler(void)
           int8_T Integrator_PrevResetState_tmp;
           boolean_T LogicalOperator_tmp;
           boolean_T zcEvent;
-          G431currentloop_M->Timing.clockTick2 =
-            G431currentloop_M->Timing.clockTick0;
 
           /* Switch: '<S84>/Switch1' incorporates:
            *  Constant: '<S84>/enableInportSatMethod'
@@ -1202,7 +940,6 @@ void ADC1_2_IRQHandler(void)
             }
 
             /* End of Switch: '<S27>/Switch' */
-            G431currentloop_DW.Dir_Sense_SubsysRanBC = 4;
           }
 
           G431currentloop_PrevZCX.Dir_Sense_Trig_ZCE =
@@ -1226,14 +963,6 @@ void ADC1_2_IRQHandler(void)
             G431currentloop_B.Merge1 = G431currentloop_B.Add1_o;
 
             /* End of Outputs for SubSystem: '<S19>/Subsystem2' */
-
-            /* Update for IfAction SubSystem: '<S19>/Subsystem2' incorporates:
-             *  ActionPort: '<S28>/Action Port'
-             */
-            /* Update for If: '<S19>/If' */
-            G431currentloop_DW.Subsystem2_SubsysRanBC = 4;
-
-            /* End of Update for SubSystem: '<S19>/Subsystem2' */
           } else {
             /* Outputs for IfAction SubSystem: '<S19>/Subsystem3' incorporates:
              *  ActionPort: '<S29>/Action Port'
@@ -1249,14 +978,6 @@ void ADC1_2_IRQHandler(void)
             G431currentloop_B.Merge = G431currentloop_B.Add1;
 
             /* End of Outputs for SubSystem: '<S19>/Subsystem3' */
-
-            /* Update for IfAction SubSystem: '<S19>/Subsystem3' incorporates:
-             *  ActionPort: '<S29>/Action Port'
-             */
-            /* Update for If: '<S19>/If' */
-            G431currentloop_DW.Subsystem3_SubsysRanBC = 4;
-
-            /* End of Update for SubSystem: '<S19>/Subsystem3' */
           }
 
           /* End of If: '<S19>/If' */
@@ -1381,10 +1102,6 @@ void ADC1_2_IRQHandler(void)
           /* End of Switch: '<S26>/Switch' */
           /* End of Outputs for SubSystem: '<S18>/angleCompensation' */
 
-          /* Gain: '<S18>/AngleConversion' */
-          G431currentloop_B.AngleConversion = (real32_T)
-            (G431currentloop_P.AngleConversion_Gain * G431currentloop_B.Switch_l);
-
           /* DataStoreRead: '<S13>/Data Store Read' */
           G431currentloop_B.DataStoreRead_h = G431currentloop_DW.Enable;
 
@@ -1417,14 +1134,6 @@ void ADC1_2_IRQHandler(void)
             G431currentloop_B.cont = G431currentloop_B.Add1_g;
 
             /* End of Outputs for SubSystem: '<S13>/If Action Subsystem2' */
-
-            /* Update for IfAction SubSystem: '<S13>/If Action Subsystem2' incorporates:
-             *  ActionPort: '<S47>/Action Port'
-             */
-            /* Update for If: '<S13>/If1' */
-            G431currentloop_DW.IfActionSubsystem2_SubsysRanB_l = 4;
-
-            /* End of Update for SubSystem: '<S13>/If Action Subsystem2' */
           } else {
             /* Outputs for IfAction SubSystem: '<S13>/If Action Subsystem3' incorporates:
              *  ActionPort: '<S48>/Action Port'
@@ -1441,14 +1150,6 @@ void ADC1_2_IRQHandler(void)
             G431currentloop_B.cont = G431currentloop_P.Constant15_Value;
 
             /* End of Outputs for SubSystem: '<S13>/If Action Subsystem3' */
-
-            /* Update for IfAction SubSystem: '<S13>/If Action Subsystem3' incorporates:
-             *  ActionPort: '<S48>/Action Port'
-             */
-            /* Update for If: '<S13>/If1' */
-            G431currentloop_DW.IfActionSubsystem3_SubsysRanBC = 4;
-
-            /* End of Update for SubSystem: '<S13>/If Action Subsystem3' */
           }
 
           /* End of If: '<S13>/If1' */
@@ -1482,14 +1183,6 @@ void ADC1_2_IRQHandler(void)
             G431currentloop_B.Merge_i = G431currentloop_P.Constant_Value_h;
 
             /* End of Outputs for SubSystem: '<S49>/If Action Subsystem' */
-
-            /* Update for IfAction SubSystem: '<S49>/If Action Subsystem' incorporates:
-             *  ActionPort: '<S50>/Action Port'
-             */
-            /* Update for If: '<S49>/If' */
-            G431currentloop_DW.IfActionSubsystem_SubsysRanBC_e = 4;
-
-            /* End of Update for SubSystem: '<S49>/If Action Subsystem' */
           } else {
             /* Outputs for IfAction SubSystem: '<S49>/If Action Subsystem2' incorporates:
              *  ActionPort: '<S51>/Action Port'
@@ -1532,14 +1225,6 @@ void ADC1_2_IRQHandler(void)
               G431currentloop_B.SaturatetomotorcalibSpeedRPM;
 
             /* End of Outputs for SubSystem: '<S49>/If Action Subsystem2' */
-
-            /* Update for IfAction SubSystem: '<S49>/If Action Subsystem2' incorporates:
-             *  ActionPort: '<S51>/Action Port'
-             */
-            /* Update for If: '<S49>/If' */
-            G431currentloop_DW.IfActionSubsystem2_SubsysRanBC = 4;
-
-            /* End of Update for SubSystem: '<S49>/If Action Subsystem2' */
           }
 
           /* End of If: '<S49>/If' */
@@ -1569,7 +1254,6 @@ void ADC1_2_IRQHandler(void)
             if (G431currentloop_B.Delay_m) {
               /* SignalConversion generated from: '<S54>/Input' */
               G431currentloop_B.Input = G431currentloop_B.scaleIn;
-              G431currentloop_DW.Subsystem_SubsysRanBC = 4;
             }
 
             /* End of Outputs for SubSystem: '<S53>/Subsystem' */
@@ -1604,13 +1288,17 @@ void ADC1_2_IRQHandler(void)
              */
             G431currentloop_DW.Delay_DSTATE_j =
               G431currentloop_P.Constant_Value_j;
-            G431currentloop_DW.Accumulate_SubsysRanBC = 4;
           }
 
           /* End of Outputs for SubSystem: '<S52>/Accumulate' */
 
           /* Switch: '<S12>/Switch' */
           if (G431currentloop_B.NOT) {
+            /* Gain: '<S18>/AngleConversion' */
+            G431currentloop_B.AngleConversion = (real32_T)
+              (G431currentloop_P.AngleConversion_Gain *
+               G431currentloop_B.Switch_l);
+
             /* Switch: '<S12>/Switch' */
             G431currentloop_B.Switch_g = G431currentloop_B.AngleConversion;
           } else {
@@ -1665,14 +1353,6 @@ void ADC1_2_IRQHandler(void)
               G431currentloop_B.Convert_back_h;
 
             /* End of Outputs for SubSystem: '<S75>/If Action Subsystem' */
-
-            /* Update for IfAction SubSystem: '<S75>/If Action Subsystem' incorporates:
-             *  ActionPort: '<S77>/Action Port'
-             */
-            /* Update for If: '<S75>/If' */
-            G431currentloop_DW.IfActionSubsystem_SubsysRanBC = 4;
-
-            /* End of Update for SubSystem: '<S75>/If Action Subsystem' */
           } else {
             /* Outputs for IfAction SubSystem: '<S75>/If Action Subsystem1' incorporates:
              *  ActionPort: '<S78>/Action Port'
@@ -1699,14 +1379,6 @@ void ADC1_2_IRQHandler(void)
               G431currentloop_B.Convert_back;
 
             /* End of Outputs for SubSystem: '<S75>/If Action Subsystem1' */
-
-            /* Update for IfAction SubSystem: '<S75>/If Action Subsystem1' incorporates:
-             *  ActionPort: '<S78>/Action Port'
-             */
-            /* Update for If: '<S75>/If' */
-            G431currentloop_DW.IfActionSubsystem1_SubsysRanBC = 4;
-
-            /* End of Update for SubSystem: '<S75>/If Action Subsystem1' */
           }
 
           /* End of If: '<S75>/If' */
@@ -2095,14 +1767,6 @@ void ADC1_2_IRQHandler(void)
               G431currentloop_B.Merge_e = G431currentloop_B.Switch_bs[1];
 
               /* End of Outputs for SubSystem: '<S92>/passThrough' */
-
-              /* Update for IfAction SubSystem: '<S92>/passThrough' incorporates:
-               *  ActionPort: '<S95>/Action Port'
-               */
-              /* Update for If: '<S92>/If' */
-              G431currentloop_DW.passThrough_SubsysRanBC = 4;
-
-              /* End of Update for SubSystem: '<S92>/passThrough' */
             } else {
               /* Outputs for IfAction SubSystem: '<S92>/limitRef2' incorporates:
                *  ActionPort: '<S94>/Action Port'
@@ -2139,14 +1803,6 @@ void ADC1_2_IRQHandler(void)
 
               /* End of Switch: '<S94>/Switch' */
               /* End of Outputs for SubSystem: '<S92>/limitRef2' */
-
-              /* Update for IfAction SubSystem: '<S92>/limitRef2' incorporates:
-               *  ActionPort: '<S94>/Action Port'
-               */
-              /* Update for If: '<S92>/If' */
-              G431currentloop_DW.limitRef2_SubsysRanBC = 4;
-
-              /* End of Update for SubSystem: '<S92>/limitRef2' */
             }
 
             /* End of If: '<S92>/If' */
@@ -2164,14 +1820,6 @@ void ADC1_2_IRQHandler(void)
 
             /* End of Switch: '<S83>/Switch1' */
             /* End of Outputs for SubSystem: '<S79>/D//Q Axis Priority' */
-
-            /* Update for IfAction SubSystem: '<S79>/D//Q Axis Priority' incorporates:
-             *  ActionPort: '<S83>/Action Port'
-             */
-            /* Update for If: '<S79>/If' */
-            G431currentloop_DW.DQAxisPriority_SubsysRanBC = 4;
-
-            /* End of Update for SubSystem: '<S79>/D//Q Axis Priority' */
           } else {
             /* Outputs for IfAction SubSystem: '<S79>/D-Q Equivalence' incorporates:
              *  ActionPort: '<S82>/Action Port'
@@ -2221,14 +1869,6 @@ void ADC1_2_IRQHandler(void)
                 G431currentloop_B.Switch_cc;
 
               /* End of Outputs for SubSystem: '<S82>/Limiter' */
-
-              /* Update for IfAction SubSystem: '<S82>/Limiter' incorporates:
-               *  ActionPort: '<S86>/Action Port'
-               */
-              /* Update for If: '<S82>/If' */
-              G431currentloop_DW.Limiter_SubsysRanBC = 4;
-
-              /* End of Update for SubSystem: '<S82>/Limiter' */
             } else {
               /* Outputs for IfAction SubSystem: '<S82>/Passthrough' incorporates:
                *  ActionPort: '<S87>/Action Port'
@@ -2240,26 +1880,10 @@ void ADC1_2_IRQHandler(void)
               G431currentloop_B.Merge_n[1] = G431currentloop_B.Saturation;
 
               /* End of Outputs for SubSystem: '<S82>/Passthrough' */
-
-              /* Update for IfAction SubSystem: '<S82>/Passthrough' incorporates:
-               *  ActionPort: '<S87>/Action Port'
-               */
-              /* Update for If: '<S82>/If' */
-              G431currentloop_DW.Passthrough_SubsysRanBC = 4;
-
-              /* End of Update for SubSystem: '<S82>/Passthrough' */
             }
 
             /* End of If: '<S82>/If' */
             /* End of Outputs for SubSystem: '<S79>/D-Q Equivalence' */
-
-            /* Update for IfAction SubSystem: '<S79>/D-Q Equivalence' incorporates:
-             *  ActionPort: '<S82>/Action Port'
-             */
-            /* Update for If: '<S79>/If' */
-            G431currentloop_DW.DQEquivalence_SubsysRanBC = 4;
-
-            /* End of Update for SubSystem: '<S79>/D-Q Equivalence' */
           }
 
           /* End of If: '<S79>/If' */
@@ -2886,15 +2510,10 @@ void ADC1_2_IRQHandler(void)
 
           /* Update for UnitDelay: '<S40>/Unit Delay' */
           G431currentloop_DW.UnitDelay_DSTATE_p = G431currentloop_B.Add1_h;
-          G431currentloop_DW.FunctionCallSubsystem_SubsysRan = 4;
         }
 
         /* End of Outputs for S-Function (HardwareInterrupt_sfun): '<S206>/Hardware Interrupt' */
       }
-
-      currentTime = (extmodeSimulationTime_T)
-        ((G431currentloop_M->Timing.clockTick2) * 0.001);
-      extmodeEvent(2,currentTime);
     }
   }
 

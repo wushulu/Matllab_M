@@ -1,2 +1,0 @@
-startup_stm32g431rbtx.o: \
- D:/Work/Matlab/PMSM/10G431currentloop/CubemaxIDE/G431Hardware/STM32CubeIDE/Application/User/Startup/startup_stm32g431rbtx.s

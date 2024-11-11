@@ -46,8 +46,6 @@ platform_timer.o: \
  D:/Work/Matlab/PMSM/10G431currentloop/CubemaxIDE/G431Hardware/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/G431currentloop.h \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rtwtypes.h \
- D:/software/MATLAB2024a/simulink/include/rtw_extmode.h \
- D:/software/MATLAB2024a/simulink/include/sysran_types.h \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rt_nonfinite.h \
  C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_nvic.h \
  D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/G431currentloop_types.h \
@@ -106,8 +104,6 @@ D:/Work/Matlab/PMSM/10G431currentloop/CubemaxIDE/G431Hardware/Drivers/STM32G4xx_
 D:/Work/Matlab/PMSM/10G431currentloop/CubemaxIDE/G431Hardware/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h:
 D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/G431currentloop.h:
 D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rtwtypes.h:
-D:/software/MATLAB2024a/simulink/include/rtw_extmode.h:
-D:/software/MATLAB2024a/simulink/include/sysran_types.h:
 D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/rt_nonfinite.h:
 C:/ProgramData/MATLAB/SupportPackages/R2024a/toolbox/shared/supportpackages/stm32/include/mw_stm32_nvic.h:
 D:/Work/Matlab/PMSM/10G431currentloop/G431currentloop_ert_rtw/G431currentloop_types.h:
