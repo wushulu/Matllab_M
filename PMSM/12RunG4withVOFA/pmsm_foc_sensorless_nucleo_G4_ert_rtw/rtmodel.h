@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'pmsm_foc_sensorless_nucleo_G4'.
  *
- * Model version                  : 8.11
+ * Model version                  : 8.13
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Mon Nov 11 16:34:27 2024
+ * C/C++ source code generated on : Wed Nov 13 17:04:28 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M

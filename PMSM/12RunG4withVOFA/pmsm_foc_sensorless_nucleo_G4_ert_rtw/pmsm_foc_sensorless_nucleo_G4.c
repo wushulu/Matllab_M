@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'pmsm_foc_sensorless_nucleo_G4'.
  *
- * Model version                  : 8.11
+ * Model version                  : 8.13
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Mon Nov 11 16:34:27 2024
+ * C/C++ source code generated on : Wed Nov 13 17:04:28 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -823,7 +823,7 @@ void pmsm_foc_sensorless_nucleo_G4_initialize(void)
     pmsm_foc_sensorless_nucle_DWork.Integrator_IC_LOADING_o = 1U;
 
     /* InitializeConditions for Delay: '<S29>/Delay' */
-    for (i = 0; i < 99; i++) {
+    for (i = 0; i < 119; i++) {
       pmsm_foc_sensorless_nucle_DWork.Delay_DSTATE_a[i] =
         pmsm_foc_sensorless_nucleo_G4_P.Delay_InitialCondition_i;
     }
@@ -1564,7 +1564,7 @@ void ADC1_2_IRQHandler(void)
 
           /* Constant: '<S22>/PhaseDelay' */
           y_tmp = pmsm_foc_sensorless_nucleo_G4_P.SlidingModeObserver_CutoffFreq
-            / 100.0;
+            / 83.333333333333329;
 
           /* Constant: '<S22>/PhaseDelay' */
           pmsm_foc_sensorless_nucleo_G4_B.PhaseDelay = (real32_T)y_tmp;
@@ -3199,7 +3199,7 @@ void ADC1_2_IRQHandler(void)
           /* Update for Delay: '<S29>/Delay' */
           pmsm_foc_sensorless_nucle_DWork.Delay_DSTATE_a[pmsm_foc_sensorless_nucle_DWork.CircBufIdx]
             = pmsm_foc_sensorless_nucleo_G4_B.PositionToCount;
-          if (pmsm_foc_sensorless_nucle_DWork.CircBufIdx < 98U) {
+          if (pmsm_foc_sensorless_nucle_DWork.CircBufIdx < 118U) {
             pmsm_foc_sensorless_nucle_DWork.CircBufIdx++;
           } else {
             pmsm_foc_sensorless_nucle_DWork.CircBufIdx = 0U;

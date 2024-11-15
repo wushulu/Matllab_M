@@ -1,0 +1,8 @@
+rtGetNaN.o: \
+ D:/Work/Matlab/PMSM/13PowerCaculate/pmsm_foc_sensorless_nucleo_G4_ert_rtw/rtGetNaN.c \
+ D:/Work/Matlab/PMSM/13PowerCaculate/pmsm_foc_sensorless_nucleo_G4_ert_rtw/rtwtypes.h \
+ D:/Work/Matlab/PMSM/13PowerCaculate/pmsm_foc_sensorless_nucleo_G4_ert_rtw/rtGetNaN.h \
+ D:/Work/Matlab/PMSM/13PowerCaculate/pmsm_foc_sensorless_nucleo_G4_ert_rtw/rt_nonfinite.h
+D:/Work/Matlab/PMSM/13PowerCaculate/pmsm_foc_sensorless_nucleo_G4_ert_rtw/rtwtypes.h:
+D:/Work/Matlab/PMSM/13PowerCaculate/pmsm_foc_sensorless_nucleo_G4_ert_rtw/rtGetNaN.h:
+D:/Work/Matlab/PMSM/13PowerCaculate/pmsm_foc_sensorless_nucleo_G4_ert_rtw/rt_nonfinite.h:

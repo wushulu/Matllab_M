@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'pmsm_foc_sensorless_nucleo_G4'.
  *
- * Model version                  : 8.11
+ * Model version                  : 8.13
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Mon Nov 11 16:34:27 2024
+ * C/C++ source code generated on : Wed Nov 13 17:04:28 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -17,14 +17,14 @@
 
 /* Block parameters (default storage) */
 Parameters_pmsm_foc_sensorless_ pmsm_foc_sensorless_nucleo_G4_P = {
-  0.0029627,
-  300.0,
+  0.0024689,
+  150.0,
   0.9,
   -1.0F,
   -1.0F,
   1.0F,
   1.0F,
-  80000U,
+  160000U,
   1U,
   1U,
   1U,
@@ -36,16 +36,16 @@ Parameters_pmsm_foc_sensorless_ pmsm_foc_sensorless_nucleo_G4_P = {
   0.0,
   0.0F,
   1.0F,
-  0.0861302F,
-  0.913869798F,
+  0.0450031646F,
+  0.954996824F,
   0.0F,
   1.0F,
-  0.0861302F,
-  0.913869798F,
+  0.0450031646F,
+  0.954996824F,
   0.0F,
   1.0F,
-  0.00125F,
-  0.99875F,
+  0.00104166672F,
+  0.998958349F,
   6.28318548F,
   1.0F,
   0.159154937F,
@@ -54,7 +54,7 @@ Parameters_pmsm_foc_sensorless_ pmsm_foc_sensorless_nucleo_G4_P = {
   1.0F,
   0.0F,
   7.5E-5F,
-  4.0F,
+  6.0F,
   0.0F,
   5.0E-5F,
   0.0F,
@@ -333,7 +333,7 @@ Parameters_pmsm_foc_sensorless_ pmsm_foc_sensorless_nucleo_G4_P = {
   0.0771591812F,
   0.97794944F,
   6.83563648E+8F,
-  4.70364914E-10F,
+  4.69574435E-10F,
   1.0F,
   1.0F,
   0.0F,

@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'pmsm_foc_sensorless_nucleo_G4'.
  *
- * Model version                  : 8.11
+ * Model version                  : 8.13
  * Simulink Coder version         : 24.1 (R2024a) 19-Nov-2023
- * C/C++ source code generated on : Mon Nov 11 16:34:27 2024
+ * C/C++ source code generated on : Wed Nov 13 17:04:28 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -339,7 +339,7 @@ typedef struct {
   real32_T UnitDelay_DSTATE_c;         /* '<S84>/Unit Delay' */
   real32_T Integrator_DSTATE_l;        /* '<S136>/Integrator' */
   real32_T UnitDelay_DSTATE_bl;        /* '<S44>/Unit Delay' */
-  uint32_T Delay_DSTATE_a[99];         /* '<S29>/Delay' */
+  uint32_T Delay_DSTATE_a[119];        /* '<S29>/Delay' */
   volatile real32_T RT1_Buffer[4];     /* '<Root>/RT1' */
   real32_T GlobleopenspeedInt;         /* '<S53>/Data Store Memory' */
   int32_T clockTickCounter;            /* '<S5>/Pulse Generator' */
@@ -1044,7 +1044,7 @@ extern "C"
  * '<S10>'  : 'pmsm_foc_sensorless_nucleo_G4/Button start/Digital Port Read/ECSoC/ECSimCodegen'
  * '<S11>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/Analog to Digital Converter'
  * '<S12>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/Counter Limited'
- * '<S13>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM'
+ * '<S13>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO'
  * '<S14>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/Subsystem1'
  * '<S15>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/Subsystem2'
  * '<S16>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/Subsystem3'
@@ -1053,33 +1053,33 @@ extern "C"
  * '<S19>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/Analog to Digital Converter/ECSoC/ECSimCodegen'
  * '<S20>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/Counter Limited/Increment Real World'
  * '<S21>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/Counter Limited/Wrap To Zero'
- * '<S22>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer'
- * '<S23>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Direction_Latch'
- * '<S24>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Ealpha_est'
- * '<S25>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Ebeta_est'
- * '<S26>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Filter_Ealpha'
- * '<S27>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Filter_Ebeta'
- * '<S28>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/IIR Filter'
- * '<S29>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Speed Measurement'
- * '<S30>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/angleCompensation'
- * '<S31>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Direction_Latch/Dir_Sense'
- * '<S32>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Direction_Latch/Subsystem2'
- * '<S33>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Direction_Latch/Subsystem3'
- * '<S34>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Ealpha_est/DisturbanceObserver'
- * '<S35>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Ebeta_est/DisturbanceObserver'
- * '<S36>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Filter_Ealpha/IIR Filter'
- * '<S37>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Filter_Ealpha/IIR Filter/Low-pass'
- * '<S38>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Filter_Ealpha/IIR Filter/Low-pass/IIR Low Pass Filter'
- * '<S39>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Filter_Ebeta/IIR Filter'
- * '<S40>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Filter_Ebeta/IIR Filter/Low-pass'
- * '<S41>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Filter_Ebeta/IIR Filter/Low-pass/IIR Low Pass Filter'
- * '<S42>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/IIR Filter/IIR Filter'
- * '<S43>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/IIR Filter/IIR Filter/Low-pass'
- * '<S44>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/IIR Filter/IIR Filter/Low-pass/IIR Low Pass Filter'
- * '<S45>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Speed Measurement/DT_Handle'
- * '<S46>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/Speed Measurement/DT_Handle/floating-point'
- * '<S47>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/angleCompensation/atan1'
- * '<S48>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SOM/Sliding Mode Observer/angleCompensation/atan1/Per Unit'
+ * '<S22>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer'
+ * '<S23>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Direction_Latch'
+ * '<S24>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Ealpha_est'
+ * '<S25>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Ebeta_est'
+ * '<S26>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Filter_Ealpha'
+ * '<S27>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Filter_Ebeta'
+ * '<S28>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/IIR Filter'
+ * '<S29>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Speed Measurement'
+ * '<S30>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/angleCompensation'
+ * '<S31>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Direction_Latch/Dir_Sense'
+ * '<S32>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Direction_Latch/Subsystem2'
+ * '<S33>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Direction_Latch/Subsystem3'
+ * '<S34>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Ealpha_est/DisturbanceObserver'
+ * '<S35>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Ebeta_est/DisturbanceObserver'
+ * '<S36>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Filter_Ealpha/IIR Filter'
+ * '<S37>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Filter_Ealpha/IIR Filter/Low-pass'
+ * '<S38>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Filter_Ealpha/IIR Filter/Low-pass/IIR Low Pass Filter'
+ * '<S39>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Filter_Ebeta/IIR Filter'
+ * '<S40>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Filter_Ebeta/IIR Filter/Low-pass'
+ * '<S41>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Filter_Ebeta/IIR Filter/Low-pass/IIR Low Pass Filter'
+ * '<S42>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/IIR Filter/IIR Filter'
+ * '<S43>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/IIR Filter/IIR Filter/Low-pass'
+ * '<S44>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/IIR Filter/IIR Filter/Low-pass/IIR Low Pass Filter'
+ * '<S45>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Speed Measurement/DT_Handle'
+ * '<S46>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/Speed Measurement/DT_Handle/floating-point'
+ * '<S47>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/angleCompensation/atan1'
+ * '<S48>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/SMO/Sliding Mode Observer/angleCompensation/atan1/Per Unit'
  * '<S49>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/Subsystem1/Feedbackt_Current'
  * '<S50>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/Subsystem2/Enable PWM for 8 seconds'
  * '<S51>'  : 'pmsm_foc_sensorless_nucleo_G4/Function-Call Subsystem/Subsystem2/If Action Subsystem2'

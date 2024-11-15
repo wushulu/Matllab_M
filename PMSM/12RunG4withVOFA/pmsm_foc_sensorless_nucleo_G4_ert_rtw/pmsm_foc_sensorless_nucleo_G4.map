@@ -2417,7 +2417,7 @@ LOAD c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.i
  .igot.plt      0x20001238        0x0 c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.instrset/win/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x20001238                . = ALIGN (0x4)
 
-.bss            0x20001238      0x91c load address 0x08006a54
+.bss            0x20001238      0x96c load address 0x08006a54
                 0x20001238                _sbss = .
                 0x20001238                __bss_start__ = _sbss
  *(.bss)
@@ -2453,42 +2453,42 @@ LOAD c:/programdata/matlab/supportpackages/r2024a/3p.instrset/gnuarm-armcortex.i
                 0x20001348                pmsm_foc_sensorl_PrevZCSigState
  *fill*         0x2000134e        0x2 
  .bss.pmsm_foc_sensorless_nucle_DWork
-                0x20001350      0x388 pmsm_foc_sensorless_nucleo_G4.o
+                0x20001350      0x3d8 pmsm_foc_sensorless_nucleo_G4.o
                 0x20001350                pmsm_foc_sensorless_nucle_DWork
  .bss.pmsm_foc_sensorless_nucleo_G4_B
-                0x200016d8      0x418 pmsm_foc_sensorless_nucleo_G4.o
-                0x200016d8                pmsm_foc_sensorless_nucleo_G4_B
+                0x20001728      0x418 pmsm_foc_sensorless_nucleo_G4.o
+                0x20001728                pmsm_foc_sensorless_nucleo_G4_B
  .bss.pmsm_foc_sensorless_nucleo_G_M_
-                0x20001af0        0x8 pmsm_foc_sensorless_nucleo_G4.o
+                0x20001b40        0x8 pmsm_foc_sensorless_nucleo_G4.o
  .bss.schdl_counter
-                0x20001af8        0x4 SysTickScheduler.o
-                0x20001af8                schdl_counter
+                0x20001b48        0x4 SysTickScheduler.o
+                0x20001b48                schdl_counter
  .bss.schdl_counter_max
-                0x20001afc        0x4 SysTickScheduler.o
-                0x20001afc                schdl_counter_max
+                0x20001b4c        0x4 SysTickScheduler.o
+                0x20001b4c                schdl_counter_max
  .bss.taskToSchedule
-                0x20001b00        0x4 m3m4m4f_multitasking.o
-                0x20001b00                taskToSchedule
- .bss.htim2     0x20001b04       0x4c stm32g4xx_hal_timebase_tim.o
-                0x20001b04                htim2
- .bss.uwTick    0x20001b50        0x4 stm32g4xx_hal.o
-                0x20001b50                uwTick
+                0x20001b50        0x4 m3m4m4f_multitasking.o
+                0x20001b50                taskToSchedule
+ .bss.htim2     0x20001b54       0x4c stm32g4xx_hal_timebase_tim.o
+                0x20001b54                htim2
+ .bss.uwTick    0x20001ba0        0x4 stm32g4xx_hal.o
+                0x20001ba0                uwTick
  *(COMMON)
-                0x20001b54                . = ALIGN (0x4)
-                0x20001b54                _ebss = .
-                0x20001b54                __bss_end__ = _ebss
+                0x20001ba4                . = ALIGN (0x4)
+                0x20001ba4                _ebss = .
+                0x20001ba4                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20001b54      0x604 load address 0x08006a54
-                0x20001b58                . = ALIGN (0x8)
- *fill*         0x20001b54        0x4 
+                0x20001ba4      0x604 load address 0x08006a54
+                0x20001ba8                . = ALIGN (0x8)
+ *fill*         0x20001ba4        0x4 
                 [!provide]                PROVIDE (end = .)
-                0x20001b58                PROVIDE (_end = .)
-                0x20001d58                . = (. + _Min_Heap_Size)
- *fill*         0x20001b58      0x200 
-                0x20002158                . = (. + _Min_Stack_Size)
- *fill*         0x20001d58      0x400 
-                0x20002158                . = ALIGN (0x8)
+                0x20001ba8                PROVIDE (_end = .)
+                0x20001da8                . = (. + _Min_Heap_Size)
+ *fill*         0x20001ba8      0x200 
+                0x200021a8                . = (. + _Min_Stack_Size)
+ *fill*         0x20001da8      0x400 
+                0x200021a8                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)

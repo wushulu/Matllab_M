@@ -2,7 +2,7 @@
 ## Makefile generated for component 'pmsm_foc_sensorless_nucleo_G4'. 
 ## 
 ## Makefile     : pmsm_foc_sensorless_nucleo_G4.mk
-## Generated on : Mon Nov 11 10:33:41 2024
+## Generated on : Wed Nov 13 16:42:53 2024
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/pmsm_foc_sensorless_nucleo_G4.elf
 ## Product type : executable
 ## 
