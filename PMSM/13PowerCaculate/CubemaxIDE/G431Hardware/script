@@ -1,4 +1,4 @@
-config load "D:\Work\Matlab\PMSM\12RunG4withVOFA\CubemaxIDE\G431Hardware\G431Hardware.ioc"
+config load "D:\Work\Matlab\PMSM\13PowerCaculate\CubemaxIDE\G431Hardware\G431Hardware.ioc"
 project toolchain STM32CubeIDE
 
 SetStructure Advanced

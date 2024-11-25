@@ -1,0 +1,2 @@
+startup_stm32g431rbtx.o: \
+ D:/Work/Matlab/PMSM/13PowerCaculate/CubemaxIDE/G431Hardware/STM32CubeIDE/Application/User/Startup/startup_stm32g431rbtx.s
