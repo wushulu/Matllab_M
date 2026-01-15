@@ -1275,6 +1275,8 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["nucleo_g431re_ihm07m1:9564"] = {rtwname: "<S17>/count_to_PU"};
 	this.rtwnameHashMap["<S17>/count_to_PU1"] = {sid: "nucleo_g431re_ihm07m1:9970"};
 	this.sidHashMap["nucleo_g431re_ihm07m1:9970"] = {rtwname: "<S17>/count_to_PU1"};
+	this.rtwnameHashMap["<S17>/count_to_PU2"] = {sid: "nucleo_g431re_ihm07m1:10061"};
+	this.sidHashMap["nucleo_g431re_ihm07m1:10061"] = {rtwname: "<S17>/count_to_PU2"};
 	this.rtwnameHashMap["<S17>/Ia"] = {sid: "nucleo_g431re_ihm07m1:8564"};
 	this.sidHashMap["nucleo_g431re_ihm07m1:8564"] = {rtwname: "<S17>/Ia"};
 	this.rtwnameHashMap["<S17>/Ib"] = {sid: "nucleo_g431re_ihm07m1:8565"};

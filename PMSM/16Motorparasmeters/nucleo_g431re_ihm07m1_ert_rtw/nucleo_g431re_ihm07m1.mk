@@ -2,7 +2,7 @@
 ## Makefile generated for component 'nucleo_g431re_ihm07m1'. 
 ## 
 ## Makefile     : nucleo_g431re_ihm07m1.mk
-## Generated on : Fri Jan 16 10:48:24 2026
+## Generated on : Fri Jan 16 15:24:09 2026
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/nucleo_g431re_ihm07m1.elf
 ## Product type : executable
 ## 
@@ -23,7 +23,7 @@ MAKEFILE                  = nucleo_g431re_ihm07m1.mk
 MATLAB_ROOT               = D:/software/MATLAB2024a
 MATLAB_BIN                = D:/software/MATLAB2024a/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = D:/Work/Matlab/PMSM/16MotorparasmetersM
+START_DIR                 = D:/Work/Matlab/PMSM/16MotorParasmeters
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -285,7 +285,7 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 #---------------
 
 CPP_LDFLAGS_ = --specs=nano.specs
-CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\PMSM\16MotorparasmetersM\stm32g431_pmsm_example\STM32CubeIDE\STM32G431RBTX_FLASH.ld"
+CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\PMSM\16MotorParasmeters\stm32g431_pmsm_example\STM32CubeIDE\STM32G431RBTX_FLASH.ld"
 
 CPP_LDFLAGS += $(CPP_LDFLAGS_) $(CPP_LDFLAGS_SKIPFORSIL)
 
@@ -294,7 +294,7 @@ CPP_LDFLAGS += $(CPP_LDFLAGS_) $(CPP_LDFLAGS_SKIPFORSIL)
 #------------------------------
 
 CPP_SHAREDLIB_LDFLAGS_ = --specs=nano.specs
-CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\PMSM\16MotorparasmetersM\stm32g431_pmsm_example\STM32CubeIDE\STM32G431RBTX_FLASH.ld"
+CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\PMSM\16MotorParasmeters\stm32g431_pmsm_example\STM32CubeIDE\STM32G431RBTX_FLASH.ld"
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_) $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
@@ -303,7 +303,7 @@ CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_) $(CPP_SHAREDLIB_LDFLAGS_SKIPF
 #-----------
 
 LDFLAGS_ = --specs=nano.specs
-LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\PMSM\16MotorparasmetersM\stm32g431_pmsm_example\STM32CubeIDE\STM32G431RBTX_FLASH.ld"
+LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\PMSM\16MotorParasmeters\stm32g431_pmsm_example\STM32CubeIDE\STM32G431RBTX_FLASH.ld"
 
 LDFLAGS += $(LDFLAGS_) $(LDFLAGS_SKIPFORSIL)
 
@@ -328,7 +328,7 @@ MEX_CFLAGS += $(MEX_Compiler_BASIC)
 #--------------------------
 
 SHAREDLIB_LDFLAGS_ = --specs=nano.specs
-SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\PMSM\16MotorparasmetersM\stm32g431_pmsm_example\STM32CubeIDE\STM32G431RBTX_FLASH.ld"
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"D:\Work\Matlab\PMSM\16MotorParasmeters\stm32g431_pmsm_example\STM32CubeIDE\STM32G431RBTX_FLASH.ld"
 
 SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_) $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 

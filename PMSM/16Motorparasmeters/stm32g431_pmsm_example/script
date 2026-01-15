@@ -1,4 +1,4 @@
-config load "D:\Work\Matlab\PMSM\16MotorparasmetersM\stm32g431_pmsm_example\stm32g431_pmsm_example.ioc"
+config load "D:\Work\Matlab\PMSM\16MotorParasmeters\stm32g431_pmsm_example\stm32g431_pmsm_example.ioc"
 project toolchain STM32CubeIDE
 
 SetStructure Advanced

@@ -43,6 +43,7 @@ if isequal(boardSelection,2) || isequal(boardSelection,3)
 else
 	PWM_frequency = 20e3; %(Hz);
 end
+
 Ts = 1/PWM_frequency;
 assignin('base', 'Ts', Ts);
 PWM_Counter_Period = round(CPU_frequency/PWM_frequency/2); %(PWM timer counts);

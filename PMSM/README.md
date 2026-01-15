@@ -33,7 +33,7 @@
 
 ### 高级控制与启动
 -   **`14IFstart`**: I/F (电流/频率) 开环启动策略。
--   **`16Motorparasmeters` / `16MotorparasmetersM`**: 电机参数辨识相关模型与脚本。
+-   **`16Motorparasmeters`**: 电机参数辨识相关模型与脚本。
 -   **`13PowerCaculate`**: 功率计算模块。
 
 ### 硬件运行与调试
