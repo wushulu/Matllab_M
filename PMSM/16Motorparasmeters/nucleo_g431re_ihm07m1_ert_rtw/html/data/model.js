@@ -1,0 +1,1 @@
+var modelInfo = {model:"nucleo_g431re_ihm07m1"};var modelHierarchy=[{model:"nucleo_g431re_ihm07m1",relativePath:"_internal.html",parent:"null"},];var AddCode = true;

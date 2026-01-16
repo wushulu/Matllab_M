@@ -1,0 +1,1 @@
+var reportPages = [["摘要","nucleo_g431re_ihm07m1_survey.html"],["子系统报告","nucleo_g431re_ihm07m1_subsystems.html"],["代码接口报告","nucleo_g431re_ihm07m1_interface.html"],["可追溯性报告","nucleo_g431re_ihm07m1_trace.html"],["静态代码度量报告","nucleo_g431re_ihm07m1_metrics.html"],["代码替换报告","nucleo_g431re_ihm07m1_replacements.html"],["代码生成器假设","nucleo_g431re_ihm07m1_coderassumptions.html"]];

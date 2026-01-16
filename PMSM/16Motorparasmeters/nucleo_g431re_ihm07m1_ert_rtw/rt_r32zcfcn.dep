@@ -1,0 +1,12 @@
+rt_r32zcfcn.o: \
+ D:/Work/Matlab/PMSM/16MotorparasmetersM/nucleo_g431re_ihm07m1_ert_rtw/rt_r32zcfcn.c \
+ D:/Work/Matlab/PMSM/16MotorparasmetersM/nucleo_g431re_ihm07m1_ert_rtw/rtwtypes.h \
+ D:/Work/Matlab/PMSM/16MotorparasmetersM/nucleo_g431re_ihm07m1_ert_rtw/zero_crossing_types.h \
+ D:/Work/Matlab/PMSM/16MotorparasmetersM/nucleo_g431re_ihm07m1_ert_rtw/rt_r32zcfcn.h \
+ D:/software/MATLAB2024a/simulink/include/solver_zc.h \
+ D:/Work/Matlab/PMSM/16MotorparasmetersM/nucleo_g431re_ihm07m1_ert_rtw/rtwtypes.h
+D:/Work/Matlab/PMSM/16MotorparasmetersM/nucleo_g431re_ihm07m1_ert_rtw/rtwtypes.h:
+D:/Work/Matlab/PMSM/16MotorparasmetersM/nucleo_g431re_ihm07m1_ert_rtw/zero_crossing_types.h:
+D:/Work/Matlab/PMSM/16MotorparasmetersM/nucleo_g431re_ihm07m1_ert_rtw/rt_r32zcfcn.h:
+D:/software/MATLAB2024a/simulink/include/solver_zc.h:
+D:/Work/Matlab/PMSM/16MotorparasmetersM/nucleo_g431re_ihm07m1_ert_rtw/rtwtypes.h:
