@@ -1,2 +1,0 @@
-syscalls.o: \
- D:/Work/Matlab/PMSM/07Hallcorrection/Testbuilderror/STM32CubeIDE/Application/User/Core/syscalls.c

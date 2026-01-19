@@ -1,2 +1,0 @@
-startup_stm32f401retx.o: \
- D:/Work/Matlab/PMSM/Hallharewredebug/Testbuilderror/STM32CubeIDE/Application/User/Startup/startup_stm32f401retx.s

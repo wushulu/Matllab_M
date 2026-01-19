@@ -1,1 +1,0 @@
-var modelInfo = {model:"mcb_param_est_sensorless_nucleo_g474re_ihm07m1"};var modelHierarchy=[{model:"mcb_param_est_sensorless_nucleo_g474re_ihm07m1",relativePath:"_internal.html",parent:"null"},];var AddCode = true;

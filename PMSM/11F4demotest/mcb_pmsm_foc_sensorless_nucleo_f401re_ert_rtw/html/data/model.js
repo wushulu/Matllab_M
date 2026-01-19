@@ -1,1 +1,0 @@
-var modelInfo = {model:"mcb_pmsm_foc_sensorless_nucleo_f401re"};var modelHierarchy=[{model:"mcb_pmsm_foc_sensorless_nucleo_f401re",relativePath:"_internal.html",parent:"null"},];var AddCode = true;

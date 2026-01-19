@@ -45,6 +45,10 @@
 1.  **打开模型**: 使用 Matlab 打开对应的文件夹，双击 `.slx` 文件加载 Simulink 模型。
 2.  **加载参数**: 部分模型可能依赖参数脚本 (如 `Motorparasmeters` 文件夹下的 `.m` 文件)，请先运行脚本加载变量到 workspace。
 3.  **代码生成**: 确保已安装对应的 STM32 硬件支持包，并在模型配置参数中选择了正确的硬件板卡 (Hardware Board)，即可进行 Build 和下载。
+4.  **下载到 STM32**: 使用 ST-Link  Ctrl+B 下载生成的二进制文件到 STM32。
+### 保留核心文件
+1.  **保留文件**: 保留 `cleanup_files.bat` 脚本，用于清理不必要的文件。
+2.  **保留文件**: 保留 `cleanup_files.ps1` 脚本，用于清理不必要的文件。
 
 ---
 *Created by Antigravity Assistant*

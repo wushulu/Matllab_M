@@ -1,2 +1,0 @@
-syscalls.o: \
- D:/Work/Matlab/STM32F4Generation/GPIO/STM32CubeIDE/Application/User/Core/syscalls.c

@@ -1,2 +1,0 @@
-syscalls.o: \
- D:/Work/Matlab/PMSM/11F4demotest/stm32f401re_pmsm_example/STM32CubeIDE/Application/User/Core/syscalls.c

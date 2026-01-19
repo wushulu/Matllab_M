@@ -1,2 +1,0 @@
-startup_stm32g431rbtx.o: \
- D:/Work/Matlab/PMSM/16MotorParasmeters/stm32g431_pmsm_example/STM32CubeIDE/Application/User/Startup/startup_stm32g431rbtx.s
